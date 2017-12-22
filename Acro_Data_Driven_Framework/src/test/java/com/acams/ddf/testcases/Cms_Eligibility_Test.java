@@ -296,7 +296,65 @@ reportFailure("Test Case Failed catch black for t1 got executed",
 
 
 
+ExtentTest t6 = test
+.createNode(
+"Checking the MD approval flow is working correctly for the MPI:- "
++ data.get("Mpi")
+)
+.assignCategory("Funtional Category")
+.assignAuthor("Sarthak Singhal");
 
+try{
+	// storing the status of the ICD code before sending the request to the MD 
+	String mdRequestStatus1=getLocatorText("mdRequeststatus_xpath", t6);
+	
+	
+	
+	//clicking on YES button of the  Do you want to send request to MD for approval?  pop up
+	//checking the alert message is present and comparing the text 
+	
+	if(isElementPresent("alertpresent_id", t6)==true){
+		String actualText=getLocatorText("alerttexxt_id", t6);
+		if(actualText.equals("Do you want to send request to MD for approval? "))
+		{
+			click("mdapprovalyesbutton_id", t6);
+			waitUntilElementPresent("mdRequeststatus_xpath", t6);
+			String mdRequestStatus2=getLocatorText("mdRequeststatus_xpath", t6);
+			logOutCactus(t6);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t6);
+			clickCmsProgram(t6);
+			mouseHover("mdapprovalleftmenumousehover_xpath", t1);
+			click("mdapprovalpagelink_xpath", t1);
+			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t6);
+			List<WebElement> listofMpi=driver.findElements(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
+			java.util.Iterator<WebElement> mpi = listofMpi.iterator();
+			 String values = mpi.next().getText();
+			 System.out.println(values);
+		  
+			
+			
+			
+			
+		}else{
+			t6.log(Status.FAIL, "MD Approval alert text is not matching");
+			reportFailure("MD Approval alert text is not matching", t6);
+		}
+		
+		
+	}else{
+
+			t6.log(Status.FAIL, "MD Approval alert is not present");
+			reportFailure("MD Approval alert is not present", t6);
+	}
+	
+
+
+
+}catch (Exception e) {
+t5.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
+reportFailure("Test Case Failed catch black for t1 got executed",
+t5);
+}
 
 
 
