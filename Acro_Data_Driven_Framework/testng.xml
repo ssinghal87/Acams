@@ -1,0 +1,6 @@
+<suite name="ACAMS SUITE"  parallel="tests">
+
+  <suite-files>
+   <suite-file path="C:\Users\ssinghal\git\selenium projects\Acams\Acro_Data_Driven_Framework\src\test\resources\Acams_Suite_One.xml" />
+  </suite-files>
+</suite>

@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="4" failed="0" ignored="0" total="6" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ACAMS SUITE ONE" duration-ms="188845" started-at="2017-12-07T08:54:47Z" finished-at="2017-12-07T08:57:56Z">
+    <groups>
+    </groups>
+    <test name="LoginTest" duration-ms="30227" started-at="2017-12-07T08:54:47Z" finished-at="2017-12-07T08:55:18Z">
+      <class name="com.acams.ddf.testcases.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@78ac1102]" name="beforeTest" is-config="true" duration-ms="375" started-at="2017-12-07T03:54:47Z" finished-at="2017-12-07T03:54:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.LoginTest@78ac1102]" name="LoginTest" duration-ms="28951" started-at="2017-12-07T03:54:49Z" data-provider="getData" finished-at="2017-12-07T03:55:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=supadmin, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@78ac1102]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:54:49Z" finished-at="2017-12-07T03:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@78ac1102]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:18Z" finished-at="2017-12-07T03:55:18Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.LoginTest.quit(LoginTest.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@78ac1102]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:18Z" finished-at="2017-12-07T03:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.acams.ddf.testcases.LoginTest -->
+    </test> <!-- LoginTest -->
+    <test name="SaveAsReferralTest" duration-ms="5404" started-at="2017-12-07T08:55:18Z" finished-at="2017-12-07T08:55:23Z">
+      <class name="com.acams.ddf.testcases.SaveAsReferral">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="beforeTest" is-config="true" duration-ms="219" started-at="2017-12-07T03:55:18Z" finished-at="2017-12-07T03:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:18Z" finished-at="2017-12-07T03:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="IntakePageTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="IntakePageTest" duration-ms="4851" started-at="2017-12-07T03:55:18Z" data-provider="getData" finished-at="2017-12-07T03:55:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Lomes, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=Jenilia, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[Unable to get browser
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:40996/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c330f26a-ab31-4806-850b-b71f5aa91235]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:40996/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c330f26a-ab31-4806-850b-b71f5aa91235
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:235)
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:642)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:621)
+	at com.acams.ddf.testcases.SaveAsReferral.IntakePageTest(SaveAsReferral.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="FAIL" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:23Z" finished-at="2017-12-07T03:55:23Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.SaveAsReferral.quit(SaveAsReferral.java:413)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="SKIP" signature="IntakePageTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="IntakePageTest" duration-ms="0" started-at="2017-12-07T03:55:23Z" data-provider="getData" finished-at="2017-12-07T03:55:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Lomes, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=Jenilia, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.SaveAsReferral.quit(SaveAsReferral.java:413)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="SKIP" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:23Z" finished-at="2017-12-07T03:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="SKIP" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@43a0cee9]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:23Z" finished-at="2017-12-07T03:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
+    </test> <!-- SaveAsReferralTest -->
+    <test name="IntakePageTest" duration-ms="7930" started-at="2017-12-07T08:55:23Z" finished-at="2017-12-07T08:55:31Z">
+      <class name="com.acams.ddf.testcases.IntakePageTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="beforeTest" is-config="true" duration-ms="2634" started-at="2017-12-07T03:55:23Z" finished-at="2017-12-07T03:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:26Z" finished-at="2017-12-07T03:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="IntakePageTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="IntakePageTest" duration-ms="4859" started-at="2017-12-07T03:55:26Z" data-provider="getData" finished-at="2017-12-07T03:55:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Lomes, Jenilia, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201712018677, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20171204000046, MLastName=Lomes, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[Unable to get browser
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:32717/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 42994cd2-fd85-494b-983d-d535726b19c1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Unable to get browser
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.133', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:32717/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 42994cd2-fd85-494b-983d-d535726b19c1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:235)
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:642)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:621)
+	at com.acams.ddf.testcases.IntakePageTest.IntakePageTest(IntakePageTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="FAIL" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:31Z" finished-at="2017-12-07T03:55:31Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.IntakePageTest.quit(IntakePageTest.java:523)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="SKIP" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:31Z" finished-at="2017-12-07T03:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:31Z" finished-at="2017-12-07T03:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="SKIP" signature="IntakePageTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.IntakePageTest@67b467e9]" name="IntakePageTest" duration-ms="0" started-at="2017-12-07T03:55:31Z" data-provider="getData" finished-at="2017-12-07T03:55:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Lomes, Jenilia, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201712018677, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20171204000046, MLastName=Lomes, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.IntakePageTest.quit(IntakePageTest.java:523)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
+    </test> <!-- IntakePageTest -->
+    <test name="DemographicsTest" duration-ms="145190" started-at="2017-12-07T08:55:31Z" finished-at="2017-12-07T08:57:56Z">
+      <class name="com.acams.ddf.testcases.DemographicsPageTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@646007f4]" name="beforeTest" is-config="true" duration-ms="313" started-at="2017-12-07T03:55:31Z" finished-at="2017-12-07T03:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="DemographicsPageTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.DemographicsPageTest@646007f4]" name="DemographicsPageTest" duration-ms="144767" started-at="2017-12-07T03:55:32Z" data-provider="getData" finished-at="2017-12-07T03:57:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Lomes, Jenilia, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018677, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000046, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemographicsPageTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@646007f4]" name="init" is-config="true" duration-ms="0" started-at="2017-12-07T03:55:32Z" finished-at="2017-12-07T03:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@646007f4]" name="quit" is-config="true" duration-ms="0" started-at="2017-12-07T03:57:56Z" finished-at="2017-12-07T03:57:56Z">
+          <exception class="java.lang.NoClassDefFoundError">
+            <message>
+              <![CDATA[org/bson/types/ObjectId]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoClassDefFoundError: org/bson/types/ObjectId
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+	at java.lang.Class.getMethods(Class.java:1615)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:464)
+	at freemarker.ext.beans.ClassIntrospector.discoverAccessibleMethods(ClassIntrospector.java:457)
+	at freemarker.ext.beans.ClassIntrospector.createClassIntrospectionData(ClassIntrospector.java:268)
+	at freemarker.ext.beans.ClassIntrospector.get(ClassIntrospector.java:244)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:114)
+	at freemarker.ext.beans.BeanModel.<init>(BeanModel.java:104)
+	at freemarker.ext.beans.StringModel.<init>(StringModel.java:52)
+	at freemarker.ext.beans.StringModel$1.create(StringModel.java:37)
+	at freemarker.ext.beans.BeansModelCache.create(BeansModelCache.java:71)
+	at freemarker.ext.util.ModelCache.getInstance(ModelCache.java:84)
+	at freemarker.ext.beans.BeansWrapper.wrap(BeansWrapper.java:860)
+	at freemarker.template.DefaultObjectWrapper.handleUnknownType(DefaultObjectWrapper.java:235)
+	at freemarker.template.DefaultObjectWrapper.wrap(DefaultObjectWrapper.java:214)
+	at freemarker.template.WrappingTemplateModel.wrap(WrappingTemplateModel.java:105)
+	at freemarker.template.DefaultListAdapter.get(DefaultListAdapter.java:75)
+	at freemarker.core.DynamicKeyName.dealWithNumericalKey(DynamicKeyName.java:104)
+	at freemarker.core.DynamicKeyName._eval(DynamicKeyName.java:69)
+	at freemarker.core.Expression.eval(Expression.java:78)
+	at freemarker.core.Assignment.accept(Assignment.java:131)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.ConditionalBlock.accept(ConditionalBlock.java:48)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at com.aventstack.extentreports.reporter.ExtentHtmlReporter.flush(ExtentHtmlReporter.java:142)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.aventstack.extentreports.Report.notifyReporters(Report.java:247)
+	at com.aventstack.extentreports.Report.flush(Report.java:169)
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:272)
+	at com.acams.ddf.testcases.DemographicsPageTest.quit(DemographicsPageTest.java:558)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.TestNG.privateMain(TestNG.java:1434)
+	at org.testng.TestNG.main(TestNG.java:1403)
+Caused by: java.lang.ClassNotFoundException: org.bson.types.ObjectId
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 64 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoClassDefFoundError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
+    </test> <!-- DemographicsTest -->
+  </suite> <!-- ACAMS SUITE ONE -->
+</testng-results>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuitName]">
+  <test name="LoginTest(failed)">
+    <classes>
+      <class name="com.acams.ddf.testcases.SaveAsReferral">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
+      <class name="com.acams.ddf.testcases.LoginTest">
+        <methods>
+          <include name="LoginTest" invocation-numbers="0"/>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [SuitName] -->

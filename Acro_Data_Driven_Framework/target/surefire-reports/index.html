@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-ACAMS_SUITE_ONE">
+              <span class="suite-name border-passed">ACAMS SUITE ONE</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-ACAMS_SUITE_ONE">
+                    <span>C:\Users\ssinghal\git\selenium projects\Acams\Acro_Data_Driven_Framework\src\test\resources\Acams_Suite_One.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-ACAMS_SUITE_ONE">
+                    <span class="test-stats">5 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-ACAMS_SUITE_ONE">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-ACAMS_SUITE_ONE">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-ACAMS_SUITE_ONE">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-ACAMS_SUITE_ONE">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-ACAMS_SUITE_ONE">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">5 methods,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ACAMS_SUITE_ONE" class="hide-methods passed suite-ACAMS_SUITE_ONE"> (hide)</a> <!-- hide-methods passed suite-ACAMS_SUITE_ONE -->
+                      <a href="#" panel-name="suite-ACAMS_SUITE_ONE" class="show-methods passed suite-ACAMS_SUITE_ONE"> (show)</a> <!-- show-methods passed suite-ACAMS_SUITE_ONE -->
+                    </span>
+                    <div class="method-list-content passed suite-ACAMS_SUITE_ONE">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.Cms_Eligibility_Test" hash-for-method="Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)">Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.DemographicsPageTest" hash-for-method="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.SaveAsReferral" hash-for-method="IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)">IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.IntakePageTest" hash-for-method="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.LoginTest" hash-for-method="LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})">LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ACAMS_SUITE_ONE -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-ACAMS_SUITE" class="panel ACAMS_SUITE">
+        </div> <!-- panel ACAMS_SUITE -->
+        <div panel-name="suite-ACAMS_SUITE_ONE" class="panel ACAMS_SUITE_ONE">
+          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.SaveAsReferral</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)">
+                  </a> <!-- IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...) -->
+                  <span class="method-name">IntakePageTest</span>
+                  <span class="parameters">({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Waltson, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=John, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})">
+                  </a> <!-- LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie}) -->
+                  <span class="method-name">LoginTest</span>
+                  <span class="parameters">({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.Cms_Eligibility_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)">
+                  </a> <!-- Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...) -->
+                  <span class="method-name">Cms_Eligibility_Test</span>
+                  <span class="parameters">({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=201712018789, ICDComments=ICD code added successfully., Browser=ie})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.IntakePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)">
+                  </a> <!-- IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...) -->
+                  <span class="method-name">IntakePageTest</span>
+                  <span class="parameters">({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201712018785, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20171204000190, MLastName=Waltson, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.DemographicsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)">
+                  </a> <!-- DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...) -->
+                  <span class="method-name">DemographicsPageTest</span>
+                  <span class="parameters">({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018789, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000194, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+        </div> <!-- panel ACAMS_SUITE_ONE -->
+        <div panel-name="test-xml-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\ssinghal\git\selenium projects\Acams\Acro_Data_Driven_Framework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;ACAMS SUITE&quot; parallel=&quot;tests&quot;&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;C:\Users\ssinghal\git\selenium projects\Acams\Acro_Data_Driven_Framework\src\test\resources\Acams_Suite_One.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- ACAMS SUITE --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\ssinghal\git\selenium projects\Acams\Acro_Data_Driven_Framework\src\test\resources\Acams_Suite_One.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;ACAMS SUITE ONE&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.acams.ddf.util.RetryListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;LoginTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.acams.ddf.testcases.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- LoginTest --&gt;
+  &lt;test name=&quot;SaveAsReferralTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.acams.ddf.testcases.SaveAsReferral&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SaveAsReferralTest --&gt;
+  &lt;test name=&quot;IntakePageTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.acams.ddf.testcases.IntakePageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- IntakePageTest --&gt;
+  &lt;test name=&quot;DemographicsTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.acams.ddf.testcases.DemographicsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- DemographicsTest --&gt;
+  &lt;test name=&quot;Cms_Eligibility_Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.acams.ddf.testcases.Cms_Eligibility_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Cms_Eligibility_Test --&gt;
+&lt;/suite&gt; &lt;!-- ACAMS SUITE ONE --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ACAMS SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ACAMS SUITE ONE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">LoginTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SaveAsReferralTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">IntakePageTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">DemographicsTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Cms_Eligibility_Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ACAMS SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ACAMS SUITE ONE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ACAMS SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ACAMS_SUITE');
+function tableData_ACAMS_SUITE() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['ACAMS_SUITE']= { tableData: data, tableDiv: 'times-div-ACAMS_SUITE'}
+return data;
+}
+              </script>
+              <div id="times-div-ACAMS_SUITE">
+              </div> <!-- times-div-ACAMS_SUITE -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ACAMS SUITE ONE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ACAMS_SUITE_ONE');
+function tableData_ACAMS_SUITE_ONE() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(5);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'IntakePageTest')
+data.setCell(0, 2, 'com.acams.ddf.testcases.IntakePageTest')
+data.setCell(0, 3, 110298);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'IntakePageTest')
+data.setCell(1, 2, 'com.acams.ddf.testcases.SaveAsReferral')
+data.setCell(1, 3, 100893);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'DemographicsPageTest')
+data.setCell(2, 2, 'com.acams.ddf.testcases.DemographicsPageTest')
+data.setCell(2, 3, 82407);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Cms_Eligibility_Test')
+data.setCell(3, 2, 'com.acams.ddf.testcases.Cms_Eligibility_Test')
+data.setCell(3, 3, 55407);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'LoginTest')
+data.setCell(4, 2, 'com.acams.ddf.testcases.LoginTest')
+data.setCell(4, 3, 19894);
+window.suiteTableData['ACAMS_SUITE_ONE']= { tableData: data, tableDiv: 'times-div-ACAMS_SUITE_ONE'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <div id="times-div-ACAMS_SUITE_ONE">
+              </div> <!-- times-div-ACAMS_SUITE_ONE -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ACAMS SUITE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ACAMS SUITE ONE</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ACAMS_SUITE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ACAMS_SUITE_ONE" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.acams.ddf.testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">1143 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</span>
+                <span class="method-start">1144 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">21038 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.acams.ddf.testcases.SaveAsReferral</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">21524 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)</span>
+                <span class="method-start">21920 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">21920 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">122813 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.acams.ddf.testcases.IntakePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">122929 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)</span>
+                <span class="method-start">123313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">123313 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">233611 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.acams.ddf.testcases.DemographicsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">233717 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)</span>
+                <span class="method-start">234016 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">234016 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">316423 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.acams.ddf.testcases.Cms_Eligibility_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">316523 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)</span>
+                <span class="method-start">316952 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">316952 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">372359 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">372458 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
