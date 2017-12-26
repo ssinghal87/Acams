@@ -67,104 +67,99 @@ public class RoughTesting extends BaseTest  {
 		ExtentTest t1=test.createNode("rough testing");
 		//ExtentTest c9=pNode.createNode("URL", "checking that if user has successfully logged in then the url is the landingPage");
 
-        t1.log(Status.INFO, "Starting the test LoginTest");
+        t1.log(Status.INFO, "Starting the test Lough");
 		//test.log(Status.INFO,data.toString());
-		if(!DataUtil.isRunnable("LoginTest", xls) ||  data.get("Runmode").equals("N")){
+		if(!DataUtil.isRunnable("Rough", xls) ||  data.get("Runmode").equals("N")){
 			t1.log(Status.SKIP, "Skipping the test as runmode is N");
 			throw new SkipException("Skipping the test as runmode is N");
 		}
 		
-		openBrowser(data.get("Browser"),t1);                                       //opening the browser
-		navigate(System.getProperty("appurl"),t1);                                 //navigating to the Acams login page
-	    doLogin(prop.getProperty("ssusername"),prop.getProperty("sspassword"),t1); // doing the login
-	    clickCmsProgram(t1); 
-	    clickCoordinates(t1);
-	    waitUntilElementPresent("globalsearch_xpath", t1);
-	    type("globalsearch_xpath", data.get("Mpi"), t1);
-		click("globalsearchbutton_xpath", t1);
-		click("yespopupbutton_xpath", t1);
-		waitUntilElementPresent("clickclientname_xpath", t1);
-		click("clickclientname_xpath", t1);
-	    clickIntake(t1);
-	    scrollTo("addressplusicon_xpath", t1);
-	    
-	 /* //Get the column count
-        List<WebElement> colCount=driver.findElements(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']/tbody/tr[1]/th"));
-        int totalColumns=colCount.size();
-        System.out.println("Total Columns available: "+totalColumns);
+		openBrowser(data.get("Browser"), t1);
+		navigate(prop.getProperty("appurl"), t1);
+		doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
+		clickCmsProgram(t1);
+		clickCoordinates(t1);
+		mouseHover("mdapprovalleftmenumousehover_xpath", t1);
+		click("mdapprovalpagelink_xpath", t1);
+		waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t1);
+		String mpi=getLocatorText("mdapprovalgetmpi_xpath", t1);
+		if(mpi.equals(data.get("Mpi"))){
+			click("mdapprovalmpiactionbuttonclick_xpath", t1);
+			click("mdapprovalviewactioblink_id", t1);
+			type("mdapprovalcomments_id", data.get("MdApprovalComment"), t1);
+			click("mdapprovalsubmitbuton_id", t1);
+			verifyAlertPresentAndAlertText("Request approved successfully.", t1);
+			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
+			clickCmsProgram(t1);
+			clickCoordinates(t1);
+			waitUntilElementPresent("globalsearch_xpath", t1);
+			type("globalsearch_xpath", data.get("Mpi"), t1);
+			click("globalsearchbutton_xpath", t1);
+			click("yespopupbutton_xpath", t1);
+			waitUntilElementPresent("clickclientname_xpath", t1);
+			click("clickclientname_xpath", t1);
+			waitUntilElementPresent("clickeligibility_xpath", t1);
+			clickEligibility(t1);
+			String icdRequestStatusAfterMdApproved=getLocatorText("mdRequeststatus_xpath", t1);
+			if(icdRequestStatusAfterMdApproved.equals("APR"))
+			{
+				t1.log(Status.PASS, "The Status of the ICD code is not equal to Approved");
+				reportPass("MCD Approval Test Case Passed ", t1);
+			}
+			else
+			{
+				
+			t1.log(Status.FAIL, "The Status of the ICD code is not equal to Approved");
+			reportFailure("MCD Approval Test Case Failed  ", t1);
+		     }
+			
+		}
+		else
+		{
+			t1.log(Status.FAIL, "MPI is not matching on the MD approval page");
+			reportFailure("MCD Approval Test Case Failed  ", t1);
+		}
+			
+
+
+		}
+	
+			
+		
+		//int rows=htmltable.findElement(By.tagName("tr")).getSize();
+	
+		
+
+		/*List<WebElement> rows=htmltable.findElements(By.tagName("tr"));
+	
+		for(int rnum=0;rnum<rows.size();rnum++)
+		{
+		List<WebElement> columns=rows.get(rnum).findElements(By.tagName("td"));
+
+		System.out.println("Number of columns:"+columns.size());
+		
+		
+
+		for(int cnum=0;cnum<columns.size();cnum++)
+		{
+		System.out.println(columns.get(cnum).getText());
+		}
+
+		}*/
+
         
         
-        //Get the rows count
-        List<WebElement> rowCount=driver.findElements(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']/tbody/tr"));
-        int totalRows=rowCount.size()-1;
-        System.out.println("Total rows available: "+totalRows);
+	  
+	    
+		
+		
+		
+		
+		/*WebElement listofMpi=driver.findElement(By.xpath(".//*[@id='body_gvMedicalDiagnosis']/tbody/tr/td[3]"));
+	    String allMpiList=listofMpi.getText();
+		System.out.println(allMpiList);*/
+	    
 	
-        String arrayFor2[][]=new String[totalRows][totalColumns];
-        for(int row=0;row<=totalRows;row++){
-            for(int col=0;col<totalColumns;col++){
-            arrayFor2[row][col]=rowCount.get(col).getText();
-            System.out.println("row "+row+" col "+col+" is:"+rowCount.get(col).getText());
-            System.out.println("\t");
-            }
-            System.out.println();
-                }
-        System.out.println("\n \n \n Array Stored Result \n");
-
-        for(int row=0;row<=totalRows;row++){
-            for(int col=0;col<=totalColumns;col++){
-            System.out.println("........"+arrayFor2[row][col]);
-            System.out.println("\t");
-            }
-            System.out.println("\n");
-                }*/
-	    
-	    
-	    
-	    
-	    
-	  //Locate the webtable
-	    WebElement reportTable = driver.findElement(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']")); 
-
-	    int rowCount = driver.findElements(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']/tbody/tr")).size();  //Get number of rows
-	    System.out.println("Number of rows : " +rowCount);  
-
-	    String[][] reportMatrix = new String[rowCount-1][];    //Declare new 2d String array
-	                                   //rowCount-1 because the first row is header which i don't need to store 
-	    
-	    
-	    int mainColCount = 0;
-
-
-	    for(int i=2;i<=rowCount;i++)  //Start count from second row, and loop till last row
-	    {
-	        int columnCount = driver.findElements(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']/tbody/tr[1]/td["+i+"]")).size();  //Get number of columns
-	        System.out.println("Number of columns : " +columnCount);
-
-	        mainColCount = columnCount;
-
-	        for(int j=1;j<=columnCount;j++)    //Start count from first column and loop till last column
-	        {
-	            String text = driver.findElement(By.xpath(".//*[@id='body_ctl00_gvAddressInformation']/tbody/tr["+i+"]/td["+j+"]")).getText();  //Get cell contents
-
-	            System.out.println(i + " " + j + " " + text);
-
-	            reportMatrix[i-2][j-1] = text;  //Store cell contents in 2d array, adjust index values accordingly
-	        }
-	    
-
-	
-	
-	    }
-	  //Print contents of 2d matrix
-	    for(int i=0;i<rowCount-1;i++)
-	    {
-	        for(int j=0;j<mainColCount;j++)
-	        {
-	            System.out.print(reportMatrix[i][j] + " ");
-	        }
-	        System.out.println();
-	    }   
-	}
 
 	@DataProvider
 	public Object[][] getData(){

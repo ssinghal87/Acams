@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -223,6 +224,7 @@ try{
 	//scrollTo(testCaseName, t4);
 	scrollTo("eligibilitybegindate_id", t4);
 	getCurrentDate("eligibilitybegindate_id", t4);
+	driver.findElement(By.id(prop.getProperty("eligibilitybegindate_id"))).sendKeys(Keys.TAB);
 	selectByVisibleText("insurance_id", data.get("Insurance"), t4);
 	click("addinsrancebutton_id", t4);
 	verifyAlertPresentAndAlertText("Please update the CMS Card insurance information.", t4);
@@ -253,6 +255,8 @@ try{
 	reportFailure("Test Case Failed catch black for t1 got executed",
 			t4);
 }
+
+
 
 
 //////////**********************************ENDS*******************************************/////////////////////
@@ -306,7 +310,7 @@ ExtentTest t6 = test
 
 try{
 	// storing the status of the ICD code before sending the request to the MD 
-	String mdRequestStatus1=getLocatorText("mdRequeststatus_xpath", t6);
+	//String mdRequestStatus1=getLocatorText("mdRequeststatus_xpath", t6);
 	
 	
 	
@@ -314,33 +318,22 @@ try{
 	//checking the alert message is present and comparing the text 
 	
 	if(isElementPresent("alertpresent_id", t6)==true){
-		String actualText=getLocatorText("alerttexxt_id", t6);
-		if(actualText.equals("Do you want to send request to MD for approval? "))
-		{
+		
+		
 			click("mdapprovalyesbutton_id", t6);
 			waitUntilElementPresent("mdRequeststatus_xpath", t6);
 			String mdRequestStatus2=getLocatorText("mdRequeststatus_xpath", t6);
 			logOutCactus(t6);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t6);
 			clickCmsProgram(t6);
-			mouseHover("mdapprovalleftmenumousehover_xpath", t1);
-			click("mdapprovalpagelink_xpath", t1);
+			clickCoordinates(t6);
+			mouseHover("mdapprovalleftmenumousehover_xpath", t6);
+			click("mdapprovalpagelink_xpath", t6);
 			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t6);
-			List<WebElement> listofMpi=driver.findElements(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
-			java.util.Iterator<WebElement> mpi = listofMpi.iterator();
-			 String values = mpi.next().getText();
-			 System.out.println(values);
-		  
-			
-			
-			
-			
-		}else{
-			t6.log(Status.FAIL, "MD Approval alert text is not matching");
-			reportFailure("MD Approval alert text is not matching", t6);
-		}
-		
-		
+		    WebElement listofMpi=driver.findElement(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
+		    String allMpiList=listofMpi.getText();
+			System.out.println(allMpiList);
+
 	}else{
 
 			t6.log(Status.FAIL, "MD Approval alert is not present");
@@ -351,9 +344,9 @@ try{
 
 
 }catch (Exception e) {
-t5.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
-reportFailure("Test Case Failed catch black for t1 got executed",
-t5);
+t6.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
+reportFailure("Test Case Failed catch black for t6 got executed",
+t6);
 }
 
 

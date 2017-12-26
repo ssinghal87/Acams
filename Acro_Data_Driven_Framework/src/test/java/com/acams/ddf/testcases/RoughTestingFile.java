@@ -1,97 +1,407 @@
 package com.acams.ddf.testcases;
 
 import java.awt.AWTException;
-import java.awt.Robot;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Hashtable;
 import java.util.List;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-//import org.apache.tools.ant.taskdefs.WaitFor;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.acams.ddf.base.BaseTest;
+import com.acams.ddf.base.EligibilityPageMethods;
+import com.acams.ddf.util.DataUtil;
 import com.acams.ddf.util.Xls_Reader;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
-public class RoughTestingFile {
+public class RoughTestingFile extends BaseTest {
 
-	public static void main(String[] args) throws InterruptedException, AWTException, InvalidFormatException, IOException {
-		// TODO Auto-generated method stub
+	String testCaseName = "Cms_Eligibility_Test";
+	SoftAssert softAssert;
+	Xls_Reader xls;
+	EligibilityPageMethods epm = new EligibilityPageMethods();
 
-		
-		
-		//Xls_Reader xls;
-		//Xls_Reader.writeCellData("45678", 12, 30, "Data");
-		WebDriver driver;
-		System.setProperty("webdriver.ie.driver","E:\\Selenium\\IEDriverServer.exe");
-		driver=new InternetExplorerDriver();
-		
-		driver.get("https://testfhb-acams.acrocorp.com/qa/");
-		//Thread.sleep(3000);
-		driver.findElement(By.id("txtLoginID")).clear();
-		driver.findElement(By.id("txtLoginID")).sendKeys("supadmin");
-		driver.findElement(By.id("txtPassword")).sendKeys("1234");;
-		driver.findElement(By.id("btnSignIn")).click();
-		
-		WebDriverWait	wait=new WebDriverWait(driver, 100);
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='body_lnbCMS']/div/div[1]/div[2]")));
-		driver.findElement(By.xpath(".//*[@id='body_lnbCMS']/div/div[1]/div[2]")).click();
-		
-		 Actions actions = new Actions(driver);
-		    Robot robot = new Robot();
-		    robot.delay(3000);
-		    robot.mouseMove(50,50);
-		    actions.click().build().perform();
-		    
-		//    Thread.sleep(10000);
-			//WebDriverWait	wait=new WebDriverWait(driver, 100);
-			WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='searchtextbox']")));
-		
-		driver.findElement(By.xpath(".//*[@id='searchtextbox']")).sendKeys("201711038490");
-		WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='btnsearch']/i")));
+	@BeforeTest
+	public void beforeTest() throws IOException, InterruptedException {
+		boolean excelProcessRunning = isProcessRunning("EXCEL.EXE");
 
-		driver.findElement(By.xpath(".//*[@id='btnsearch']/i")).click();
-		driver.findElement(By.xpath(".//*[@id='btnYesPopupConfirm']")).click();
-		WebElement element3 = wait.until(ExpectedConditions.elementToBeClickable(By.id("body_grdpatient_lbfirstname_0")));
+		if (excelProcessRunning == true) {
+			Runtime.getRuntime().exec("taskkill /F /IM EXCEL.EXE");
+			System.out.println("excel is running so i closed");
+		} else {
+			System.out.println("excel is running so no need to closed");
+		}
 
-		driver.findElement(By.id("body_grdpatient_lbfirstname_0")).click();
-		//Thread.sleep(4000);
-		WebElement element4 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='lnkDemo']")));
-
-		driver.findElement(By.xpath(".//*[@id='lnkDemo']")).click();
-		
-		//WebElement element5 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='lnkIntake']")));
-		
-		WebElement element6 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='grdFamilyEmployementStatus']")));
-
-
-	    List <WebElement> gridrow=driver.findElements(By.xpath(".//*[@id='grdFamilyEmployementStatus']"));
-	    int numberofrows=gridrow.size();
-	    System.out.println(numberofrows);
-		
-		
-		//System.out.println("no data");
-		//driver.quit();
-	    
-	    
-	    driver.quit();
-	    driver.close();
-	   // driver.wait()
-	    
-	   // driver.manage().window().maximize();
-	    //driver.manage().window()
-			
 	}
+
+	@Test(priority = 4, dataProvider = "getData")
+	public void Cms_Eligibility_Test(Hashtable<String, String> data)
+			throws IOException, AWTException, InvalidFormatException {
+		test = rep.createTest("Cms_Eligibility_Test")
+				.assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
+
+		// ***************************************child Test Case 1 ://
+		// Searching the Client and go on Eligibility Page://
+		// -*******************************************************
+
+		ExtentTest t1 = test
+				.createNode(
+						"Searching the Client through Global search: -"
+								+ data.get("Mpi")
+								+ " and going to the CMSEligibility tab.")
+				.assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
+		t1.log(Status.INFO, "Starting the test ");
+		t1.log(Status.INFO, data.toString());
+		if (!DataUtil.isRunnable(testCaseName, xls)
+				|| data.get("Runmode").equals("N")) {
+			test.log(Status.SKIP, "Skipping the test as runmode is N");
+			throw new SkipException("Skipping the test as runmode is N");
+
+		}
+
+		try {
+			openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl"), t1);
+			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
+			clickCmsProgram(t1);
+			clickCoordinates(t1);
+			/*waitUntilElementPresent("globalsearch_xpath", t1);
+			type("globalsearch_xpath", data.get("Mpi"), t1);
+			click("globalsearchbutton_xpath", t1);
+			click("yespopupbutton_xpath", t1);
+			waitUntilElementPresent("clickclientname_xpath", t1);
+			click("clickclientname_xpath", t1);
+			waitUntilElementPresent("clickeligibility_xpath", t1);
+			clickEligibility(t1);
+			boolean eligibilityPageCheck = isElementPresent(
+					"Eligibilitypagecheck_xpath", t1);
+			if (eligibilityPageCheck == true) {
+				t1.log(Status.PASS,
+						"User is on the page Eligibility Page for the Client MPI:-"
+								+ data.get("Mpi"));
+				reportPass("Test Case Passed", t1);
+			} else {
+
+				t1.log(Status.FAIL, "User is not on the Eligibility Page."
+						+ prop.getProperty("Eligibilitypagecheck_xpath")
+						+ " not found on the page");
+				reportFailure("Test Case Failed", t1);
+			}*/
+			
+			mouseHover("mdapprovalleftmenumousehover_xpath", t1);
+			click("mdapprovalpagelink_xpath", t1);
+			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t1);
+			List<WebElement> listofMpi=driver.findElements(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
+			java.util.Iterator<WebElement> mpi = listofMpi.iterator();
+			 String values = mpi.next().getText();
+			 System.out.println(values);
+		    
+
+		}
+
+		catch (Exception e) {
+			t1.log(Status.FAIL, e.fillInStackTrace());
+			reportFailure("Test Case Failed catch black for t1 got executed",
+					t1);
+		}
+		
+		
+		
+		
+		
+////////////////*************TEst Case 2 Adding the ICD code//*******************************
+		
+		
+		
+		ExtentTest t2 = test
+				.createNode(
+						"Adding the ICD code for the MPI:- "
+								+ data.get("Mpi")
+								)
+				.assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
+		
+		try{
+	    wait(1);
+		addIcdCode("A000", "icdcodelist_id", data.get("ICDCode"), t2);
+		t2.log(Status.PASS, "ICD Code added successfully");
+		reportPass("ICD Code added successfully", t2);
+		
+		
+		
+		}catch (Exception e) {
+			t2.log(Status.FAIL, "Adding the ICD code Test Case Failed"+e.fillInStackTrace());
+			reportFailure("Test Case Failed catch black for t1 got executed",
+					t2);
+		}
+		
+		
+//////////**********************************ENDS*******************************************/////////////////////
+
+
+		
+		
+		
+////////////////*************TEst Case 3 Checking meetincome guide line condition//*******************************
+
+		
+		
+		ExtentTest t3 = test
+				.createNode(
+						"Checking meetincome guide line condition " 
+								+ data.get("Mpi")
+								)
+				.assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
+		
+		try{
+			selectHippaConsent("yes", t3);
+			selectReleaseInformation("Yes", t3);
+			selectMeetsIncomeGuideline("Yes", t3);
+			boolean hippaRadioButton = elementIsSelected("hipparadioname_name", t3);
+			if(hippaRadioButton==true){
+				t3.log(Status.INFO, "hippaRadioButton is selected as YES:");
+				boolean releaseInfoRadioButton = elementIsSelected("releaseinfo_name", t3);
+				if(releaseInfoRadioButton==true)
+				{
+					t3.log(Status.INFO, "releaseInfoRadioButton is selected as YES:");
+					boolean meetIncomeRadioButton =elementIsSelected("meetincome_name", t3);
+					if(meetIncomeRadioButton==true){
+						t3.log(Status.INFO, "meetIncomeRadioButton is selected as YES:");
+						boolean checkApprovedByCC=isElementPresent("approvedByCCYes_id", t3);
+						if(checkApprovedByCC==true){
+							scrollTo("approvedByCCYes_id", t3);
+							t3.log(Status.PASS, "Approved By CC section is there");
+							reportPass("Approved By CC section is there", t3);
+						}else{
+							t3.log(Status.FAIL, "Approved By CC section is  not there");
+							reportFailure("Approved By CC section is  not there", t3);
+						}
+						
+					}else{
+						t3.log(Status.INFO, "meetIncomeRadioButton is selected as NO:");
+					}
+
+
+				}else{
+					t3.log(Status.INFO, "releaseInfoRadioButton is selected as NO:");
+				}
+				
+			}else{
+				t3.log(Status.INFO, "hippaRadioButton is selected as NO:");			}
+		
+		}catch (Exception e) {
+			t3.log(Status.FAIL, "MeetIncomeGuideline condition failed"+e.fillInStackTrace());
+			reportFailure("Test Case Failed catch black for t1 got executed",
+					t3);
+		}
+		
+		
+/////*****************************************ENDS************************************************////////////
+		
+		
 		
 
+		
+////////////////*************TEst Case 4 Adding the Insurance//*******************************
+		
+		
+		
+ExtentTest t4 = test
+		.createNode(
+				"Adding the Insurance  for the MPI:- "
+						+ data.get("Mpi")
+						)
+		.assignCategory("Funtional Category")
+		.assignAuthor("Sarthak Singhal");
+
+try{
+	//scrollTo(testCaseName, t4);
+	scrollTo("eligibilitybegindate_id", t4);
+	getCurrentDate("eligibilitybegindate_id", t4);
+	driver.findElement(By.id(prop.getProperty("eligibilitybegindate_id"))).sendKeys(Keys.TAB);
+	selectByVisibleText("insurance_id", data.get("Insurance"), t4);
+	click("addinsrancebutton_id", t4);
+	verifyAlertPresentAndAlertText("Please update the CMS Card insurance information.", t4);
+	List<WebElement> insuranceInformationGridRow = driver.findElements(By
+			.xpath(prop.getProperty("insurancegriallnames_xpath")));
+	int numberOfRowsInGrid = insuranceInformationGridRow.size();
+	System.out.println(numberOfRowsInGrid);
+	if (numberOfRowsInGrid != 0) {
+		scrollTo("insurancegriallnames_xpath", t4);
+		t4.log(Status.PASS, "record  found in the Insurance Grid:- "
+				+ numberOfRowsInGrid);
+		reportPass(
+				"record  found in the Insurance Grid, Test Case Passed",
+				t4);
+	} else {
+		scrollTo("insurancegriallnames_xpath", t4);
+		t4.log(Status.FAIL, "record not found in the Insurance Grid : - "
+				+ numberOfRowsInGrid);
+		reportFailure(
+				"record not found in the Insurance, Test Case Failed", t4);
+	}
+
+
+
+
+}catch (Exception e) {
+	t4.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
+	reportFailure("Test Case Failed catch black for t1 got executed",
+			t4);
+}
+
+
+
+
+//////////**********************************ENDS*******************************************/////////////////////
+
+
+
+
+
+
+////////////////////////////************Test case 5********************///////////////////////////////
+	
+
+
+
+ExtentTest t5 = test
+.createNode(
+		"Checking the Eligibility Page submits successfully and alert is shown for the MPI:- "
+				+ data.get("Mpi")
+				)
+.assignCategory("Funtional Category")
+.assignAuthor("Sarthak Singhal");
+
+try{
+
+scrollTo("eligibilitysubmitbutton_id", t5);
+click("eligibilitysubmitbutton_id", t5);
+verifyAlertPresentAndAlertText("Record saved successfully.", t5);
+
+}catch (Exception e) {
+t5.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
+reportFailure("Test Case Failed catch black for t1 got executed",
+	t5);
+}
+	
+	
+	
+//////////**********************************ENDS*******************************************/////////////////////
+
+
+////////////////////////////************Test case 6********************///////////////////////////////
+
+
+
+ExtentTest t6 = test
+.createNode(
+"Checking the MD approval flow is working correctly for the MPI:- "
++ data.get("Mpi")
+)
+.assignCategory("Funtional Category")
+.assignAuthor("Sarthak Singhal");
+
+try{
+	// storing the status of the ICD code before sending the request to the MD 
+	String mdRequestStatus1=getLocatorText("mdRequeststatus_xpath", t6);
+	
+	
+	
+	//clicking on YES button of the  Do you want to send request to MD for approval?  pop up
+	//checking the alert message is present and comparing the text 
+	
+	if(isElementPresent("alertpresent_id", t6)==true){
+		String actualText=getLocatorText("alerttexxt_id", t6);
+		if(actualText.equals("Do you want to send request to MD for approval? "))
+		{
+			click("mdapprovalyesbutton_id", t6);
+			waitUntilElementPresent("mdRequeststatus_xpath", t6);
+			String mdRequestStatus2=getLocatorText("mdRequeststatus_xpath", t6);
+			logOutCactus(t6);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t6);
+			clickCmsProgram(t6);
+			mouseHover("mdapprovalleftmenumousehover_xpath", t1);
+			click("mdapprovalpagelink_xpath", t1);
+			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t6);
+			List<WebElement> listofMpi=driver.findElements(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
+			java.util.Iterator<WebElement> mpi = listofMpi.iterator();
+			 String values = mpi.next().getText();
+			 System.out.println(values);
+		  
+			
+			
+			
+			
+		}else{
+			t6.log(Status.FAIL, "MD Approval alert text is not matching");
+			reportFailure("MD Approval alert text is not matching", t6);
+		}
+		
+		
+	}else{
+
+			t6.log(Status.FAIL, "MD Approval alert is not present");
+			reportFailure("MD Approval alert is not present", t6);
+	}
+	
+
+
+
+}catch (Exception e) {
+t5.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
+reportFailure("Test Case Failed catch black for t1 got executed",
+t5);
+}
+
+
+
+
+
+//////////**********************************ENDS*******************************************/////////////////////
+	
+	
+	}
+
+	@BeforeMethod
+	public void init() {
+		softAssert = new SoftAssert();
+	}
+
+	@AfterMethod
+	public void quit() {
+		try {
+			softAssert.assertAll();
+		} catch (Error e) {
+			test.log(Status.FAIL, e.getMessage());
+		}
+		if (rep != null) {
+			// rep.endTest(test);
+			rep.flush();
+		}
+
+	}
+
+	@DataProvider
+	public Object[][] getData() {
+		super.init();
+		xls = new Xls_Reader(prop.getProperty("xlspath_suite_one"));
+		return DataUtil.getTestData(xls, testCaseName);
+
+	}
 }

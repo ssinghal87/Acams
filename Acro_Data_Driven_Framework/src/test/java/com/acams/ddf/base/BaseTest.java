@@ -40,6 +40,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -96,14 +97,14 @@ public class BaseTest {
 		
 	    if(driver==null){
 		testObject.log(Status.INFO, "Opening the browser - " + bType);
-		if (bType.equals("mozilla")) {
+		if (bType.equalsIgnoreCase("mozilla")) {
 			// System.setProperty("webdriver.gecko.driver.","D:\\geckodriver.exe");
 			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"//Drivers//geckodriver.exe");
 			driver = new FirefoxDriver();
-		} else if (bType.equals("chrome")) {
+		} else if (bType.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
 			driver = new ChromeDriver();
-		} else if (bType.equals("ie")) {
+		} else if (bType.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"//Drivers//IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
@@ -122,14 +123,14 @@ public class BaseTest {
 		
 	}
 	
-	@AfterSuite
+	/*@AfterSuite
 	public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}
+	}*/
 
 	
 	
@@ -200,6 +201,8 @@ public class BaseTest {
 	public void navigate(String urlKey, ExtentTest testObject) {
 		testObject.log(Status.INFO,
 				"Navigating to " + prop.getProperty("appurl"));
+		
+
 		driver.get(prop.getProperty("appurl"));
 		testObject.log(Status.INFO,
 				"Successfully navigated to " + prop.getProperty("appurl"));
@@ -675,6 +678,22 @@ public class BaseTest {
 
 	}
 	
+	
+	public void pressEnterKey(ExtentTest testObject) throws AWTException
+	{
+		try {
+			testObject.log(Status.INFO, "Pressing the Enter Key in the keyboard");
+		    Robot robot = new Robot();
+		    robot.keyPress(KeyEvent.VK_ENTER);
+		    robot.keyRelease(KeyEvent.VK_ENTER);
+		    robot.delay(200);
+		}catch(Exception e){
+			testObject.log(Status.FAIL, "pressEnterKey catch block executed");
+			
+		}
+				
+		
+	}
 	
 	
 	

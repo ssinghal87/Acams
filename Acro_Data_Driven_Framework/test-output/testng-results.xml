@@ -2,33 +2,28 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="118595" started-at="2017-12-22T09:51:27Z" finished-at="2017-12-22T09:53:25Z">
+  <suite name="Default suite" duration-ms="32762" started-at="2017-12-26T13:23:59Z" finished-at="2017-12-26T13:24:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="118595" started-at="2017-12-22T09:51:27Z" finished-at="2017-12-22T09:53:25Z">
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@704deff2]" name="beforeTest" is-config="true" duration-ms="252" started-at="2017-12-22T04:51:27Z" finished-at="2017-12-22T04:51:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@704deff2]" name="Cms_Eligibility_Test" duration-ms="116837" started-at="2017-12-22T04:51:28Z" data-provider="getData" finished-at="2017-12-22T04:53:25Z">
+    <test name="Default test" duration-ms="32762" started-at="2017-12-26T13:23:59Z" finished-at="2017-12-26T13:24:32Z">
+      <class name="com.acams.ddf.testcases.RoughTesting">
+        <test-method status="FAIL" signature="Rough(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2f177a4b]" name="Rough" duration-ms="31950" started-at="2017-12-26T08:24:00Z" data-provider="getData" finished-at="2017-12-26T08:24:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=201712018777 , ICDComments=ICD code added successfully., Browser=ie}]]>
+                <![CDATA[{Occupation=Servicemen, Mpi=201712018768, Case=20170304000079, Runmode=Y, EmployementStatus=Full Time, MdApprovalComment=ABCD, Browser=ie, EmploymentRelationshipstatus=Mother, Employer=ACRO}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Alert Text not Matches--Actual Alert Text =The Eligibility End Date field is mandatory. Please enter Eligibility End Date.--Expected Alert Text=Record saved successfully.]]>
+              <![CDATA[MCD Approval Test Case Failed  ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Alert Text not Matches--Actual Alert Text =The Eligibility End Date field is mandatory. Please enter Eligibility End Date.--Expected Alert Text=Record saved successfully.
+              <![CDATA[java.lang.AssertionError: MCD Approval Test Case Failed  
 	at org.testng.Assert.fail(Assert.java:94)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:702)
-	at com.acams.ddf.base.BaseTest.verifyAlertPresentAndAlertText(BaseTest.java:945)
-	at com.acams.ddf.testcases.Cms_Eligibility_Test.Cms_Eligibility_Test(Cms_Eligibility_Test.java:282)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:719)
+	at com.acams.ddf.testcases.RoughTesting.Rough(RoughTesting.java:120)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,20 +54,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Cms_Eligibility_Test -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@704deff2]" name="init" is-config="true" duration-ms="0" started-at="2017-12-22T04:51:28Z" finished-at="2017-12-22T04:51:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@704deff2]" name="quit" is-config="true" duration-ms="430" started-at="2017-12-22T04:53:25Z" finished-at="2017-12-22T04:53:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@704deff2]" name="closeBrowser" is-config="true" duration-ms="36" started-at="2017-12-22T04:53:25Z" finished-at="2017-12-22T04:53:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
+        </test-method> <!-- Rough -->
+      </class> <!-- com.acams.ddf.testcases.RoughTesting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
