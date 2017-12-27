@@ -123,14 +123,14 @@ public class BaseTest {
 		
 	}
 	
-	/*@AfterSuite
+	@AfterSuite
 	public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}*/
+	}
 
 	
 	
@@ -532,6 +532,7 @@ public class BaseTest {
 		
 		 boolean dohProgram=waitUntilElementPresent("popupdiv_id", testObject);
 		    if(dohProgram==true){
+		    	wait(2);
 		    	testObject.log(Status.INFO, "Doh Pop us is present");
 		    	 Robot bot = null;
 		    	  try {
@@ -554,6 +555,7 @@ public class BaseTest {
 		    		  boolean dohProgram1=waitUntilElementPresent("popupdiv_id", testObject);
 		  		    System.out.println(dohProgram);
 		  		    if(dohProgram==true){
+		  		    	wait(2);
 		  		    	testObject.log(Status.INFO, "Doh Pop us is present");
 		  		    	
 		  		    	 Robot bot1 = null;

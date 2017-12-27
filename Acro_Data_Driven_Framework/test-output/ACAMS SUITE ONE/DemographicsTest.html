@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>DemographicsTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 14 09:40:52 EST 2017</td>
+<td>Started on:</td><td>Wed Dec 27 04:49:19 EST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>706 seconds (706587 ms)</td>
+<tr><td>Total time:</td><td>101 seconds (101010 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,154 +67,17 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest()'><b>DemographicsPageTest</b><br>Test class: com.acams.ddf.testcases.DemographicsPageTest<br>Parameters: {Browser=ie, PharmacyName=Test Pharmacy, ClientName=Jason, Johny, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018727, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000111, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}</td>
-<td><div><pre>java.lang.AssertionError: Unable to find element with css selector == #txtLoginID
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
-System info: host: &apos;ACROLAP15&apos;, ip: &apos;10.0.6.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_102&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{proxy=Proxy(), acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:19385/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=XP, setWindowRect=true, platform=XP}]
-Session ID: 62787fb2-3856-4603-a164-1eea480d5679
-*** Element info: {Using=id, value=txtLoginID}
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.base.BaseTest.getElement(BaseTest.java:268)
-	at com.acams.ddf.base.BaseTest.clear(BaseTest.java:198)
-	at com.acams.ddf.base.BaseTest.doLogin(BaseTest.java:780)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:94)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1602530280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1602530280'><pre>java.lang.AssertionError: Unable to find element with css selector == #txtLoginID
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
-System info: host: &apos;ACROLAP15&apos;, ip: &apos;10.0.6.253&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_102&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{proxy=Proxy(), acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:19385/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=XP, setWindowRect=true, platform=XP}]
-Session ID: 62787fb2-3856-4603-a164-1eea480d5679
-*** Element info: {Using=id, value=txtLoginID}
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.base.BaseTest.getElement(BaseTest.java:268)
-	at com.acams.ddf.base.BaseTest.clear(BaseTest.java:198)
-	at com.acams.ddf.base.BaseTest.doLogin(BaseTest.java:780)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:998)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1200)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>65</td>
-<td>com.acams.ddf.testcases.DemographicsPageTest@161479c6</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest()'><b>DemographicsPageTest</b><br>Test class: com.acams.ddf.testcases.DemographicsPageTest<br>Parameters: {Browser=ie, PharmacyName=Test Pharmacy, ClientName=Jason, Johny, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018727, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000111, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}</td>
-<td><div><pre>java.lang.AssertionError: Test Case Failed catch black for t1 got executed
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:135)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990684641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace990684641'><pre>java.lang.AssertionError: Test Case Failed catch black for t1 got executed
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:135)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>362</td>
-<td>com.acams.ddf.testcases.DemographicsPageTest@161479c6</td></tr>
-<tr>
-<td title='com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest()'><b>DemographicsPageTest</b><br>Test class: com.acams.ddf.testcases.DemographicsPageTest<br>Parameters: {Browser=ie, PharmacyName=Test Pharmacy, ClientName=Jason, Johny, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018727, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000111, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}</td>
-<td><div><pre>java.lang.AssertionError: Test Case Failed catch black for t1 got executed
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:135)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace642538759", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace642538759'><pre>java.lang.AssertionError: Test Case Failed catch black for t1 got executed
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:681)
-	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:135)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:998)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1200)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>263</td>
+<td title='com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest()'><b>DemographicsPageTest</b><br>Test class: com.acams.ddf.testcases.DemographicsPageTest<br>Parameters: {Browser=ie, PharmacyName=Test Pharmacy, ClientName=Saamuel, John, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018824, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000247, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}</td>
+<td></td>
+<td>100</td>
 <td>com.acams.ddf.testcases.DemographicsPageTest@161479c6</td></tr>
 </table><p>
 </body>

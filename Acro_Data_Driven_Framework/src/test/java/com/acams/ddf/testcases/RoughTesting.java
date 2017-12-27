@@ -37,6 +37,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -82,13 +84,16 @@ public class RoughTesting extends BaseTest  {
 		mouseHover("mdapprovalleftmenumousehover_xpath", t1);
 		click("mdapprovalpagelink_xpath", t1);
 		waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t1);
-		String mpi=getLocatorText("mdapprovalgetmpi_xpath", t1);
-		if(mpi.equals(data.get("Mpi"))){
+		String mpiOnMdApprovalPage=driver.findElement(By.xpath(".//*[@id='body_gvMedicalDiagnosis']/tbody/tr[2]/td[3]")).getText().trim();
+		String mpiInExcelSheet=data.get("Mpi");
+		//mpiInExcelSheet.trim();
+		if(mpiOnMdApprovalPage.equals(mpiInExcelSheet)){
 			click("mdapprovalmpiactionbuttonclick_xpath", t1);
 			click("mdapprovalviewactioblink_id", t1);
 			type("mdapprovalcomments_id", data.get("MdApprovalComment"), t1);
 			click("mdapprovalsubmitbuton_id", t1);
 			verifyAlertPresentAndAlertText("Request approved successfully.", t1);
+			logOutCactus(t1);
 			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
 			clickCmsProgram(t1);
 			clickCoordinates(t1);
@@ -159,7 +164,24 @@ public class RoughTesting extends BaseTest  {
 	    String allMpiList=listofMpi.getText();
 		System.out.println(allMpiList);*/
 	    
-	
+	@BeforeMethod
+	public void init() {
+		softAssert = new SoftAssert();
+	}
+
+	@AfterMethod
+	public void quit() {
+		try {
+			softAssert.assertAll();
+		} catch (Error e) {
+			test.log(Status.FAIL, e.getMessage());
+		}
+		if (rep != null) {
+			// rep.endTest(test);
+			rep.flush();
+		}
+
+	}
 
 	@DataProvider
 	public Object[][] getData(){

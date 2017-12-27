@@ -5,7 +5,9 @@
     <classes>
       <class name="com.acams.ddf.testcases.RoughTesting">
         <methods>
+          <include name="init"/>
           <include name="Rough" invocation-numbers="0"/>
+          <include name="quit"/>
         </methods>
       </class> <!-- com.acams.ddf.testcases.RoughTesting -->
     </classes>

@@ -74,11 +74,6 @@ public class Cms_Eligibility_Test extends BaseTest {
 		}
 
 		try {
-			openBrowser(data.get("Browser"), t1);
-			navigate(prop.getProperty("appurl"), t1);
-			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
-			clickCmsProgram(t1);
-			clickCoordinates(t1);
 			waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
 			click("globalsearchbutton_xpath", t1);
@@ -309,17 +304,8 @@ ExtentTest t6 = test
 .assignAuthor("Sarthak Singhal");
 
 try{
-	// storing the status of the ICD code before sending the request to the MD 
-	//String mdRequestStatus1=getLocatorText("mdRequeststatus_xpath", t6);
-	
-	
-	
-	//clicking on YES button of the  Do you want to send request to MD for approval?  pop up
-	//checking the alert message is present and comparing the text 
-	
-	if(isElementPresent("alertpresent_id", t6)==true){
-		
-		
+	if(isElementPresent("alertpresent_id", t6)==true)
+	{
 			click("mdapprovalyesbutton_id", t6);
 			waitUntilElementPresent("mdRequeststatus_xpath", t6);
 			String mdRequestStatus2=getLocatorText("mdRequeststatus_xpath", t6);
@@ -330,20 +316,55 @@ try{
 			mouseHover("mdapprovalleftmenumousehover_xpath", t6);
 			click("mdapprovalpagelink_xpath", t6);
 			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t6);
-		    WebElement listofMpi=driver.findElement(By.xpath(prop.getProperty("listofMPIonmdapprovalpage_xpath")));
-		    String allMpiList=listofMpi.getText();
-			System.out.println(allMpiList);
+			String mpiOnMdApprovalPage=driver.findElement(By.xpath(".//*[@id='body_gvMedicalDiagnosis']/tbody/tr[2]/td[3]")).getText().trim();
+			String mpiInExcelSheet=data.get("Mpi");
+			if(mpiOnMdApprovalPage.equals(mpiInExcelSheet))
+			{
+				click("mdapprovalmpiactionbuttonclick_xpath", t6);
+				click("mdapprovalviewactioblink_id", t6);
+				type("mdapprovalcomments_id", data.get("MdApprovalComment"), t6);
+				click("mdapprovalsubmitbuton_id", t6);
+				verifyAlertPresentAndAlertText("Request approved successfully.", t6);
+				logOutCactus(t6);
+				doLogin(prop.getProperty("ssusername"), prop.getProperty("sspassword"), t6);
+				clickCmsProgram(t6);
+				clickCoordinates(t6);
+				waitUntilElementPresent("globalsearch_xpath", t6);
+				type("globalsearch_xpath", data.get("Mpi"), t6);
+				click("globalsearchbutton_xpath", t6);
+				click("yespopupbutton_xpath", t6);
+				waitUntilElementPresent("clickclientname_xpath", t6);
+				click("clickclientname_xpath", t6);
+				waitUntilElementPresent("clickeligibility_xpath", t6);
+				clickEligibility(t6);
+				String icdRequestStatusAfterMdApproved=getLocatorText("mdRequeststatus_xpath", t6);
+				if(icdRequestStatusAfterMdApproved.equals("APR"))
+				{
+					t6.log(Status.PASS, "The Status of the ICD code is not equal to Approved");
+					reportPass("MCD Approval Test Case Passed ", t6);
+				}
+				else
+				{
+				t6.log(Status.FAIL, "The Status of the ICD code is not equal to Approved");
+				reportFailure("MCD Approval Test Case Failed  ", t6);
+			    }
+				
+			}
+			else
+			{
+				t6.log(Status.FAIL, "MPI is not matching on the MD approval page");
+				reportFailure("MCD Approval Test Case Failed  ", t6);
+			}
 
 	}else{
 
 			t6.log(Status.FAIL, "MD Approval alert is not present");
 			reportFailure("MD Approval alert is not present", t6);
-	}
-	
+	     }
 
-
-
-}catch (Exception e) {
+}
+catch (Exception e) 
+{
 t6.log(Status.FAIL, "Adding the Insurance  Test Case Failed"+e.fillInStackTrace());
 reportFailure("Test Case Failed catch black for t6 got executed",
 t6);
