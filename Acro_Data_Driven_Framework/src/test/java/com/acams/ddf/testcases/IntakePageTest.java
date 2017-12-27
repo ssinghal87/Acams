@@ -384,6 +384,9 @@ public class IntakePageTest extends BaseTest {
 				writeCellData(mpinumber, 23, 2, "Data");
 				writeCellData(casenumber, 23, 3, "Data");
 				writeCellData(clientName, 23, 4, "Data");
+				writeCellData(mpinumber, 29, 2, "Data");
+				writeCellData(casenumber, 29, 3, "Data");
+				writeCellData(clientName, 29, 4, "Data");
 				System.out.println("data is added in the file");
 
 			} else {

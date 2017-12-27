@@ -1487,17 +1487,20 @@ public class BaseTest {
 //********************************ELIGIBILITY PAGE METHODS ENDS************************************//////////////////////////////////
 
 	
+//********************************CMS Card PAGE STARTS HERE************************************//////////////////////////////////
+	
+	public void clickCmsCard(ExtentTest testObject){
+		
+		WebElement e =getElement("cmscardquicklink_xpath", testObject);
+		e.click();
+	}
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
+//********************************CMS Card PAGE METHODS ENDS HERE ************************************//////////////////////////////////
+
 	
 	
 	
