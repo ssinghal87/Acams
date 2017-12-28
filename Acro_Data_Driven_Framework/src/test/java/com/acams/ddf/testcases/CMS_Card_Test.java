@@ -149,7 +149,7 @@ public class CMS_Card_Test extends BaseTest {
 		
 		catch (Exception e) 
 		{
-			t2.log(Status.FAIL,"t3 test case catch block executed" + e.fillInStackTrace());
+			t3.log(Status.FAIL,"t3 test case catch block executed" + e.fillInStackTrace());
 		}
 
 	}	
