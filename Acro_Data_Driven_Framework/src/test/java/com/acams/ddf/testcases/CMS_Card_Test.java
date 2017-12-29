@@ -25,6 +25,7 @@ import com.acams.ddf.util.DataUtil;
 import com.acams.ddf.util.Xls_Reader;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.gargoylesoftware.htmlunit.javascript.host.intl.DateTimeFormat;
 
 public class CMS_Card_Test extends BaseTest {
 
@@ -142,7 +143,9 @@ public class CMS_Card_Test extends BaseTest {
 
 	// **************************************************END*********************************************************
 
+	
 		
+//********************************************************Third Test Case************************************************
 		
 		ExtentTest t3 = test.createNode("Clicking on the CMS card quick link.","Checking that the fiscal year drop down value is showing correct or not"+data.get("Mpi"));
 		try 
@@ -151,38 +154,36 @@ public class CMS_Card_Test extends BaseTest {
 			//cmscardfy_id
 			
 			
-			
+			// get the current date in string
 		    LocalDate localDate = LocalDate.now();
 	        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
 			LocalDateTime now = LocalDateTime.now();  
 			String todayDate = (dtf.format(now));
 			System.out.println("today's date in string format is  : - "+todayDate); 
+			
+			
+			// getting the current year in int
 	        int year=localDate.getYear();
 	        String currentYear=String.valueOf(year);
 	        System.out.println("The current year in String format is  : - "+currentYear);
 
 	       
-
+            // getting the CMS card Start and End Date and Current Date in Date format
 	        LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
 	        LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
 	        LocalDate currentDate =LocalDate.now();
 	        
 	        
+	        
+	        // getting the actual selected value in the drop down of the FY in CMS card in INT format
 	        scrollTo("cmscardfy_id", t3);
 	        Select archiveList = new Select(driver.findElement(By.id(prop.getProperty("cmscardfy_id"))));
 	        String selectedValue = archiveList.getFirstSelectedOption().getText();
 	        int CmsCardFy=Integer.valueOf(selectedValue);
-	        
-	       
-	        
-	        
+
+
 	        
 	        
-	       // System.out.println("The current year is : - "+currentYear);
-	        //System.out.println("The CMS card Start date should be : - " +cmsStartDate);
-	        //System.out.println("The CMS end  date should be : - " +cmsEndDate);
-	        //System.out.println("The current date is  : - " +currentDate);
-	     
 
 	        if(currentDate.isAfter(cmsStartDate) && currentDate.isBefore(cmsEndDate))
 	        {
@@ -191,7 +192,7 @@ public class CMS_Card_Test extends BaseTest {
 	        	System.out.println("FY: - "+fiscalYear);
 	        	if(fiscalYear==CmsCardFy)
 	        	{
-	        		t3.log(Status.PASS, "Fiscal Year is matching to the current Fiscal year");
+	        		t3.log(Status.PASS, "Fiscal Year is matching to the current Fiscal year. The Expected FY is: - "+fiscalYear +"  which is equal to the Actual FY is : - "+CmsCardFy);
 	        		reportPass("Fiscal Year Check Test Case Passed", t3);
 	        	}
 	        	else
@@ -201,8 +202,6 @@ public class CMS_Card_Test extends BaseTest {
 
 	        	}
 	       
-	        	
-	        	
 	        	System.out.println("");
 	        	
 	        }
@@ -224,10 +223,35 @@ public class CMS_Card_Test extends BaseTest {
 			t3.log(Status.FAIL,"t3 test case catch block executed" + e.fillInStackTrace());
 		}
 
-	}	
 	
 	
+//*******************************************************END*******************************************************************
 	
+	
+//********************************************************Four Test Case************************************************
+
+		
+		
+		ExtentTest t4 = test.createNode("Checkiing the CMS card Start Date and EndDates are correctly populated","MPI: - "+data.get("Mpi"));
+		try 
+		{
+			
+			String cmsCardActualStartDate=getLocatorText("cmsstartdate_id", t4);
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
+			LocalDate cmsCardActualStartDateParse = (LocalDate) dtf.parse(cmsCardActualStartDate);
+			String cmsCardActualEndDate=getLocatorText("cmsenddate_id", t4);
+			LocalDate cmsCardActualEndDateParse = (LocalDate) dtf.parse(cmsCardActualEndDate);
+
+			
+			
+		}
+		
+		catch (Exception e) 
+		{
+			t2.log(Status.FAIL,"t4 test case catch block executed" + e.fillInStackTrace());
+		}
+
+	}
 	@BeforeMethod
 	public void init() {
 		softAssert = new SoftAssert();
