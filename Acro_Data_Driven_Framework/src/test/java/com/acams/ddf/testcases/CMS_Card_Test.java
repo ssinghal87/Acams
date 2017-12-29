@@ -1,8 +1,14 @@
 package com.acams.ddf.testcases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Hashtable;
 
 import org.testng.SkipException;
@@ -15,7 +21,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.acams.ddf.base.BaseTest;
-
 import com.acams.ddf.util.DataUtil;
 import com.acams.ddf.util.Xls_Reader;
 import com.aventstack.extentreports.ExtentTest;
@@ -139,9 +144,76 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 		
-		ExtentTest t3 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi"));
+		ExtentTest t3 = test.createNode("Clicking on the CMS card quick link.","Checking that the fiscal year drop down value is showing correct or not"+data.get("Mpi"));
 		try 
 		{
+			
+			//cmscardfy_id
+			
+			
+			
+		    LocalDate localDate = LocalDate.now();
+	        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
+			LocalDateTime now = LocalDateTime.now();  
+			String todayDate = (dtf.format(now));
+			System.out.println("today's date in string format is  : - "+todayDate); 
+	        int year=localDate.getYear();
+	        String currentYear=String.valueOf(year);
+	        System.out.println("The current year in String format is  : - "+currentYear);
+
+	       
+
+	        LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
+	        LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
+	        LocalDate currentDate =LocalDate.now();
+	        
+	        
+	        scrollTo("cmscardfy_id", t3);
+	        Select archiveList = new Select(driver.findElement(By.id(prop.getProperty("cmscardfy_id"))));
+	        String selectedValue = archiveList.getFirstSelectedOption().getText();
+	        int CmsCardFy=Integer.valueOf(selectedValue);
+	        
+	       
+	        
+	        
+	        
+	        
+	       // System.out.println("The current year is : - "+currentYear);
+	        //System.out.println("The CMS card Start date should be : - " +cmsStartDate);
+	        //System.out.println("The CMS end  date should be : - " +cmsEndDate);
+	        //System.out.println("The current date is  : - " +currentDate);
+	     
+
+	        if(currentDate.isAfter(cmsStartDate) && currentDate.isBefore(cmsEndDate))
+	        {
+	        	System.out.println(" The CMS card date is : - "+cmsEndDate);
+	          	int fiscalYear=cmsEndDate.getYear();
+	        	System.out.println("FY: - "+fiscalYear);
+	        	if(fiscalYear==CmsCardFy)
+	        	{
+	        		t3.log(Status.PASS, "Fiscal Year is matching to the current Fiscal year");
+	        		reportPass("Fiscal Year Check Test Case Passed", t3);
+	        	}
+	        	else
+	        	{
+	        		t3.log(Status.FAIL, "Fiscal Year is not matching to the current Fiscal year. The Expected FY is: - "+fiscalYear +"  The Actual FY is : - "+CmsCardFy);
+	        		reportPass("Fiscal Year Check Test Case Failed", t3);
+
+	        	}
+	       
+	        	
+	        	
+	        	System.out.println("");
+	        	
+	        }
+	        
+	        else{
+	        	t3.log(Status.FAIL, "Fiscal Year is not matching to the current Fiscal year.");
+        		reportPass("Fiscal Year Check Test Case Failed", t3);
+	        }
+         
+         
+			
 		
 			
 			
