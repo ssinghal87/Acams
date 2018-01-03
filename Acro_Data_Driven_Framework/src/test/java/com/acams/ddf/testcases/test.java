@@ -25,8 +25,14 @@ public class test {
         int year=localDate.getYear();
         String currentYear=String.valueOf(year);
        
+        int actualMonth =localDate.getMonthValue();
+       
         
-        
+        if(actualMonth<6)
+        {
+           year =year-1;
+        }
+       
         
         LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
         LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
@@ -50,6 +56,11 @@ public class test {
       
 	}
 	
+
+
+	
 	
 
 }
+
+

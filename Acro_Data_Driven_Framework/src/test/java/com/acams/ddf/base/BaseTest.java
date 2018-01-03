@@ -93,7 +93,8 @@ public class BaseTest {
 	
 
 	// fn to open the browser
-	public WebDriver openBrowser(String bType, ExtentTest testObject) {
+	public WebDriver openBrowser(String bType, ExtentTest testObject) 
+	{
 		
 	    if(driver==null){
 		testObject.log(Status.INFO, "Opening the browser - " + bType);

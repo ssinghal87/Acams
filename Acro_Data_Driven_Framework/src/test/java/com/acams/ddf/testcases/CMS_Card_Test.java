@@ -32,10 +32,31 @@ public class CMS_Card_Test extends BaseTest {
 	SoftAssert softAssert;
 	Xls_Reader xls;
 	Exception e;
+	 LocalDate localDate = LocalDate.now();
+	 int year=localDate.getYear();
+     String currentYear=String.valueOf(year);
+    // System.out.println("The current year in String format is  : - "+currentYear);
+     
+    
+     int actualMonth =localDate.getMonthValue();
+     {
+    	 if(actualMonth<6)
+         {
+            year =year-1;
+         }else{
+        	 
+         }
+     
+     }
+    LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
+    LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
+    LocalDate currentDate =LocalDate.now();
 
 	
+    
 	@BeforeTest
-	public void beforeTest() throws IOException, InterruptedException {
+	public void beforeTest() throws IOException, InterruptedException
+	{
 		boolean excelProcessRunning = isProcessRunning("EXCEL.EXE");
 
 		if (excelProcessRunning = true) {
@@ -114,7 +135,9 @@ public class CMS_Card_Test extends BaseTest {
 		
  //*************************************************END****************************************************************//`		
 		
+
 		
+//********************************************************SECOND TEST CASE*****************************************************************
 		ExtentTest t2 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi"));
 		try 
 		{
@@ -155,7 +178,7 @@ public class CMS_Card_Test extends BaseTest {
 			
 			
 			// get the current date in string
-		    LocalDate localDate = LocalDate.now();
+		  
 	        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
 			LocalDateTime now = LocalDateTime.now();  
 			String todayDate = (dtf.format(now));
@@ -163,15 +186,14 @@ public class CMS_Card_Test extends BaseTest {
 			
 			
 			// getting the current year in int
-	        int year=localDate.getYear();
-	        String currentYear=String.valueOf(year);
-	        System.out.println("The current year in String format is  : - "+currentYear);
-
 	       
-            // getting the CMS card Start and End Date and Current Date in Date format
-	        LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
-	        LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
-	        LocalDate currentDate =LocalDate.now();
+	       
+			
+		    
+	       // System.out.println("date format CMS StartDate"+cmsStartDate);
+	        //System.out.println("date format CMS End Date"+cmsEndDate);
+	        //System.out.println("date format CurrentDate "+currentDate);
+
 	        
 	        
 	        
@@ -185,7 +207,8 @@ public class CMS_Card_Test extends BaseTest {
 	        
 	        
 
-	        if(currentDate.isAfter(cmsStartDate) && currentDate.isBefore(cmsEndDate))
+	       if(currentDate.isAfter(cmsStartDate) && currentDate.isBefore(cmsEndDate))
+	        //if(currentDate>=cmsStartDate && currentDate<=cmsEndDate)	
 	        {
 	        	System.out.println(" The CMS card date is : - "+cmsEndDate);
 	          	int fiscalYear=cmsEndDate.getYear();
@@ -236,21 +259,77 @@ public class CMS_Card_Test extends BaseTest {
 		try 
 		{
 			
-			String cmsCardActualStartDate=getLocatorText("cmsstartdate_id", t4);
-			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
-			LocalDate cmsCardActualStartDateParse = (LocalDate) dtf.parse(cmsCardActualStartDate);
-			String cmsCardActualEndDate=getLocatorText("cmsenddate_id", t4);
-			LocalDate cmsCardActualEndDateParse = (LocalDate) dtf.parse(cmsCardActualEndDate);
+			String cmsCardActualStartDate=driver.findElement(By.id(prop.getProperty("cmsstartdate_id"))).getAttribute("value").trim();
+			System.out.println(cmsCardActualStartDate);
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+			String CmsStartdateInStr =cmsStartDate.format(dtf);
+			if(cmsCardActualStartDate.equals(CmsStartdateInStr))
+			{
+				String cmsCardActualEndDate=driver.findElement(By.id(prop.getProperty("cmsenddate_id"))).getAttribute("value").trim();
+				System.out.println(cmsCardActualEndDate);
+				DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+				String CmsEnddateInStr =cmsEndDate.format(dtf);
+				
+				if(cmsCardActualEndDate.equals(CmsEnddateInStr))
+				{
+					t4.log(Status.PASS, " CMS card Start Date and EndDates are correctly populated");
+					reportPass("CMS card Autoppulated Test case passed", t4);
+					
+				}
+				else{
+					t4.log(Status.FAIL, " CMS card Start Date and EndDates are  not correctly populated");
+					reportFailure("CMS card Autoppulated Test case Failed", t4);
+					
+				}
+				
+			}else
+			{
+				t4.log(Status.FAIL, " CMS card Start Date correctly populated");
+				reportFailure("CMS card Start Date Autoppulated Test case Failed", t4);
+				
+			}
+			
 
-			
-			
 		}
 		
 		catch (Exception e) 
 		{
-			t2.log(Status.FAIL,"t4 test case catch block executed" + e.fillInStackTrace());
+			t4.log(Status.FAIL,"t4 test case catch block executed" + e.fillInStackTrace());
 		}
+		
+//***************************************************END***********************************************************************************************88
 
+		
+
+		
+//********************************************************FIFTH TEST CASE*****************************************************************
+				ExtentTest t5 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi"));
+				try 
+				{
+					clickCmsCard(t2);
+					boolean compareUrl=getURLAndCompare("https://testfhb-acams.acrocorp.com/QA/CMS/Reports/CMS_Card.aspx", t2);
+					if(compareUrl==true)
+					{
+						t1.log(Status.PASS, "User is successfully navigated to the CMS card page.");
+						reportPass("User is successfully navigated to the CMS card page.", t2);
+					}
+					else
+					{
+						t1.log(Status.FAIL, "User is is not on the CMS card page.");
+						reportFailure("User is is not on the CMS card page. Test Case Failed.", t2);
+					}
+					
+					
+				}
+				
+				catch (Exception e) 
+				{
+					t2.log(Status.FAIL,"t2 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+			// **************************************************END*********************************************************
 	}
 	@BeforeMethod
 	public void init() {
