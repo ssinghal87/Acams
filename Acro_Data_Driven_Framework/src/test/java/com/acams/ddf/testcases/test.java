@@ -1,6 +1,10 @@
 package com.acams.ddf.testcases;
 
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,56 +15,38 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.acams.ddf.util.Xls_Reader;
 
 public class test {
+	
+	static Xls_Reader xls = new Xls_Reader("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx");
 
-	public static void main(String[] args) throws ParseException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws ParseException, IOException {
 		
-	    LocalDate localDate = LocalDate.now();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
-		   LocalDateTime now = LocalDateTime.now();  
-		   String todayDate = (dtf.format(now));
-		   System.out.println("today's date : - "+todayDate); 
-        int year=localDate.getYear();
-        String currentYear=String.valueOf(year);
-       
-        int actualMonth =localDate.getMonthValue();
-       
-        
-        if(actualMonth<6)
-        {
-           year =year-1;
-        }
-       
-        
-        LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
-        LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
-        LocalDate currentDate =LocalDate.now();
-      //  String cmsCardFyInDropdown=getLocatorText("cmscardfy_id", t3);
-       // int CmsCardFy= Integer.valueOf(cmsCardFyInDropdown);
-        
-  
-        
-        System.out.println("The current year is : - "+currentYear);
-        System.out.println("The CMS card Start date should be : - " +cmsStartDate);
-        System.out.println("The CMS end  date should be : - " +cmsEndDate);
-        System.out.println("The current date is  : - " +currentDate);
-        
-  
+		//"C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx"
 		
 		
-		
+		//String expectedPcpName=xls.getCellData("Data", "Insurance", 23);
+		String expectedPcpName=xls.getCellData("Data", 7, 24);
 
-      
-      
+		System.out.println(expectedPcpName);
+		
+		
+		
 	}
 	
-
-
-	
-	
-
 }
 
 

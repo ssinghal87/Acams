@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import org.testng.reporters.jq.TestPanel;
 
 import com.acams.ddf.base.BaseTest;
 import com.acams.ddf.util.DataUtil;
@@ -30,11 +31,12 @@ import com.gargoylesoftware.htmlunit.javascript.host.intl.DateTimeFormat;
 public class CMS_Card_Test extends BaseTest {
 
 	SoftAssert softAssert;
-	Xls_Reader xls;
+	Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"\\Acams_Suite_One.xlsx");
 	Exception e;
 	 LocalDate localDate = LocalDate.now();
 	 int year=localDate.getYear();
      String currentYear=String.valueOf(year);
+     
     // System.out.println("The current year in String format is  : - "+currentYear);
      
     
@@ -51,6 +53,7 @@ public class CMS_Card_Test extends BaseTest {
     LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
     LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
     LocalDate currentDate =LocalDate.now();
+    int fiscalYear=cmsEndDate.getYear();
 
 	
     
@@ -89,7 +92,7 @@ public class CMS_Card_Test extends BaseTest {
 			
 			openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl"), t1);
-			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
 			clickCoordinates(t1);
 			
@@ -145,12 +148,12 @@ public class CMS_Card_Test extends BaseTest {
 			boolean compareUrl=getURLAndCompare("https://testfhb-acams.acrocorp.com/QA/CMS/Reports/CMS_Card.aspx", t2);
 			if(compareUrl==true)
 			{
-				t1.log(Status.PASS, "User is successfully navigated to the CMS card page.");
+				t2.log(Status.PASS, "User is successfully navigated to the CMS card page.");
 				reportPass("User is successfully navigated to the CMS card page.", t2);
 			}
 			else
 			{
-				t1.log(Status.FAIL, "User is is not on the CMS card page.");
+				t2.log(Status.FAIL, "User is is not on the CMS card page.");
 				reportFailure("User is is not on the CMS card page. Test Case Failed.", t2);
 			}
 			
@@ -184,18 +187,7 @@ public class CMS_Card_Test extends BaseTest {
 			String todayDate = (dtf.format(now));
 			System.out.println("today's date in string format is  : - "+todayDate); 
 			
-			
-			// getting the current year in int
-	       
-	       
-			
-		    
-	       // System.out.println("date format CMS StartDate"+cmsStartDate);
-	        //System.out.println("date format CMS End Date"+cmsEndDate);
-	        //System.out.println("date format CurrentDate "+currentDate);
 
-	        
-	        
 	        
 	        // getting the actual selected value in the drop down of the FY in CMS card in INT format
 	        scrollTo("cmscardfy_id", t3);
@@ -211,7 +203,7 @@ public class CMS_Card_Test extends BaseTest {
 	        //if(currentDate>=cmsStartDate && currentDate<=cmsEndDate)	
 	        {
 	        	System.out.println(" The CMS card date is : - "+cmsEndDate);
-	          	int fiscalYear=cmsEndDate.getYear();
+	          	
 	        	System.out.println("FY: - "+fiscalYear);
 	        	if(fiscalYear==CmsCardFy)
 	        	{
@@ -221,7 +213,7 @@ public class CMS_Card_Test extends BaseTest {
 	        	else
 	        	{
 	        		t3.log(Status.FAIL, "Fiscal Year is not matching to the current Fiscal year. The Expected FY is: - "+fiscalYear +"  The Actual FY is : - "+CmsCardFy);
-	        		reportPass("Fiscal Year Check Test Case Failed", t3);
+	        		reportFailure("Fiscal Year Check Test Case Failed", t3);
 
 	        	}
 	       
@@ -231,7 +223,7 @@ public class CMS_Card_Test extends BaseTest {
 	        
 	        else{
 	        	t3.log(Status.FAIL, "Fiscal Year is not matching to the current Fiscal year.");
-        		reportPass("Fiscal Year Check Test Case Failed", t3);
+        		reportFailure("Fiscal Year Check Test Case Failed", t3);
 	        }
          
          
@@ -303,20 +295,93 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 //********************************************************FIFTH TEST CASE*****************************************************************
-				ExtentTest t5 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi"));
+				ExtentTest t5 = test.createNode("Checking the PCP name","Checking the PCP name is coming populating correct for the MPI: - "+data.get("Mpi"));
 				try 
 				{
-					clickCmsCard(t2);
-					boolean compareUrl=getURLAndCompare("https://testfhb-acams.acrocorp.com/QA/CMS/Reports/CMS_Card.aspx", t2);
-					if(compareUrl==true)
+					
+					scrollTo("cmscardpcpname_id", t5);
+					String actualPcpFirstName = getLocatorText("cmscardpcpname_id", t5);
+					
+					String expectedPcpFirstName=xls.getCellData("Data", 13, 19);
+					String expectedPcpLastName=xls.getCellData("Data", 14, 19);
+					String expectedPcpClinicName=xls.getCellData("Data", 15, 19);
+					
+					String expectedFinalPcpName=expectedPcpClinicName+"/"+expectedPcpLastName+", "+expectedPcpFirstName;
+
+					if(actualPcpFirstName.equals(expectedFinalPcpName))
 					{
-						t1.log(Status.PASS, "User is successfully navigated to the CMS card page.");
-						reportPass("User is successfully navigated to the CMS card page.", t2);
+						t5.log(Status.PASS, "PCP name is populating correct on the CMS Card Form.");
+						reportPass("PCP name is populating correct on the CMS Card Form, test Case Pased", t5);
+					}else
+					{
+						t5.log(Status.FAIL, "PCP name is not populating correct on the CMS Card Form.");
+						reportFailure("PCP name is not populating correct on the CMS Card Form, test Case Failed", t5);
 					}
-					else
+
+				}
+				
+				catch (Exception e) 
+				{
+					t5.log(Status.FAIL,"t5 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+//**************************************************************END*********************************************************
+				
+				
+
+
+				
+//********************************************************SIXTH TEST CASE************************************************************************************
+		
+		ExtentTest t6 = test.createNode("Checking the Pharmcy name","Checking the Pharmcy name is coming populating correct for the MPI: - "+data.get("Mpi"));
+		try 
+		{	scrollTo("cmscardpharmacyname_id", t6);
+			String actualPharmacyName = getLocatorText("cmscardpharmacyname_id", t6);
+			String expectedPharmacyName=xls.getCellData("Data", 16, 19);
+			if(actualPharmacyName.equals(expectedPharmacyName))
+			{
+				t6.log(Status.PASS, "Pharmcy name is populating correct on the CMS Card Form.");
+				reportPass("Pharmcy name is populating correct on the CMS Card Form, test Case Pased", t6);
+			}else
+			{
+				t6.log(Status.FAIL, "Pharmcy name is not populating correct on the CMS Card Form.");
+				reportFailure("Pharmcy name is not populating correct on the CMS Card Form, test Case Failed", t6);
+			}
+			
+			
+		}
+		
+		catch (Exception e) 
+		{
+			t6.log(Status.FAIL,"t6 test case catch block executed" + e.fillInStackTrace());
+		}
+
+
+
+// **************************************************END***********************************************************************************************
+				
+				
+				
+		
+//********************************************************SEVETH TEST CASE************************************************************************************
+		
+				ExtentTest t7 = test.createNode("Checking the Insurance name in the Insurance Drop down ","Checking that the Insurance name is  populating correct in the insurance drop down for the MPI: - "+data.get("Mpi"));
+				try 
+				{	scrollTo("cmscardinsurance_id", t7);
+				    Select archiveList = new Select(driver.findElement(By.id(prop.getProperty("cmscardinsurance_id"))));
+			        String insuranceselectedValue = archiveList.getFirstSelectedOption().getText();
+			
+					String expectedInsuranceName=xls.getCellData("Data", 7, 24);
+					if(insuranceselectedValue.equals(expectedInsuranceName))
 					{
-						t1.log(Status.FAIL, "User is is not on the CMS card page.");
-						reportFailure("User is is not on the CMS card page. Test Case Failed.", t2);
+						t7.log(Status.PASS, "Insurance name is populating correct on the CMS Card Form.");
+						reportPass("Insurance name is populating correct on the CMS Card Form, test Case Pased", t7);
+					}else
+					{
+						t7.log(Status.FAIL, "Insurance name is not populating correct on the CMS Card Form.");
+						reportFailure("Insurance name is not populating correct on the CMS Card Form, test Case Failed", t7);
 					}
 					
 					
@@ -324,12 +389,50 @@ public class CMS_Card_Test extends BaseTest {
 				
 				catch (Exception e) 
 				{
-					t2.log(Status.FAIL,"t2 test case catch block executed" + e.fillInStackTrace());
+					t7.log(Status.FAIL,"t7 test case catch block executed" + e.fillInStackTrace());
 				}
 
 
 
-			// **************************************************END*********************************************************
+// **************************************************END***********************************************************************************************
+				
+	
+
+				
+				
+				
+//********************************************************EIGHT TEST CASE************************************************************************************
+		
+				ExtentTest t8 = test.createNode("Checking that CMS card for the current fiscal year is generated successfully","Checking the record in the grid is present for the  MPI: - "+data.get("Mpi"));
+				try 
+				{	scrollTo("cmscardgeneratebutton_id", t8);
+				    verifyAlertPresentAndAlertText("CMS Card generated successfully.", t8);
+				    String  gridSfy = getIntegetText("sfygrid_xpath", t8);
+				    int gridSfyParse=Integer.valueOf(gridSfy);
+				    if(gridSfyParse==fiscalYear)
+				    {
+				    	t8.log(Status.PASS, "CMS Card is generated for the : - "+fiscalYear +"Fiscal Year");
+						reportPass("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
+				    }else{
+				      	t8.log(Status.FAIL, "CMS Card is not generated for the : - "+fiscalYear +"Fiscal Year.");
+						reportFailure("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
+				    }
+				    
+				    
+				    
+				    
+					
+				}
+				
+				catch (Exception e) 
+				{
+					t8.log(Status.FAIL,"t8 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+// **************************************************END***********************************************************************************************
+		
 	}
 	@BeforeMethod
 	public void init() {

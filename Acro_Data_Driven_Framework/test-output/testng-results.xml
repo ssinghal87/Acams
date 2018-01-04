@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101886" started-at="2017-12-29T10:09:50Z" finished-at="2017-12-29T10:11:32Z">
+  <suite name="Default suite" duration-ms="110083" started-at="2018-01-04T11:57:32Z" finished-at="2018-01-04T11:59:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="101886" started-at="2017-12-29T10:09:50Z" finished-at="2017-12-29T10:11:32Z">
+    <test name="Default test" duration-ms="110083" started-at="2018-01-04T11:57:32Z" finished-at="2018-01-04T11:59:22Z">
       <class name="com.acams.ddf.testcases.CMS_Card_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@47542153]" name="beforeTest" is-config="true" duration-ms="474" started-at="2017-12-29T05:09:50Z" finished-at="2017-12-29T05:09:51Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@1536602f]" name="beforeTest" is-config="true" duration-ms="427" started-at="2018-01-04T06:57:32Z" finished-at="2018-01-04T06:57:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@47542153]" name="init" is-config="true" duration-ms="0" started-at="2017-12-29T05:09:52Z" finished-at="2017-12-29T05:09:52Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@1536602f]" name="init" is-config="true" duration-ms="0" started-at="2018-01-04T06:57:33Z" finished-at="2018-01-04T06:57:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.CMS_Card_Test@47542153]" name="CMS_Card_Test" duration-ms="99998" started-at="2017-12-29T05:09:52Z" data-provider="getData" finished-at="2017-12-29T05:11:32Z">
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.CMS_Card_Test@1536602f]" name="CMS_Card_Test" duration-ms="108859" started-at="2018-01-04T06:57:33Z" data-provider="getData" finished-at="2018-01-04T06:59:22Z">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CMS_Card_Test -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@47542153]" name="quit" is-config="true" duration-ms="384" started-at="2017-12-29T05:11:32Z" finished-at="2017-12-29T05:11:32Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@1536602f]" name="quit" is-config="true" duration-ms="484" started-at="2018-01-04T06:59:22Z" finished-at="2018-01-04T06:59:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@47542153]" name="closeBrowser" is-config="true" duration-ms="108" started-at="2017-12-29T05:11:32Z" finished-at="2017-12-29T05:11:32Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@1536602f]" name="closeBrowser" is-config="true" duration-ms="26" started-at="2018-01-04T06:59:22Z" finished-at="2018-01-04T06:59:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
