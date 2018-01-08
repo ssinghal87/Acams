@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="4" ignored="0" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ACAMS SUITE" duration-ms="0" started-at="2017-12-19T13:02:54Z" finished-at="2017-12-19T13:02:54Z">
+  <suite name="ACAMS SUITE" duration-ms="0" started-at="2018-01-05T14:50:33Z" finished-at="2018-01-05T14:50:33Z">
     <groups>
     </groups>
   </suite> <!-- ACAMS SUITE -->
-  <suite name="ACAMS SUITE ONE" duration-ms="372440" started-at="2017-12-19T12:56:42Z" finished-at="2017-12-19T13:02:54Z">
+  <suite name="ACAMS SUITE ONE" duration-ms="19016" started-at="2018-01-05T14:50:14Z" finished-at="2018-01-05T14:50:33Z">
     <groups>
     </groups>
-    <test name="LoginTest" duration-ms="21492" started-at="2017-12-19T12:56:42Z" finished-at="2017-12-19T12:57:03Z">
+    <test name="LoginTest" duration-ms="17125" started-at="2018-01-05T14:50:14Z" finished-at="2018-01-05T14:50:31Z">
       <class name="com.acams.ddf.testcases.LoginTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@6b1274d2]" name="beforeTest" is-config="true" duration-ms="269" started-at="2017-12-19T07:56:42Z" finished-at="2017-12-19T07:56:42Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="beforeTest" is-config="true" duration-ms="297" started-at="2018-01-05T09:50:14Z" finished-at="2018-01-05T09:50:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@6b1274d2]" name="init" is-config="true" duration-ms="1" started-at="2017-12-19T07:56:43Z" finished-at="2017-12-19T07:56:43Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:15Z" finished-at="2018-01-05T09:50:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.LoginTest@6b1274d2]" name="LoginTest" duration-ms="19894" started-at="2017-12-19T07:56:43Z" data-provider="getData" finished-at="2017-12-19T07:57:03Z">
+        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="LoginTest" duration-ms="15578" started-at="2018-01-05T09:50:15Z" data-provider="getData" finished-at="2018-01-05T09:50:31Z">
           <params>
             <param index="0">
               <value>
@@ -30,119 +30,271 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@6b1274d2]" name="quit" is-config="true" duration-ms="454" started-at="2017-12-19T07:57:03Z" finished-at="2017-12-19T07:57:03Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="quit" is-config="true" duration-ms="391" started-at="2018-01-05T09:50:31Z" finished-at="2018-01-05T09:50:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.LoginTest -->
     </test> <!-- LoginTest -->
-    <test name="SaveAsReferralTest" duration-ms="101389" started-at="2017-12-19T12:57:03Z" finished-at="2017-12-19T12:58:44Z">
+    <test name="SaveAsReferralTest" duration-ms="546" started-at="2018-01-05T14:50:31Z" finished-at="2018-01-05T14:50:32Z">
       <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@4450d156]" name="beforeTest" is-config="true" duration-ms="248" started-at="2017-12-19T07:57:03Z" finished-at="2017-12-19T07:57:03Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-05T09:50:31Z" finished-at="2018-01-05T09:50:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@4450d156]" name="init" is-config="true" duration-ms="0" started-at="2017-12-19T07:57:03Z" finished-at="2017-12-19T07:57:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="IntakePageTest(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.SaveAsReferral@4450d156]" name="IntakePageTest" duration-ms="100893" started-at="2017-12-19T07:57:03Z" data-provider="getData" finished-at="2017-12-19T07:58:44Z">
+        <test-method status="FAIL" signature="IntakePageTest(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="IntakePageTest" duration-ms="15" started-at="2018-01-05T09:50:32Z" data-provider="getData" finished-at="2018-01-05T09:50:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Waltson, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=John, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
+                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Clark, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=Henry , MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.SaveAsReferral.IntakePageTest(SaveAsReferral.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IntakePageTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@4450d156]" name="quit" is-config="true" duration-ms="100" started-at="2017-12-19T07:58:44Z" finished-at="2017-12-19T07:58:44Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="quit" is-config="true" duration-ms="93" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
     </test> <!-- SaveAsReferralTest -->
-    <test name="IntakePageTest" duration-ms="110765" started-at="2017-12-19T12:58:44Z" finished-at="2017-12-19T13:00:35Z">
+    <test name="IntakePageTest" duration-ms="407" started-at="2018-01-05T14:50:32Z" finished-at="2018-01-05T14:50:32Z">
       <class name="com.acams.ddf.testcases.IntakePageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@731f8236]" name="beforeTest" is-config="true" duration-ms="247" started-at="2017-12-19T07:58:44Z" finished-at="2017-12-19T07:58:45Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="beforeTest" is-config="true" duration-ms="235" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@731f8236]" name="init" is-config="true" duration-ms="0" started-at="2017-12-19T07:58:45Z" finished-at="2017-12-19T07:58:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="IntakePageTest(java.util.Hashtable)[pri:3, instance:com.acams.ddf.testcases.IntakePageTest@731f8236]" name="IntakePageTest" duration-ms="110298" started-at="2017-12-19T07:58:45Z" data-provider="getData" finished-at="2017-12-19T08:00:35Z">
+        <test-method status="FAIL" signature="IntakePageTest(java.util.Hashtable)[pri:3, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="IntakePageTest" duration-ms="16" started-at="2018-01-05T09:50:32Z" data-provider="getData" finished-at="2018-01-05T09:50:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201712018785, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20171204000190, MLastName=Waltson, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
+                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201801000466, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20180104000479, MLastName=Clark, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.IntakePageTest.IntakePageTest(IntakePageTest.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IntakePageTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@731f8236]" name="quit" is-config="true" duration-ms="83" started-at="2017-12-19T08:00:35Z" finished-at="2017-12-19T08:00:35Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="quit" is-config="true" duration-ms="78" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
     </test> <!-- IntakePageTest -->
-    <test name="DemographicsTest" duration-ms="82806" started-at="2017-12-19T13:00:35Z" finished-at="2017-12-19T13:01:58Z">
+    <test name="DemographicsTest" duration-ms="453" started-at="2018-01-05T14:50:32Z" finished-at="2018-01-05T14:50:33Z">
       <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@3b2c72c2]" name="beforeTest" is-config="true" duration-ms="231" started-at="2017-12-19T08:00:35Z" finished-at="2017-12-19T08:00:35Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="beforeTest" is-config="true" duration-ms="266" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="DemographicsPageTest(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.DemographicsPageTest@3b2c72c2]" name="DemographicsPageTest" duration-ms="82407" started-at="2017-12-19T08:00:36Z" data-provider="getData" finished-at="2017-12-19T08:01:58Z">
+        <test-method status="FAIL" signature="DemographicsPageTest(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="DemographicsPageTest" duration-ms="0" started-at="2018-01-05T09:50:33Z" data-provider="getData" finished-at="2018-01-05T09:50:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018789, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000194, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
+                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201801000466, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20180104000479, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DemographicsPageTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@3b2c72c2]" name="init" is-config="true" duration-ms="0" started-at="2017-12-19T08:00:36Z" finished-at="2017-12-19T08:00:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@3b2c72c2]" name="quit" is-config="true" duration-ms="100" started-at="2017-12-19T08:01:58Z" finished-at="2017-12-19T08:01:58Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="quit" is-config="true" duration-ms="93" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
       </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
     </test> <!-- DemographicsTest -->
-    <test name="Cms_Eligibility_Test" duration-ms="55917" started-at="2017-12-19T13:01:58Z" finished-at="2017-12-19T13:02:54Z">
+    <test name="Cms_Eligibility_Test" duration-ms="438" started-at="2018-01-05T14:50:33Z" finished-at="2018-01-05T14:50:33Z">
       <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@51b7e5df]" name="beforeTest" is-config="true" duration-ms="313" started-at="2017-12-19T08:01:58Z" finished-at="2017-12-19T08:01:58Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@51b7e5df]" name="init" is-config="true" duration-ms="0" started-at="2017-12-19T08:01:58Z" finished-at="2017-12-19T08:01:58Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@51b7e5df]" name="Cms_Eligibility_Test" duration-ms="55407" started-at="2017-12-19T08:01:58Z" data-provider="getData" finished-at="2017-12-19T08:02:54Z">
+        <test-method status="FAIL" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="Cms_Eligibility_Test" duration-ms="0" started-at="2018-01-05T09:50:33Z" data-provider="getData" finished-at="2018-01-05T09:50:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=201712018789, ICDComments=ICD code added successfully., Browser=ie}]]>
+                <![CDATA[{Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, Henry, Runmode=Y, ICDCode=A0, MdApprovalComment=I am approving the ICD code , Insurance=CMS Only, Browser=ie}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.Cms_Eligibility_Test.Cms_Eligibility_Test(Cms_Eligibility_Test.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cms_Eligibility_Test -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@51b7e5df]" name="quit" is-config="true" duration-ms="81" started-at="2017-12-19T08:02:54Z" finished-at="2017-12-19T08:02:54Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="quit" is-config="true" duration-ms="94" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@51b7e5df]" name="closeBrowser" is-config="true" duration-ms="30" started-at="2017-12-19T08:02:54Z" finished-at="2017-12-19T08:02:54Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

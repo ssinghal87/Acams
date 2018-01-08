@@ -247,7 +247,7 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 		
-		ExtentTest t4 = test.createNode("Checkiing the CMS card Start Date and EndDates are correctly populated","MPI: - "+data.get("Mpi"));
+		ExtentTest t4 = test.createNode("Checking the CMS card Start Date and EndDates are correctly populated","MPI: - "+data.get("Mpi"));
 		try 
 		{
 			
@@ -433,6 +433,40 @@ public class CMS_Card_Test extends BaseTest {
 
 // **************************************************END***********************************************************************************************
 		
+				
+				
+				//********************************************************Ninth TEST CASE************************************************************************************
+				
+				ExtentTest t9 = test.createNode("Checking CMS card PDF ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+				try 
+				{	scrollTo("cmscardgeneratebutton_id", t8);
+				    verifyAlertPresentAndAlertText("CMS Card generated successfully.", t8);
+				    String  gridSfy = getIntegetText("sfygrid_xpath", t8);
+				    int gridSfyParse=Integer.valueOf(gridSfy);
+				    if(gridSfyParse==fiscalYear)
+				    {
+				    	t8.log(Status.PASS, "CMS Card is generated for the : - "+fiscalYear +"Fiscal Year");
+						reportPass("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
+				    }else{
+				      	t8.log(Status.FAIL, "CMS Card is not generated for the : - "+fiscalYear +"Fiscal Year.");
+						reportFailure("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
+				    }
+				    
+				    
+				    
+				    
+					
+				}
+				
+				catch (Exception e) 
+				{
+					t8.log(Status.FAIL,"t8 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+// **************************************************END***********************************************************************************************
+	
 	}
 	@BeforeMethod
 	public void init() {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">2 suites</span>
+      <span class="top-banner-font-1">2 suites, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-ACAMS_SUITE_ONE">
-              <span class="suite-name border-passed">ACAMS SUITE ONE</span>
+              <span class="suite-name border-failed">ACAMS SUITE ONE</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 4 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ACAMS_SUITE_ONE" class="hide-methods failed suite-ACAMS_SUITE_ONE"> (hide)</a> <!-- hide-methods failed suite-ACAMS_SUITE_ONE -->
+                      <a href="#" panel-name="suite-ACAMS_SUITE_ONE" class="show-methods failed suite-ACAMS_SUITE_ONE"> (show)</a> <!-- show-methods failed suite-ACAMS_SUITE_ONE -->
+                    </span>
+                    <div class="method-list-content failed suite-ACAMS_SUITE_ONE">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.Cms_Eligibility_Test" hash-for-method="Cms_Eligibility_Test({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, ...)">Cms_Eligibility_Test({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.DemographicsPageTest" hash-for-method="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicem...)">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicem...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.SaveAsReferral" hash-for-method="IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)">IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.IntakePageTest" hash-for-method="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFina...)">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFina...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ACAMS_SUITE_ONE -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,26 +129,6 @@
                       <a href="#" panel-name="suite-ACAMS_SUITE_ONE" class="show-methods passed suite-ACAMS_SUITE_ONE"> (show)</a> <!-- show-methods passed suite-ACAMS_SUITE_ONE -->
                     </span>
                     <div class="method-list-content passed suite-ACAMS_SUITE_ONE">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.Cms_Eligibility_Test" hash-for-method="Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)">Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.DemographicsPageTest" hash-for-method="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.SaveAsReferral" hash-for-method="IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)">IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.IntakePageTest" hash-for-method="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-ACAMS_SUITE_ONE" title="com.acams.ddf.testcases.LoginTest" hash-for-method="LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})">LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</a> <!-- method navigator-link -->
@@ -139,9 +148,53 @@
         <div panel-name="suite-ACAMS_SUITE" class="panel ACAMS_SUITE">
         </div> <!-- panel ACAMS_SUITE -->
         <div panel-name="suite-ACAMS_SUITE_ONE" class="panel ACAMS_SUITE_ONE">
-          <div class="suite-ACAMS_SUITE_ONE-class-passed">
+          <div class="suite-ACAMS_SUITE_ONE-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.Cms_Eligibility_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Cms_Eligibility_Test({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, ...)">
+                  </a> <!-- Cms_Eligibility_Test({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, ...) -->
+                  <span class="method-name">Cms_Eligibility_Test</span>
+                  <span class="parameters">({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, Henry, Runmode=Y, ICDCode=A0, MdApprovalComment=I am approving the ICD code , Insurance=CMS Only, Browser=ie})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.Cms_Eligibility_Test.Cms_Eligibility_Test(Cms_Eligibility_Test.java:104)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-failed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.IntakePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFina...)">
+                  </a> <!-- IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFina...) -->
+                  <span class="method-name">IntakePageTest</span>
+                  <span class="parameters">({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201801000466, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20180104000479, MLastName=Clark, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.IntakePageTest.IntakePageTest(IntakePageTest.java:111)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-failed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">com.acams.ddf.testcases.SaveAsReferral</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -150,11 +203,39 @@
                   <a name="IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)">
                   </a> <!-- IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...) -->
                   <span class="method-name">IntakePageTest</span>
-                  <span class="parameters">({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Waltson, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=John, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test})</span>
+                  <span class="parameters">({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Clark, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=Henry , MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.SaveAsReferral.IntakePageTest(SaveAsReferral.java:99)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-failed -->
+          <div class="suite-ACAMS_SUITE_ONE-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.acams.ddf.testcases.DemographicsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicem...)">
+                  </a> <!-- DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicem...) -->
+                  <span class="method-name">DemographicsPageTest</span>
+                  <span class="parameters">({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201801000466, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20180104000479, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:122)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ACAMS_SUITE_ONE-class-failed -->
           <div class="suite-ACAMS_SUITE_ONE-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -167,54 +248,6 @@
                   </a> <!-- LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie}) -->
                   <span class="method-name">LoginTest</span>
                   <span class="parameters">({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
-          <div class="suite-ACAMS_SUITE_ONE-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.acams.ddf.testcases.Cms_Eligibility_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)">
-                  </a> <!-- Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...) -->
-                  <span class="method-name">Cms_Eligibility_Test</span>
-                  <span class="parameters">({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=201712018789, ICDComments=ICD code added successfully., Browser=ie})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
-          <div class="suite-ACAMS_SUITE_ONE-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.acams.ddf.testcases.IntakePageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)">
-                  </a> <!-- IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...) -->
-                  <span class="method-name">IntakePageTest</span>
-                  <span class="parameters">({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201712018785, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20171204000190, MLastName=Waltson, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ACAMS_SUITE_ONE-class-passed -->
-          <div class="suite-ACAMS_SUITE_ONE-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.acams.ddf.testcases.DemographicsPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)">
-                  </a> <!-- DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...) -->
-                  <span class="method-name">DemographicsPageTest</span>
-                  <span class="parameters">({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201712018789, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20171204000194, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -364,30 +397,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'IntakePageTest')
-data.setCell(0, 2, 'com.acams.ddf.testcases.IntakePageTest')
-data.setCell(0, 3, 110298);
+data.setCell(0, 1, 'LoginTest')
+data.setCell(0, 2, 'com.acams.ddf.testcases.LoginTest')
+data.setCell(0, 3, 15578);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'IntakePageTest')
-data.setCell(1, 2, 'com.acams.ddf.testcases.SaveAsReferral')
-data.setCell(1, 3, 100893);
+data.setCell(1, 2, 'com.acams.ddf.testcases.IntakePageTest')
+data.setCell(1, 3, 16);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'DemographicsPageTest')
-data.setCell(2, 2, 'com.acams.ddf.testcases.DemographicsPageTest')
-data.setCell(2, 3, 82407);
+data.setCell(2, 1, 'IntakePageTest')
+data.setCell(2, 2, 'com.acams.ddf.testcases.SaveAsReferral')
+data.setCell(2, 3, 15);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Cms_Eligibility_Test')
-data.setCell(3, 2, 'com.acams.ddf.testcases.Cms_Eligibility_Test')
-data.setCell(3, 3, 55407);
+data.setCell(3, 1, 'DemographicsPageTest')
+data.setCell(3, 2, 'com.acams.ddf.testcases.DemographicsPageTest')
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'LoginTest')
-data.setCell(4, 2, 'com.acams.ddf.testcases.LoginTest')
-data.setCell(4, 3, 19894);
+data.setCell(4, 1, 'Cms_Eligibility_Test')
+data.setCell(4, 2, 'com.acams.ddf.testcases.Cms_Eligibility_Test')
+data.setCell(4, 3, 0);
 window.suiteTableData['ACAMS_SUITE_ONE']= { tableData: data, tableDiv: 'times-div-ACAMS_SUITE_ONE'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-ACAMS_SUITE_ONE">
               </div> <!-- times-div-ACAMS_SUITE_ONE -->
             </div> <!-- times-div -->
@@ -439,97 +472,105 @@ return data;
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">1143 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginTest({Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie})</span>
-                <span class="method-start">1144 ms</span>
+                <span class="method-start">1141 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">1141 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">21038 ms</span>
+                <span class="method-start">16734 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.acams.ddf.testcases.SaveAsReferral</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">21524 ms</span>
+                <span class="method-start">17141 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">IntakePageTest({Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 8...)</span>
-                <span class="method-start">21920 ms</span>
+                <span class="method-start">17547 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
-                <span class="method-start">21920 ms</span>
+                <span class="method-start">17547 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">122813 ms</span>
+                <span class="method-start">17594 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.acams.ddf.testcases.IntakePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">122929 ms</span>
+                <span class="method-start">17687 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Roles, James, FinalComment=IntakeFina...)</span>
-                <span class="method-start">123313 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">IntakePageTest({CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFina...)</span>
+                <span class="method-start">18000 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
-                <span class="method-start">123313 ms</span>
+                <span class="method-start">18000 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">233611 ms</span>
+                <span class="method-start">18016 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.acams.ddf.testcases.DemographicsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">233717 ms</span>
+                <span class="method-start">18109 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Waltson, John, Employer=ACRO, Occupation=Service...)</span>
-                <span class="method-start">234016 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">DemographicsPageTest({Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicem...)</span>
+                <span class="method-start">18469 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
-                <span class="method-start">234016 ms</span>
+                <span class="method-start">18469 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">316423 ms</span>
+                <span class="method-start">18469 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.acams.ddf.testcases.Cms_Eligibility_Test</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">316523 ms</span>
+                <span class="method-start">18578 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Cms_Eligibility_Test({ClientName=Waltson, John, Case=20171204000194, Insurance=CMS Only, ICDCode=A0, Runmode=Y, Mpi=20171...)</span>
-                <span class="method-start">316952 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Cms_Eligibility_Test({Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, ...)</span>
+                <span class="method-start">18906 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
-                <span class="method-start">316952 ms</span>
+                <span class="method-start">18906 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">372359 ms</span>
+                <span class="method-start">18922 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">372458 ms</span>
+                <span class="method-start">19016 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
