@@ -74,7 +74,7 @@ public class SaveAsReferral extends BaseTest {
 		try {
 			clickCmsProgram(t1);
 			wait(2);
-			clickCoordinates(t1);
+			removeDohPopUp(t1);
 			waitUntilElementIsClickable("globalsearch_xpath", t1);
 			type("globalsearch_xpath", "abc", t1);
 			click("globalsearchbutton_xpath", t1);
@@ -217,7 +217,7 @@ public class SaveAsReferral extends BaseTest {
 			waitUntilElementIsClickable("cmsprogram_xpath", t3);
 			click("cmsprogram_xpath", t5);
 			wait(2);
-			clickCoordinates(t5);
+			removeDohPopUp(t5);
 			scrollTo("newreferral_id", t5);
 			String Fname = data.get("FirstName").trim().toLowerCase();
 			String Lname = data.get("LastName").trim().toLowerCase();

@@ -1,130 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ACAMS SUITE ONE]">
-  <listeners>
-    <listener class-name="com.acams.ddf.util.RetryListenerClass"/>
-  </listeners>
-  <test name="SaveAsReferralTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.acams.ddf.testcases.IntakePageTest">
+      <class name="com.acams.ddf.testcases.RoughTesting">
         <methods>
           <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
-      <class name="com.acams.ddf.testcases.LoginTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.LoginTest -->
-      <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-          <include name="IntakePageTest" invocation-numbers="0 0 0"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
-      <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <methods>
           <include name="closeBrowser"/>
-          <include name="init"/>
+          <include name="Rough" invocation-numbers="0"/>
           <include name="quit"/>
-          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
+      </class> <!-- com.acams.ddf.testcases.RoughTesting -->
     </classes>
-  </test> <!-- SaveAsReferralTest(failed) -->
-  <test name="IntakePageTest(failed)">
-    <classes>
-      <class name="com.acams.ddf.testcases.IntakePageTest">
-        <methods>
-          <include name="init"/>
-          <include name="IntakePageTest" invocation-numbers="0 0 0"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
-      <class name="com.acams.ddf.testcases.LoginTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.LoginTest -->
-      <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
-      <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
-    </classes>
-  </test> <!-- IntakePageTest(failed) -->
-  <test name="Cms_Eligibility_Test(failed)">
-    <classes>
-      <class name="com.acams.ddf.testcases.IntakePageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
-      <class name="com.acams.ddf.testcases.LoginTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.LoginTest -->
-      <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
-      <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="Cms_Eligibility_Test" invocation-numbers="0 0 0"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
-    </classes>
-  </test> <!-- Cms_Eligibility_Test(failed) -->
-</suite> <!-- Failed suite [ACAMS SUITE ONE] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

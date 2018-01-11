@@ -339,6 +339,13 @@ public class BaseTest {
 		}
 
 	}
+	
+
+	        
+	
+	
+	
+	
 
 	// ********************************Validations// Functions**************************************************************************************************************************
 
@@ -528,7 +535,7 @@ public class BaseTest {
 
 	
 
-	public void clickCoordinates(ExtentTest testObject) throws AWTException {
+	public void removeDohPopUp(ExtentTest testObject) throws AWTException {
 		
 		
 		 boolean dohProgram=waitUntilElementPresent("popupdiv_id", testObject);
@@ -696,6 +703,24 @@ public class BaseTest {
 		}
 				
 		
+	}
+	
+	
+	public void clickCoordinates(int xcoordinate, int ycoordinate) 
+	
+	{
+		
+	  Robot bot = null;
+   	  try {
+   	   bot = new Robot();
+   	  } catch (Exception failed) {
+   	   System.err.println("Failed instantiating Robot: " + failed);
+   	  }
+   	  int mask = InputEvent.BUTTON1_DOWN_MASK;
+   	  bot.mouseMove(xcoordinate, ycoordinate);
+   	  wait(1);
+   	  bot.mousePress(mask);
+   	  bot.mouseRelease(mask);
 	}
 	
 	

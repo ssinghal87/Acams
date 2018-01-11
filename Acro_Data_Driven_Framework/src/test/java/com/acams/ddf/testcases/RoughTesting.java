@@ -1,8 +1,10 @@
 package com.acams.ddf.testcases;
 
 import java.awt.AWTException;
+import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,29 +15,8 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-//import org.apache.tools.ant.taskdefs.WaitFor;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -48,7 +29,7 @@ import com.acams.ddf.util.DataUtil;
 import com.acams.ddf.util.Xls_Reader;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.sun.glass.events.KeyEvent;
+
 
 public class RoughTesting extends BaseTest  {
 	
@@ -61,6 +42,7 @@ public class RoughTesting extends BaseTest  {
 	@Test(dataProvider="getData")
 	public void Rough(Hashtable<String,String> data) throws AWTException
 		// TODO Auto-generated method stub
+, IOException, InterruptedException
 		
  
 	{
@@ -78,54 +60,59 @@ public class RoughTesting extends BaseTest  {
 		
 		openBrowser(data.get("Browser"), t1);
 		navigate(prop.getProperty("appurl"), t1);
-		doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
+		doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 		clickCmsProgram(t1);
-		clickCoordinates(t1);
-		mouseHover("mdapprovalleftmenumousehover_xpath", t1);
-		click("mdapprovalpagelink_xpath", t1);
-		waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t1);
-		String mpiOnMdApprovalPage=driver.findElement(By.xpath(".//*[@id='body_gvMedicalDiagnosis']/tbody/tr[2]/td[3]")).getText().trim();
-		String mpiInExcelSheet=data.get("Mpi");
-		//mpiInExcelSheet.trim();
-		if(mpiOnMdApprovalPage.equals(mpiInExcelSheet)){
-			click("mdapprovalmpiactionbuttonclick_xpath", t1);
-			click("mdapprovalviewactioblink_id", t1);
-			type("mdapprovalcomments_id", data.get("MdApprovalComment"), t1);
-			click("mdapprovalsubmitbuton_id", t1);
-			verifyAlertPresentAndAlertText("Request approved successfully.", t1);
-			logOutCactus(t1);
-			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
-			clickCmsProgram(t1);
-			clickCoordinates(t1);
-			waitUntilElementPresent("globalsearch_xpath", t1);
-			type("globalsearch_xpath", data.get("Mpi"), t1);
-			click("globalsearchbutton_xpath", t1);
-			click("yespopupbutton_xpath", t1);
-			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);
-			clickEligibility(t1);
-			String icdRequestStatusAfterMdApproved=getLocatorText("mdRequeststatus_xpath", t1);
-			if(icdRequestStatusAfterMdApproved.equals("APR"))
-			{
-				t1.log(Status.PASS, "The Status of the ICD code is not equal to Approved");
-				reportPass("MCD Approval Test Case Passed ", t1);
-			}
-			else
-			{
-				
-			t1.log(Status.FAIL, "The Status of the ICD code is not equal to Approved");
-			reportFailure("MCD Approval Test Case Failed  ", t1);
-		     }
-			
-		}
-		else
-		{
-			t1.log(Status.FAIL, "MPI is not matching on the MD approval page");
-			reportFailure("MCD Approval Test Case Failed  ", t1);
-		}
-			
+		removeDohPopUp(t1);
+		
+		
+		waitUntilElementPresent("globalsearch_xpath", t1);
+		type("globalsearch_xpath", data.get("Mpi"), t1);
+		click("globalsearchbutton_xpath", t1);
+		click("yespopupbutton_xpath", t1);
+		waitUntilElementPresent("clickclientname_xpath", t1);
+		click("clickclientname_xpath", t1);
+		wait(3);
+		quickLinkIsPresent("cms", t1);
+		//wait(4);
+		clickCmsCard(t1);
+		scrollTo("cmscardactionbutton_xpath", t1);
+		click("cmscardactionbutton_xpath", t1);
+		click("cmscardprintlink_id", t1);
+		//waitUntilElementPresent("cmscardactionbutton_xpath", t1);
+		
+		wait(15);
+		
+	try{
+		Runtime.getRuntime().exec(System.getProperty("user.dir")+"//filedownload4.exe");
+	
+		
+		//Runtime.getRuntime().exec("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\filedownload3.exe", null, new File("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\"));
+		/*Process p = new Process();
+        p.StartInfo.FileName = Convert.ToString(ConfigurationManager.AppSettings["NBGBatchLocation"]);
+        p.Start();*/
+        
+       /* ProcessBuilder pb = new ProcessBuilder("", "", "");
+        pb.directory(new File("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\filedownload3.exe"));
+        Process p = pb.start();*/
+		
+		  /* Desktop desktop = Desktop.getDesktop();
 
+		    desktop.open(new File("filedownload3.exe"));*/
+
+	}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+		
+				
+	
+	
+		
+		
+	
+		
+	
 
 		}
 	

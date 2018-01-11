@@ -5,6 +5,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,16 +38,18 @@ public class test {
 	
 	static Xls_Reader xls = new Xls_Reader("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx");
 
-	public static void main(String[] args) throws ParseException, IOException {
-		
-		//"C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx"
+	public static void main(String[] args) throws ParseException, IOException, SQLException, ClassNotFoundException {
 		
 		
-		//String expectedPcpName=xls.getCellData("Data", "Insurance", 23);
-		String expectedPcpName=xls.getCellData("Data", 7, 24);
-
-		System.out.println(expectedPcpName);
 		
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("10.0.0.28","ACAMSDev", "ACAMSDev");
+		Statement st = conn.createStatement();
+		String sqlStr = "select * from cm.usermaster";
+		ResultSet rs = st.executeQuery(sqlStr);
+		while (rs.next()) {
+			System.out.println(rs.getString("name"));
+		}
 		
 		
 	}

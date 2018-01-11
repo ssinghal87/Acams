@@ -94,7 +94,7 @@ public class CMS_Card_Test extends BaseTest {
 			navigate(prop.getProperty("appurl"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
-			clickCoordinates(t1);
+			removeDohPopUp(t1);
 			
 			
 			waitUntilElementPresent("globalsearch_xpath", t1);

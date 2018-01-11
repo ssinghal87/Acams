@@ -89,7 +89,7 @@ public class IntakePageTest extends BaseTest {
 		    mouseHover("homeicon_xpath", t1);
 		    click("homeicon_xpath", t1);
 		    wait(3);
-			clickCoordinates(t1);
+		    removeDohPopUp(t1);
 			//clickCmsProgram(t1);
 			scrollTo("newreferral_id", t1);
 			getLocatorText("newreferral_id", t1);

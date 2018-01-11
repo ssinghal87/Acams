@@ -78,7 +78,7 @@ public class RoughTestingFile extends BaseTest {
 			navigate(prop.getProperty("appurl"), t1);
 			doLogin(prop.getProperty("adminuserid"), prop.getProperty("adminpsw"), t1);
 			clickCmsProgram(t1);
-			clickCoordinates(t1);
+			removeDohPopUp(t1);
 			/*waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
 			click("globalsearchbutton_xpath", t1);

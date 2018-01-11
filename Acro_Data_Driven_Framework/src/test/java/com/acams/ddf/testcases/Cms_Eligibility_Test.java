@@ -312,7 +312,7 @@ try{
 			logOutCactus(t6);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t6);
 			clickCmsProgram(t6);
-			clickCoordinates(t6);
+			removeDohPopUp(t6);
 			mouseHover("mdapprovalleftmenumousehover_xpath", t6);
 			click("mdapprovalpagelink_xpath", t6);
 			waitUntilElementPresent("listofMPIonmdapprovalpage_xpath", t6);
@@ -328,7 +328,7 @@ try{
 				logOutCactus(t6);
 				doLogin(prop.getProperty("ssusername"), prop.getProperty("sspassword"), t6);
 				clickCmsProgram(t6);
-				clickCoordinates(t6);
+				removeDohPopUp(t6);
 				waitUntilElementPresent("globalsearch_xpath", t6);
 				type("globalsearch_xpath", data.get("Mpi"), t6);
 				click("globalsearchbutton_xpath", t6);
