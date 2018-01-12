@@ -17,6 +17,8 @@ import java.util.List;
 
 
 
+
+
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -76,81 +78,19 @@ public class RoughTesting extends BaseTest  {
 		//wait(4);
 		clickCmsCard(t1);
 		scrollTo("cmscardactionbutton_xpath", t1);
-		click("cmscardactionbutton_xpath", t1);
+		/*click("cmscardactionbutton_xpath", t1);
 		click("cmscardprintlink_id", t1);
-		//waitUntilElementPresent("cmscardactionbutton_xpath", t1);
-		
-		wait(15);
-		
-	try{
-		Runtime.getRuntime().exec(System.getProperty("user.dir")+"//filedownload4.exe");
-	
-		
-		//Runtime.getRuntime().exec("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\filedownload3.exe", null, new File("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\"));
-		/*Process p = new Process();
-        p.StartInfo.FileName = Convert.ToString(ConfigurationManager.AppSettings["NBGBatchLocation"]);
-        p.Start();*/
-        
-       /* ProcessBuilder pb = new ProcessBuilder("", "", "");
-        pb.directory(new File("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\filedownload3.exe"));
-        Process p = pb.start();*/
-		
-		  /* Desktop desktop = Desktop.getDesktop();
-
-		    desktop.open(new File("filedownload3.exe"));*/
-
-	}
-	catch(Exception e)
-	{
-		e.printStackTrace();
-	}
-		
-				
-	
-	
+		wait(2);
+		*/
+		//scrollTo("sfygrid_xpath", t1);
+		ieFileDownloadAutoITFlow(t1);
 		
 		
-	
-		
-	
 
 		}
 	
 			
 		
-		//int rows=htmltable.findElement(By.tagName("tr")).getSize();
-	
-		
-
-		/*List<WebElement> rows=htmltable.findElements(By.tagName("tr"));
-	
-		for(int rnum=0;rnum<rows.size();rnum++)
-		{
-		List<WebElement> columns=rows.get(rnum).findElements(By.tagName("td"));
-
-		System.out.println("Number of columns:"+columns.size());
-		
-		
-
-		for(int cnum=0;cnum<columns.size();cnum++)
-		{
-		System.out.println(columns.get(cnum).getText());
-		}
-
-		}*/
-
-        
-        
-	  
-	    
-		
-		
-		
-		
-		/*WebElement listofMpi=driver.findElement(By.xpath(".//*[@id='body_gvMedicalDiagnosis']/tbody/tr/td[3]"));
-	    String allMpiList=listofMpi.getText();
-		System.out.println(allMpiList);*/
-	    
 	@BeforeMethod
 	public void init() {
 		softAssert = new SoftAssert();

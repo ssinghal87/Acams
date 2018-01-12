@@ -124,14 +124,14 @@ public class BaseTest {
 		
 	}
 	
-	@AfterSuite
+	/*@AfterSuite
 	public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}
+	}*/
 
 	
 	
@@ -721,6 +721,26 @@ public class BaseTest {
    	  wait(1);
    	  bot.mousePress(mask);
    	  bot.mouseRelease(mask);
+	}
+	
+	
+	public void ieFileDownloadAutoITFlow(ExtentTest testObject)
+	{
+		try{
+			wait(3);
+			testObject.log(Status.INFO, "Trying to download the file by clicking on the save button ");			
+			 String command = "C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload9.exe";
+			 ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", command);
+			 Process p = pb.start();
+			testObject.log(Status.INFO, "File downloaded successfully. ");
+
+
+			
+		}catch(Exception e)
+		{
+		testObject.log(Status.FAIL, "IE FILE DOWNLOAD FAILED.");
+		}
+		
 	}
 	
 	
