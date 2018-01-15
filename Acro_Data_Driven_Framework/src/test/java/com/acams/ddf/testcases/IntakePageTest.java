@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
@@ -23,9 +24,11 @@ import java.io.IOException;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Properties;
+
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.asserts.SoftAssert;
+
 import com.acams.ddf.base.BaseTest;
 import com.acams.ddf.util.DataUtil;
 import com.acams.ddf.util.ExtentManager;
@@ -41,7 +44,7 @@ public class IntakePageTest extends BaseTest {
 	Exception e;
 	String testCaseName = "IntakePageTest";
 	SoftAssert softAssert;
-	Xls_Reader xls;
+	Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"\\Acams_Suite_One.xlsx");
 	String killIEDriver = "taskkill /F /IM IEDriverServer.exe";
 	String killExcelProcess = "taskkill /F /IM EXCEL.EXE";
 
@@ -86,13 +89,54 @@ public class IntakePageTest extends BaseTest {
 		}
 
 		try {
+			
+			openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+		
+			clickCmsProgram(t1);
+		    removeDohPopUp(t1);
+
+		    
+		    
+		    
 		    mouseHover("homeicon_xpath", t1);
 		    click("homeicon_xpath", t1);
 		    wait(3);
 		    removeDohPopUp(t1);
 			//clickCmsProgram(t1);
 			scrollTo("newreferral_id", t1);
-			getLocatorText("newreferral_id", t1);
+
+			driver.findElement(By.xpath(prop.getProperty("clientreferralpage_xpath"))).click();
+			List<WebElement> referralClientName = driver.findElements(By.xpath(prop.getProperty("Clientreferralnamegrid_xpath")));
+			String Fname =xls.getCellData("Data", 9, 7);
+			String Lname = xls.getCellData("Data", 11, 7);
+			String expectedFullName = Lname + ", " + Fname;
+					System.out.println(referralClientName.size());
+					 for(int i=0;i<referralClientName.size();i++){
+						 
+							String clientName=referralClientName.get(i).getText().toString();
+							System.out.println(clientName);
+							
+							if(clientName.equals(expectedFullName))
+							{
+								//referralClientName.get(i).click();
+								String clientnamexpath1=".//*[@id='body_gvReferralClient_grdLnkClientName";
+								String	clientnamexpath2="_"+i+"']";
+								String finalXpath=clientnamexpath1+clientnamexpath2;
+								System.out.println(finalXpath);
+								driver.findElement(By.xpath(finalXpath)).click();
+								break;
+								
+							}
+							else{
+								continue;
+							}
+						 
+					 
+					 }
+			
+
 			click("newreferral_id", t1);
 			boolean compareURL = getURLAndCompare(
 					"https://testfhb-acams.acrocorp.com/QA/Shared/Intake/frm_Intake.aspx",

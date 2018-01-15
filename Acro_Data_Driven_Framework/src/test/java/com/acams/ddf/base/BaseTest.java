@@ -744,6 +744,31 @@ public class BaseTest {
 	}
 	
 	
+	public boolean checkFileExists(String filePath, ExtentTest testObject)
+	{
+		try{
+		File f = new File(filePath);
+        
+		if (f.exists())
+		{
+			testObject.log(Status.INFO, "This file does exist: -"+filePath);
+			return true;
+		}
+		      
+			else
+			{
+				testObject.log(Status.INFO, "This file does not exist: -"+filePath);
+				return true;			}
+		}catch(Exception e)
+		{
+			testObject.log(Status.INFO, "checkFileExists catch block executed");
+
+		}
+		return false;
+		
+	}
+	
+	
 	
 /////////////////////////////*****************************************************GENERIC FUNTIONS ENDS***************************************************************************////////////////////////////////////////////////
 	

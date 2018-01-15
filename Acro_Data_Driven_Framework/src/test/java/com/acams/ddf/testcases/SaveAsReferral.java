@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -30,6 +31,7 @@ public class SaveAsReferral extends BaseTest {
 	String testCaseName = "SaveAsReferral";
 	SoftAssert softAssert;
 	Xls_Reader xls;
+	
 
 	@BeforeTest
 	public void beforeTest() throws IOException, InterruptedException
@@ -72,6 +74,7 @@ public class SaveAsReferral extends BaseTest {
 			throw new SkipException("Skipping the test as runmode is N");
 		}
 		try {
+			
 			clickCmsProgram(t1);
 			wait(2);
 			removeDohPopUp(t1);
@@ -259,7 +262,39 @@ public class SaveAsReferral extends BaseTest {
 
 		try {
 			waitUntilElementIsClickable("newreferral_id", t6);
-			click("newreferral_id", t6);
+			
+
+			driver.findElement(By.xpath(prop.getProperty("clientreferralpage_xpath"))).click();
+			List<WebElement> referralClientName = driver.findElements(By.xpath(prop.getProperty("Clientreferralnamegrid_xpath")));
+			String Fname = data.get("FirstName").trim();
+			String Lname = data.get("LastName").trim();
+			String expectedFullName = Lname + ", " + Fname;
+					System.out.println(referralClientName.size());
+					 for(int i=0;i<referralClientName.size();i++){
+						 
+							String clientName=referralClientName.get(i).getText().toString();
+							System.out.println(clientName);
+							
+							if(clientName.equals(expectedFullName))
+							{
+								//referralClientName.get(i).click();
+								String clientnamexpath1=".//*[@id='body_gvReferralClient_grdLnkClientName";
+								String	clientnamexpath2="_"+i+"']";
+								String finalXpath=clientnamexpath1+clientnamexpath2;
+								System.out.println(finalXpath);
+								driver.findElement(By.xpath(finalXpath)).click();
+								break;
+								
+							}
+							else{
+								continue;
+							}
+						 
+					 
+					 }
+			
+
+			
 			waitUntilElementPresent("referralgrid_id", t6);
 			String referralgridtext = getWebTableText("referralgrid_id", t5);
 			test.log(Status.INFO,

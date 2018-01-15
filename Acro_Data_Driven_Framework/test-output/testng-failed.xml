@@ -6,7 +6,6 @@
       <class name="com.acams.ddf.testcases.RoughTesting">
         <methods>
           <include name="init"/>
-          <include name="closeBrowser"/>
           <include name="Rough" invocation-numbers="0"/>
           <include name="quit"/>
         </methods>

@@ -38,6 +38,12 @@
 </classes>
 </test>>
 
+<test name = "CMS_Card_Test" allow-return-values="true"> 
+<classes>
+<class name="com.acams.ddf.testcases.CMS_Card_Test"></class>
+</classes>
+</test>>
+
 
 
 </suite>

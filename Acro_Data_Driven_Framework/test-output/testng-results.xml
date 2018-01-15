@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="65263" started-at="2018-01-12T13:52:43Z" finished-at="2018-01-12T13:53:48Z">
+  <suite name="Default suite" duration-ms="5771381" started-at="2018-01-15T12:31:50Z" finished-at="2018-01-15T14:08:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="65263" started-at="2018-01-12T13:52:43Z" finished-at="2018-01-12T13:53:48Z">
+    <test name="Default test" duration-ms="5771381" started-at="2018-01-15T12:31:50Z" finished-at="2018-01-15T14:08:01Z">
       <class name="com.acams.ddf.testcases.RoughTesting">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2ddc8ecb]" name="init" is-config="true" duration-ms="16" started-at="2018-01-12T08:52:47Z" finished-at="2018-01-12T08:52:47Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@1e81f160]" name="init" is-config="true" duration-ms="15" started-at="2018-01-15T07:31:51Z" finished-at="2018-01-15T07:31:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="Rough(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2ddc8ecb]" name="Rough" duration-ms="60273" started-at="2018-01-12T08:52:47Z" data-provider="getData" finished-at="2018-01-12T08:53:48Z">
+        <test-method status="FAIL" signature="Rough(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@1e81f160]" name="Rough" duration-ms="5769743" started-at="2018-01-15T07:31:51Z" data-provider="getData" finished-at="2018-01-15T09:08:00Z">
           <params>
             <param index="0">
               <value>
@@ -19,10 +19,42 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.acams.ddf.testcases.RoughTesting.Rough(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Rough -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2ddc8ecb]" name="quit" is-config="true" duration-ms="892" started-at="2018-01-12T08:53:48Z" finished-at="2018-01-12T08:53:48Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@1e81f160]" name="quit" is-config="true" duration-ms="577" started-at="2018-01-15T09:08:00Z" finished-at="2018-01-15T09:08:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

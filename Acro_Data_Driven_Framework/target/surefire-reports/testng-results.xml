@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="5" passed="1">
+<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ACAMS SUITE" duration-ms="0" started-at="2018-01-05T14:50:33Z" finished-at="2018-01-05T14:50:33Z">
+  <suite name="ACAMS SUITE" duration-ms="0" started-at="2018-01-15T07:28:31Z" finished-at="2018-01-15T07:28:31Z">
     <groups>
     </groups>
   </suite> <!-- ACAMS SUITE -->
-  <suite name="ACAMS SUITE ONE" duration-ms="19016" started-at="2018-01-05T14:50:14Z" finished-at="2018-01-05T14:50:33Z">
+  <suite name="ACAMS SUITE ONE" duration-ms="257119" started-at="2018-01-15T07:24:13Z" finished-at="2018-01-15T07:28:31Z">
     <groups>
     </groups>
-    <test name="LoginTest" duration-ms="17125" started-at="2018-01-05T14:50:14Z" finished-at="2018-01-05T14:50:31Z">
+    <test name="LoginTest" duration-ms="14063" started-at="2018-01-15T07:24:13Z" finished-at="2018-01-15T07:24:28Z">
       <class name="com.acams.ddf.testcases.LoginTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="beforeTest" is-config="true" duration-ms="297" started-at="2018-01-05T09:50:14Z" finished-at="2018-01-05T09:50:15Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@525b461a]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-15T02:24:13Z" finished-at="2018-01-15T02:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:15Z" finished-at="2018-01-05T09:50:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="LoginTest" duration-ms="15578" started-at="2018-01-05T09:50:15Z" data-provider="getData" finished-at="2018-01-05T09:50:31Z">
+        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.LoginTest@525b461a]" name="LoginTest" duration-ms="12594" started-at="2018-01-15T02:24:15Z" data-provider="getData" finished-at="2018-01-15T02:24:27Z">
           <params>
             <param index="0">
               <value>
@@ -30,97 +26,84 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@58c1c010]" name="quit" is-config="true" duration-ms="391" started-at="2018-01-05T09:50:31Z" finished-at="2018-01-05T09:50:31Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@525b461a]" name="init" is-config="true" duration-ms="0" started-at="2018-01-15T02:24:15Z" finished-at="2018-01-15T02:24:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@525b461a]" name="quit" is-config="true" duration-ms="390" started-at="2018-01-15T02:24:27Z" finished-at="2018-01-15T02:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.LoginTest -->
     </test> <!-- LoginTest -->
-    <test name="SaveAsReferralTest" duration-ms="546" started-at="2018-01-05T14:50:31Z" finished-at="2018-01-05T14:50:32Z">
+    <test name="SaveAsReferralTest" duration-ms="121387" started-at="2018-01-15T07:24:28Z" finished-at="2018-01-15T07:26:29Z">
       <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-05T09:50:31Z" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@6b53e23f]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-15T02:24:28Z" finished-at="2018-01-15T02:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="IntakePageTest(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="IntakePageTest" duration-ms="15" started-at="2018-01-05T09:50:32Z" data-provider="getData" finished-at="2018-01-05T09:50:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Clark, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=Henry , MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
-	at com.acams.ddf.testcases.SaveAsReferral.IntakePageTest(SaveAsReferral.java:99)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- IntakePageTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@6b53e23f]" name="init" is-config="true" duration-ms="0" started-at="2018-01-15T02:24:28Z" finished-at="2018-01-15T02:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@64d2d351]" name="quit" is-config="true" duration-ms="93" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="IntakePageTest(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.SaveAsReferral@6b53e23f]" name="IntakePageTest" duration-ms="120918" started-at="2018-01-15T02:24:28Z" data-provider="getData" finished-at="2018-01-15T02:26:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Tailor, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Atkins, Cheryl, CCOutreachtime=100, FirstName=John, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@6b53e23f]" name="quit" is-config="true" duration-ms="94" started-at="2018-01-15T02:26:29Z" finished-at="2018-01-15T02:26:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
     </test> <!-- SaveAsReferralTest -->
-    <test name="IntakePageTest" duration-ms="407" started-at="2018-01-05T14:50:32Z" finished-at="2018-01-05T14:50:32Z">
+    <test name="IntakePageTest" duration-ms="73251" started-at="2018-01-15T07:26:29Z" finished-at="2018-01-15T07:27:42Z">
       <class name="com.acams.ddf.testcases.IntakePageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="beforeTest" is-config="true" duration-ms="235" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@971d0d8]" name="beforeTest" is-config="true" duration-ms="266" started-at="2018-01-15T02:26:29Z" finished-at="2018-01-15T02:26:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="IntakePageTest(java.util.Hashtable)[pri:3, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="IntakePageTest" duration-ms="16" started-at="2018-01-05T09:50:32Z" data-provider="getData" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@971d0d8]" name="init" is-config="true" duration-ms="0" started-at="2018-01-15T02:26:29Z" finished-at="2018-01-15T02:26:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="IntakePageTest(java.util.Hashtable)[pri:3, instance:com.acams.ddf.testcases.IntakePageTest@971d0d8]" name="IntakePageTest" duration-ms="72688" started-at="2018-01-15T02:26:29Z" data-provider="getData" finished-at="2018-01-15T02:27:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clark, Henry, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201801000466, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20180104000479, MLastName=Clark, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
+                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Acams, CMS, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201801000467, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20180104000480, MLastName=Tailor, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=999-99-9999, City=Alabama, FacilityRegion=NE}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error setting arguments for script
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{proxy=Proxy(), acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:30487/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=XP, setWindowRect=true, platform=XP}]
+Session ID: 6f506fc5-02f8-4c7d-9f60-e6eefa8f174e]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
-	at com.acams.ddf.testcases.IntakePageTest.IntakePageTest(IntakePageTest.java:111)
+              <![CDATA[java.lang.AssertionError: Error setting arguments for script
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{proxy=Proxy(), acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:30487/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=XP, setWindowRect=true, platform=XP}]
+Session ID: 6f506fc5-02f8-4c7d-9f60-e6eefa8f174e
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:769)
+	at com.acams.ddf.base.BaseTest.getElement(BaseTest.java:292)
+	at com.acams.ddf.base.BaseTest.getWebTableText(BaseTest.java:466)
+	at com.acams.ddf.testcases.IntakePageTest.IntakePageTest(IntakePageTest.java:179)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,39 +135,48 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IntakePageTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@51931956]" name="quit" is-config="true" duration-ms="78" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:32Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@971d0d8]" name="quit" is-config="true" duration-ms="156" started-at="2018-01-15T02:27:42Z" finished-at="2018-01-15T02:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
     </test> <!-- IntakePageTest -->
-    <test name="DemographicsTest" duration-ms="453" started-at="2018-01-05T14:50:32Z" finished-at="2018-01-05T14:50:33Z">
+    <test name="DemographicsTest" duration-ms="39782" started-at="2018-01-15T07:27:42Z" finished-at="2018-01-15T07:28:22Z">
       <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="beforeTest" is-config="true" duration-ms="266" started-at="2018-01-05T09:50:32Z" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@c8e4bb0]" name="beforeTest" is-config="true" duration-ms="375" started-at="2018-01-15T02:27:42Z" finished-at="2018-01-15T02:27:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="DemographicsPageTest(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="DemographicsPageTest" duration-ms="0" started-at="2018-01-05T09:50:33Z" data-provider="getData" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="FAIL" signature="DemographicsPageTest(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.DemographicsPageTest@c8e4bb0]" name="DemographicsPageTest" duration-ms="39047" started-at="2018-01-15T02:27:43Z" data-provider="getData" finished-at="2018-01-15T02:28:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Clark, Henry, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201801000466, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20180104000479, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
+                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Acams, CMS, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201801000467, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20180104000480, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: InternetExplorerDriver]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+              <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)
+	at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:217)
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:789)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:768)
 	at com.acams.ddf.testcases.DemographicsPageTest.DemographicsPageTest(DemographicsPageTest.java:122)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -215,45 +207,82 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:139)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:87)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 35 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 48 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DemographicsPageTest -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="quit" is-config="true" duration-ms="93" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@c8e4bb0]" name="init" is-config="true" duration-ms="0" started-at="2018-01-15T02:27:43Z" finished-at="2018-01-15T02:27:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@c8e4bb0]" name="quit" is-config="true" duration-ms="110" started-at="2018-01-15T02:28:22Z" finished-at="2018-01-15T02:28:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@6279cee3]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
       </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
     </test> <!-- DemographicsTest -->
-    <test name="Cms_Eligibility_Test" duration-ms="438" started-at="2018-01-05T14:50:33Z" finished-at="2018-01-05T14:50:33Z">
+    <test name="Cms_Eligibility_Test" duration-ms="8574" started-at="2018-01-15T07:28:22Z" finished-at="2018-01-15T07:28:31Z">
       <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@770c2e6b]" name="beforeTest" is-config="true" duration-ms="266" started-at="2018-01-15T02:28:22Z" finished-at="2018-01-15T02:28:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="init" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="Cms_Eligibility_Test" duration-ms="0" started-at="2018-01-05T09:50:33Z" data-provider="getData" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="FAIL" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@770c2e6b]" name="Cms_Eligibility_Test" duration-ms="8152" started-at="2018-01-15T02:28:22Z" data-provider="getData" finished-at="2018-01-15T02:28:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Mpi=201801000466, Case=20180104000479, ICDComments=ICD code added successfully., ClientName=Clark, Henry, Runmode=Y, ICDCode=A0, MdApprovalComment=I am approving the ICD code , Insurance=CMS Only, Browser=ie}]]>
+                <![CDATA[{Mpi=201801000467, Case=20180104000480, ICDComments=ICD code added successfully., ClientName=Acams, CMS, Runmode=Y, ICDCode=A0, MdApprovalComment=I am approving the ICD code , Insurance=CMS Only, Browser=ie}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: InternetExplorerDriver]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:744)
-	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:723)
+              <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '192.168.1.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)
+	at org.openqa.selenium.ie.InternetExplorerDriver.getScreenshotAs(InternetExplorerDriver.java:217)
+	at com.acams.ddf.base.BaseTest.takeScreenShot(BaseTest.java:789)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:768)
 	at com.acams.ddf.testcases.Cms_Eligibility_Test.Cms_Eligibility_Test(Cms_Eligibility_Test.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -284,20 +313,48 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:30487 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:139)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:87)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	... 35 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 48 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cms_Eligibility_Test -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="quit" is-config="true" duration-ms="94" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@770c2e6b]" name="init" is-config="true" duration-ms="0" started-at="2018-01-15T02:28:22Z" finished-at="2018-01-15T02:28:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@770c2e6b]" name="quit" is-config="true" duration-ms="78" started-at="2018-01-15T02:28:31Z" finished-at="2018-01-15T02:28:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@1a052a00]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-01-05T09:50:33Z" finished-at="2018-01-05T09:50:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
     </test> <!-- Cms_Eligibility_Test -->
   </suite> <!-- ACAMS SUITE ONE -->

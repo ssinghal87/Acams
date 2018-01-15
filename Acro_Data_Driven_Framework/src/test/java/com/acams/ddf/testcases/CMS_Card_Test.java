@@ -1,11 +1,15 @@
 package com.acams.ddf.testcases;
 
+import org.apache.pdfbox.pdfparser.PDFParser;
+import org.apache.pdfbox.util.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -80,7 +84,7 @@ public class CMS_Card_Test extends BaseTest {
     	test = rep.createTest("CMS Card Testing").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		ExtentTest t1 = test.createNode("CMS Card Testing","Checking that CMS Card quick link is enable for the MPI: - "+data.get("Mpi"));
 		t1.log(Status.INFO, "Starting the test LoginTest");
-		if (!DataUtil.isRunnable("LoginTest", xls)
+		if (!DataUtil.isRunnable("CMS_Card_Test", xls)
 				|| data.get("Runmode").equals("N")) 
 		{
 			t1.log(Status.SKIP, "Skipping the test as runmode is N");
@@ -406,6 +410,7 @@ public class CMS_Card_Test extends BaseTest {
 				ExtentTest t8 = test.createNode("Checking that CMS card for the current fiscal year is generated successfully","Checking the record in the grid is present for the  MPI: - "+data.get("Mpi"));
 				try 
 				{	scrollTo("cmscardgeneratebutton_id", t8);
+				click("cmscardgeneratebutton_id", t8);
 				    verifyAlertPresentAndAlertText("CMS Card generated successfully.", t8);
 				    String  gridSfy = getIntegetText("sfygrid_xpath", t8);
 				    int gridSfyParse=Integer.valueOf(gridSfy);
@@ -435,23 +440,22 @@ public class CMS_Card_Test extends BaseTest {
 		
 				
 				
-				//********************************************************Ninth TEST CASE************************************************************************************
+//********************************************************Ninth TEST CASE************************************************************************************
 				
-				ExtentTest t9 = test.createNode("Checking CMS card PDF ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+				ExtentTest t9 = test.createNode("Checking CMS card PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
 				try 
-				{	scrollTo("cmscardgeneratebutton_id", t8);
-				    verifyAlertPresentAndAlertText("CMS Card generated successfully.", t8);
-				    String  gridSfy = getIntegetText("sfygrid_xpath", t8);
-				    int gridSfyParse=Integer.valueOf(gridSfy);
-				    if(gridSfyParse==fiscalYear)
-				    {
-				    	t8.log(Status.PASS, "CMS Card is generated for the : - "+fiscalYear +"Fiscal Year");
-						reportPass("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
-				    }else{
-				      	t8.log(Status.FAIL, "CMS Card is not generated for the : - "+fiscalYear +"Fiscal Year.");
-						reportFailure("CMS Card is generated for the : - "+fiscalYear +"Fiscal Year", t7);
-				    }
-				    
+				{	
+					
+					scrollTo("cmscardactionbutton_xpath", t9);
+					ieFileDownloadAutoITFlow(t1);
+				   boolean cmsCardPdfFile= checkFileExists("E:\\CMSCardPDF\\CMSCARD.pdf", t9);
+				   if(cmsCardPdfFile=true)
+				   {
+					   t9.log(Status.PASS, "CMS card PDF is successfully downloaded");
+				   }else{
+					   t9.log(Status.FAIL, "CMS card PDF is not downloaded");
+
+				   }
 				    
 				    
 				    
@@ -460,13 +464,77 @@ public class CMS_Card_Test extends BaseTest {
 				
 				catch (Exception e) 
 				{
-					t8.log(Status.FAIL,"t8 test case catch block executed" + e.fillInStackTrace());
+					t9.log(Status.FAIL,"t9 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+// **************************************************END***********************************************************************************************
+
+				
+				
+//********************************************************Tenth TEST CASE************************************************************************************
+				
+				ExtentTest t10 = test.createNode("Checking the text of the CMS CARD PDF. ","Checking the Client name, Insurannce, CMS card dates"+data.get("Mpi"));
+				try 
+				{	
+					
+					wait(3);
+					 //create buffer reader object
+					 URL url = new URL("file:///E:/CMSCardPDF/CMSCARD.pdf");
+					 BufferedInputStream fileToParse = new BufferedInputStream(url.openStream());
+					 PDFParser pdfParser = new PDFParser(fileToParse);
+					 pdfParser.parse();
+
+					 //save pdf text into strong variable
+					 String pdftxt = new PDFTextStripper().getText(pdfParser.getPDDocument());
+					                 
+					 //close PDFParser object
+					pdfParser.getPDDocument().close();
+					// System.out.println(pdftxt);
+					
+					
+					//checking the client name 
+					String pdfclientname = data.get("ClientName");
+					
+					if (pdftxt.contains(pdfclientname)){
+						t10.log(Status.PASS, "Client name is correct in CMS CARD PDF");
+						//checking the CMS card Dates
+						if(pdftxt.contains("07/01/2017 to 06/30/2018."))
+						{
+							t10.log(Status.PASS, "CMS card Validity to and End dates are correct on the CMS CARD PDF");
+							// checking the insurance name 
+							if(pdftxt.contains("INSURANCE: CMS Only"))
+							{
+								t10.log(Status.PASS, "Insurance on the CMS card is correct");
+
+							}else{
+								t10.log(Status.FAIL, "Insurance on the CMS card is  not correct");
+
+							}
+
+						}else{
+							t10.log(Status.FAIL, "CMS card Validity to and End dates are not correct on the CMS CARD PDF");
+
+						}
+					}
+					
+					 else{
+							t10.log(Status.FAIL, "Client name is  not correct in CMS CARD PDF");
+					 }
+					 
+				}
+				
+				catch (Exception e) 
+				{
+					t10.log(Status.FAIL,"t10 test case catch block executed" + e.fillInStackTrace());
 				}
 
 
 
 // **************************************************END***********************************************************************************************
 	
+
 	}
 	@BeforeMethod
 	public void init() {
