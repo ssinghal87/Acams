@@ -24,6 +24,7 @@ import java.util.List;
 
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.SkipException;
@@ -50,9 +51,8 @@ public class RoughTesting extends BaseTest  {
 	Exception e;
 
 	@Test(dataProvider="getData")
-	public void Rough(Hashtable<String,String> data) throws AWTException
-		// TODO Auto-generated method stub
-, IOException, InterruptedException
+	public void Rough(Hashtable<String,String> data) throws Exception
+		// TODO Auto-generated method stub, 
 		
  
 	{
@@ -67,7 +67,7 @@ public class RoughTesting extends BaseTest  {
 			t1.log(Status.SKIP, "Skipping the test as runmode is N");
 			throw new SkipException("Skipping the test as runmode is N");
 		}
-		{
+		
 		
 		/*openBrowser(data.get("Browser"), t1);
 		navigate(prop.getProperty("appurl"), t1);
@@ -105,15 +105,56 @@ public class RoughTesting extends BaseTest  {
 							continue;
 						}*/
 		
-			String Fname =xls.getCellData("Data", 9, 7);
+			/*String Fname =xls.getCellData("Data", 9, 7);
 			String Lname = xls.getCellData("Data", 11, 7);
 			System.out.println(Fname);
-			System.out.println(Lname);
+			System.out.println(Lname);*/
+			
+			
+			/*openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+			clickCmsProgram(t1);
+			removeDohPopUp(t1);
+			type("globalsearch_xpath", data.get("Mpi"), t1);
+			click("globalsearchbutton_xpath", t1);
+			click("yespopupbutton_xpath", t1);
+			click("clickclientname_xpath", t1);
+//			quickLinkIsPresent("caseclosure", t1);
+			waitUntilElementPresent("clickdemographics_xpath", t1);
+			
+			
+			quickLinkIsPresent("pa309", t1);
+			clickPA309(t1);
+			scrollTo("pa309tablegrid_xpath", t1);
+			
+			
+			
+			//to catch all web elements into list
+		    List<WebElement> myList=driver.findElements(By.xpath("pa309tablegrid_xpath"));
+
+		    //myList contains all the web elements
+		    //if you want to get all elements text into array list
+		    List<String> all_pa309_elements_text=new ArrayList<>();
+
+		    for(int i=0; i<myList.size(); i++){
+
+		        //loading text of each element in to array all_elements_text
+		    	all_pa309_elements_text.add(myList.get(i).getText());
+
+		        //to print directly
+		        System.out.println(myList.get(i).getText());
+			
 				 
-				 }
+		    }
+		}*/
+			
+			execute("Tue_Jan_16_09_10_49_EST_2018.html");
+		}
+	
 		
 
-		}
+
 	
 			
 		

@@ -67,7 +67,8 @@ public class LoginTest extends BaseTest {
 
 			openBrowser(data.get("Browser"), t1);
 
-			navigate(System.getProperty("appurl"), t1);
+			//navigate(System.getProperty("appurl_QA"), t1);
+			navigate(prop.getProperty("appurl_qa"), t1);
 
 			clear("username_id", t1);
 

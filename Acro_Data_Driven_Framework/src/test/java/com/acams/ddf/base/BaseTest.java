@@ -29,6 +29,21 @@ import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -114,6 +129,7 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
+		 
 		//I got this solution on google and when I tried it worked for me.The problem was due to window resizing issue. When I maximized the window by driver.manage().window().maximize(); it always threw error. So I changed the window size and the problem that I was facing didn't exist anymore.
 
 		//Dimension d = new Dimension(1382,744);     
@@ -199,14 +215,15 @@ public class BaseTest {
 	}
 
 	// fn is to navigate
-	public void navigate(String urlKey, ExtentTest testObject) {
+	public void navigate(String uRL, ExtentTest testObject) {
 		testObject.log(Status.INFO,
 				"Navigating to " + prop.getProperty("appurl"));
 		
 
-		driver.get(prop.getProperty("appurl"));
+		//driver.get(prop.getProperty("appurl"));
+		driver.get(uRL);
 		testObject.log(Status.INFO,
-				"Successfully navigated to " + prop.getProperty("appurl"));
+				"Successfully navigated to " + uRL);
 	}
 
 	// fn is to click
@@ -1572,16 +1589,80 @@ public class BaseTest {
 	
 //********************************CMS Card PAGE METHODS ENDS HERE ************************************//////////////////////////////////
 
+	public void clickPA309(ExtentTest testObject){
+		
+		WebElement e =getElement("pa309quicklink_xpath", testObject);
+		e.click();
+	}
 	
 	
 	
+//Mail function 
+
+	 public  void execute(String reportFileName) throws Exception {
+
+		  final String username = "ssinghal@acrocorp.com";
+		  final String password = prop.getProperty("kjhgfgytuiiujhgffghj");
+
+		
+		  prop.put("mail.smtp.starttls.enable", "true");
+		 // STARTTLS/smtp.office365.com
+		  //mail.smtp.starttls.enable
+		  prop.put("mail.smtp.auth", "true");
+		  prop.put("mail.smtp.host", "smtp.office365.com");
+		  prop.put("mail.smtp.port", "587");
+
+		   Session session = Session.getInstance(prop,
+		    new javax.mail.Authenticator() {
+		     protected PasswordAuthentication getPasswordAuthentication() {
+		      return new PasswordAuthentication(username, password);
+		     }
+		    });
+
+		   try {
+
+		    Message message = new MimeMessage(session);
+		   message.setFrom(new InternetAddress("ssinghal@acrocorp.com"));
+		   message.setRecipients(Message.RecipientType.TO,
+		     //InternetAddress.parse("gkumar@acrocorp.com, ssinghal@acrocorp.com, ktyagi@acrocorp.com,skhan@acrocorp.com"));
+				     InternetAddress.parse("ssinghal@acrocorp.com"));
+
+		   message.setSubject("Selenium Automation Reports !");
+		  
+		  // message.setText(arg0);
+
+		    MimeBodyPart messageBodyPart = new MimeBodyPart();
+		    messageBodyPart.setText("Hello,"+ "\n\n Please find the Automation Report Attached");
+
+		    Multipart multipart = new MimeMultipart();
+
+		    messageBodyPart = new MimeBodyPart();
+		   String file = "E:\\Testreports\\";
+		   //E:\\Testreports\\Tue_Jan_16_09_10_49_EST_2018.html
+		   String fileName = reportFileName;
+		   DataSource source = new FileDataSource(file + fileName);
+		   messageBodyPart.setDataHandler(new DataHandler(source));
+		   messageBodyPart.setFileName(fileName);
+		   multipart.addBodyPart(messageBodyPart);
+
+		    message.setContent(multipart);
+		   System.out.println("Sending");
+		   Transport.send(message);
+		   System.out.println("Done");
+		  } catch (MessagingException e) {
+		   throw new RuntimeException(e);
+		  }
+		 }
 	
+
+		
 	
-	
+	 
 	
 	
 	
 ////////////////////////////////////////////**************************************************END APPLICATION SPECIFIC FUNTIONS******************************************************************************************************************************
 }
+
 
 

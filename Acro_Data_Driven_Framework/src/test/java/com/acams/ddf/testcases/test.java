@@ -41,66 +41,37 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
-
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+ 
 import com.acams.ddf.util.Xls_Reader;
+import com.sun.xml.internal.fastinfoset.sax.Properties;
 
 public class test {
 	
+	  Properties prop;
 	static Xls_Reader xls = new Xls_Reader("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx");
 
 	public static void main(String[] args) throws ParseException, IOException, SQLException, ClassNotFoundException {
 		
 		
 		
-		
-		     
-		File f = new File("E:\\CMSCardPDF\\CMSCARD.pdf");
-
-		if (f.exists())
-		System.out.println("This file does exist");
-		      
-		else
-		System.out.println("This file does not exist");
-		
-		
+	 
+	}
 	
-         
-		 //create buffer reader object
-		 URL url = new URL("file:///E:/CMSCardPDF/CMSCARD.pdf");
-		 BufferedInputStream fileToParse = new BufferedInputStream(url.openStream());
-		 PDFParser pdfParser = new PDFParser(fileToParse);
-		 pdfParser.parse();
 
-		 //save pdf text into strong variable
-		 String pdftxt = new PDFTextStripper().getText(pdfParser.getPDDocument());
-		                 
-		 //close PDFParser object
-		pdfParser.getPDDocument().close();
-		// System.out.println(pdftxt);
-		
-		
-		//checking the client name 
-		
-		
-		if (pdftxt.contains("07/01/2017 to 06/30/2018."))
-			 
-			 System.out.println("pass");
-		 else{
-			 System.out.println("Dates are not correct ");
-		 }
-		 
-		 // checking the dates 
-		 if (pdftxt.contains("07/01/2017 to 06/30/2018."))
-			 
-			 System.out.println("pass");
-		 else{
-			 System.out.println("Dates are not correct ");
-		 }
-		 
-		 
-;
-		
-		
 	}
 	
 
@@ -108,6 +79,6 @@ public class test {
 	
 
 	
-}
+
 
 
