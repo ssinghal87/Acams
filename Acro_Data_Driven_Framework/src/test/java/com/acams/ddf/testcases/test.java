@@ -41,6 +41,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
+
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -56,6 +57,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
  
+
 import com.acams.ddf.util.Xls_Reader;
 import com.sun.xml.internal.fastinfoset.sax.Properties;
 
@@ -65,9 +67,29 @@ public class test {
 	static Xls_Reader xls = new Xls_Reader("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx");
 
 	public static void main(String[] args) throws ParseException, IOException, SQLException, ClassNotFoundException {
-		
-		
-		
+		LocalDate localDate = LocalDate.now();
+		int year=localDate.getYear();
+	    String currentYear=String.valueOf(year);
+	     
+	    // System.out.println("The current year in String format is  : - "+currentYear);
+	     
+	    
+	     int actualMonth =localDate.getMonthValue();
+	     {
+	    	 if(actualMonth<6)
+	         {
+	            year =year-1;
+	         }else{
+	        	 
+	         }
+	     
+	     }
+	    LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
+	    LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
+	    LocalDate currentDate =LocalDate.now();
+	    int fiscalYear=cmsEndDate.getYear();
+
+
 	 
 	}
 	

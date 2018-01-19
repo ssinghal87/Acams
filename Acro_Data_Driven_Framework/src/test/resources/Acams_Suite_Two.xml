@@ -6,35 +6,16 @@
  
  </listeners>
 
-<test name = "LoginTest" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.LoginTest"></class>
-</classes>
-</test>
-
-
-<test name = "SaveAsReferralTest" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.SaveAsReferral"></class>
-</classes>
-</test>
-
-<test name = "IntakePageTest" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.IntakePageTest"></class>
-</classes>
-</test>
-
-<test name = "DemographicsTest" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.DemographicsPageTest"></class>
-</classes>
-</test>>
-
 
 <test name = "Cms_Eligibility_Test" allow-return-values="true"> 
 <classes>
 <class name="com.acams.ddf.testcases.Cms_Eligibility_Test"></class>
+</classes>
+</test>>
+
+<test name = "CMS_Card_Test" allow-return-values="true"> 
+<classes>
+<class name="com.acams.ddf.testcases.CMS_Card_Test"></class>
 </classes>
 </test>>
 

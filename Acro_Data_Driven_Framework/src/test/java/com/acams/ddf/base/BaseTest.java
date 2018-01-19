@@ -140,14 +140,14 @@ public class BaseTest {
 		
 	}
 	
-	/*@AfterSuite
+	@AfterSuite
 	public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}*/
+	}
 
 	
 	

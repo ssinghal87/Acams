@@ -90,21 +90,20 @@ public class IntakePageTest extends BaseTest {
 
 		try {
 			
-			openBrowser(data.get("Browser"), t1);
-			navigate(prop.getProperty("appurl"), t1);
-			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
-		
-			clickCmsProgram(t1);
-		    removeDohPopUp(t1);
+			//openBrowser(data.get("Browser"), t1);
+			//navigate(prop.getProperty("appurl_qa"), t1);
+			//doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+			//clickCmsProgram(t1);
+			//removeDohPopUp(t1);
 
 		    
 		    
 		    
-		    mouseHover("homeicon_xpath", t1);
-		    click("homeicon_xpath", t1);
-		    wait(3);
-		    removeDohPopUp(t1);
-			//clickCmsProgram(t1);
+		   mouseHover("homeicon_xpath", t1);
+		   click("homeicon_xpath", t1);
+		   wait(3);
+		   removeDohPopUp(t1);
+		//clickCmsProgram(t1);
 			scrollTo("newreferral_id", t1);
 
 			driver.findElement(By.xpath(prop.getProperty("clientreferralpage_xpath"))).click();
@@ -137,7 +136,7 @@ public class IntakePageTest extends BaseTest {
 					 }
 			
 
-			click("newreferral_id", t1);
+			//click("newreferral_id", t1);
 			boolean compareURL = getURLAndCompare(
 					"https://testfhb-acams.acrocorp.com/QA/Shared/Intake/frm_Intake.aspx",
 					t1);

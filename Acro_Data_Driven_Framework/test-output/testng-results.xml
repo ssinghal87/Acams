@@ -2,31 +2,39 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9059" started-at="2018-01-17T14:00:40Z" finished-at="2018-01-17T14:00:49Z">
+  <suite name="Default suite" duration-ms="105501" started-at="2018-01-19T14:47:16Z" finished-at="2018-01-19T14:49:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9059" started-at="2018-01-17T14:00:40Z" finished-at="2018-01-17T14:00:49Z">
-      <class name="com.acams.ddf.testcases.RoughTesting">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2a265ea9]" name="init" is-config="true" duration-ms="8" started-at="2018-01-17T09:00:40Z" finished-at="2018-01-17T09:00:40Z">
+    <test name="Default test" duration-ms="105501" started-at="2018-01-19T14:47:16Z" finished-at="2018-01-19T14:49:02Z">
+      <class name="com.acams.ddf.testcases.CMS_Card_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@76b1e9b8]" name="beforeTest" is-config="true" duration-ms="297" started-at="2018-01-19T09:47:16Z" finished-at="2018-01-19T09:47:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="Rough(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2a265ea9]" name="Rough" duration-ms="8380" started-at="2018-01-17T09:00:40Z" data-provider="getData" finished-at="2018-01-17T09:00:48Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.CMS_Card_Test@76b1e9b8]" name="CMS_Card_Test" duration-ms="104533" started-at="2018-01-19T09:47:17Z" data-provider="getData" finished-at="2018-01-19T09:49:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Acams, CMS, Case=20180104000480, FirstName=John, LastName=Tailor, Runmode=Y, Mpi=201801000467, Browser=ie}]]>
+                <![CDATA[{ClientName=Morathan, James, Case=20180104001066, Runmode=Y, Mpi=201801000977, Browser=ie}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rough -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@2a265ea9]" name="quit" is-config="true" duration-ms="460" started-at="2018-01-17T09:00:48Z" finished-at="2018-01-17T09:00:49Z">
+        </test-method> <!-- CMS_Card_Test -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@76b1e9b8]" name="init" is-config="true" duration-ms="0" started-at="2018-01-19T09:47:17Z" finished-at="2018-01-19T09:47:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@76b1e9b8]" name="quit" is-config="true" duration-ms="484" started-at="2018-01-19T09:49:01Z" finished-at="2018-01-19T09:49:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.acams.ddf.testcases.RoughTesting -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@76b1e9b8]" name="closeBrowser" is-config="true" duration-ms="32" started-at="2018-01-19T09:49:02Z" finished-at="2018-01-19T09:49:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
