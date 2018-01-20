@@ -6,96 +6,22 @@
   </listeners>
   <test name="Cms_Eligibility_Test(failed)">
     <classes>
-      <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="Cms_Eligibility_Test" invocation-numbers="0"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
-      <class name="com.acams.ddf.testcases.IntakePageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
-      <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
-      <class name="com.acams.ddf.testcases.LoginTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.LoginTest -->
       <class name="com.acams.ddf.testcases.CMS_Card_Test">
         <methods>
+          <include name="closeBrowser"/>
           <include name="beforeTest"/>
           <include name="init"/>
           <include name="quit"/>
         </methods>
       </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
+      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="Cms_Eligibility_Test" invocation-numbers="0 0 0"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
     </classes>
   </test> <!-- Cms_Eligibility_Test(failed) -->
-  <test name="CMS_Card_Test(failed)">
-    <classes>
-      <class name="com.acams.ddf.testcases.DemographicsPageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
-      <class name="com.acams.ddf.testcases.IntakePageTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
-      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
-      <class name="com.acams.ddf.testcases.CMS_Card_Test">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="init"/>
-          <include name="CMS_Card_Test" invocation-numbers="0"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
-      <class name="com.acams.ddf.testcases.SaveAsReferral">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
-      <class name="com.acams.ddf.testcases.LoginTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.LoginTest -->
-    </classes>
-  </test> <!-- CMS_Card_Test(failed) -->
 </suite> <!-- Failed suite [ACAMS SUITE ONE] -->

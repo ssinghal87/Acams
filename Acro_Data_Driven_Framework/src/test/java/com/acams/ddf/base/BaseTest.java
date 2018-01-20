@@ -1,28 +1,18 @@
 package com.acams.ddf.base;
 
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-
 import java.awt.AWTException;
 import java.awt.Desktop;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
@@ -32,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -53,9 +42,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -67,22 +54,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
 
 import com.acams.ddf.util.ExtentManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.configuration.Config;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.sun.glass.events.KeyEvent;
 
 public class BaseTest {
@@ -746,7 +724,7 @@ public class BaseTest {
 		try{
 			wait(3);
 			testObject.log(Status.INFO, "Trying to download the file by clicking on the save button ");			
-			 String command = "C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload9.exe";
+			 String command = "C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload11.exe";
 			 ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", command);
 			 Process p = pb.start();
 			testObject.log(Status.INFO, "File downloaded successfully. ");
@@ -779,6 +757,30 @@ public class BaseTest {
 		}catch(Exception e)
 		{
 			testObject.log(Status.INFO, "checkFileExists catch block executed");
+
+		}
+		return false;
+		
+	}
+	
+	public boolean checkFileIsDeleted(String filePath, ExtentTest testObject)
+	{
+		try{
+		File f = new File(filePath);
+        
+		if (f.delete())
+		{
+			testObject.log(Status.INFO, "This file is deleted successfully: -"+filePath);
+			return true;
+		}
+		      
+			else
+			{
+				testObject.log(Status.INFO, "This is not deleted successfully: -"+filePath);
+				return true;			}
+		}catch(Exception e)
+		{
+			testObject.log(Status.INFO, "checkFileIsDeleted catch block executed");
 
 		}
 		return false;

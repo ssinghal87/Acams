@@ -90,11 +90,11 @@ public class IntakePageTest extends BaseTest {
 
 		try {
 			
-			//openBrowser(data.get("Browser"), t1);
-			//navigate(prop.getProperty("appurl_qa"), t1);
-			//doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
-			//clickCmsProgram(t1);
-			//removeDohPopUp(t1);
+			openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl_qa"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+			clickCmsProgram(t1);
+			removeDohPopUp(t1);
 
 		    
 		    

@@ -37,9 +37,9 @@ public class CMS_Card_Test extends BaseTest {
 	SoftAssert softAssert;
 	Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"\\Acams_Suite_One.xlsx");
 	Exception e;
-	public  LocalDate localDate = LocalDate.now();
-	public  int year=localDate.getYear();
-    public  String currentYear=String.valueOf(year);
+	  LocalDate localDate = LocalDate.now();
+	  int year=localDate.getYear();
+      String currentYear=String.valueOf(year);
      
     // System.out.println("The current year in String format is  : - "+currentYear);
      
@@ -54,10 +54,10 @@ public class CMS_Card_Test extends BaseTest {
          }
      
      }
-    public  LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
-    public   LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
-    public  LocalDate currentDate =LocalDate.now();
-    public  int fiscalYear=cmsEndDate.getYear();
+      LocalDate cmsStartDate = LocalDate.of(year, 7, 01);
+       LocalDate cmsEndDate = LocalDate.of(year+1, 6, 30);
+      LocalDate currentDate =LocalDate.now();
+      int fiscalYear=cmsEndDate.getYear();
 
 	
     
@@ -95,11 +95,11 @@ public class CMS_Card_Test extends BaseTest {
 		{
 			
 		
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
-			removeDohPopUp(t1);
+			removeDohPopUp(t1);*/
 			
 			waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
@@ -448,7 +448,8 @@ public class CMS_Card_Test extends BaseTest {
 					
 					scrollTo("cmscardactionbutton_xpath", t9);
 					ieFileDownloadAutoITFlow(t1);
-				   boolean cmsCardPdfFile= checkFileExists("E:\\CMSCardPDF\\CMSCARD.pdf", t9);
+					wait(12);
+				   boolean cmsCardPdfFile= checkFileExists("E:\\CMSCardPDF\\CMSCARD.pdf",t9);
 				   if(cmsCardPdfFile=true)
 				   {
 					   t9.log(Status.PASS, "CMS card PDF is successfully downloaded");
@@ -522,6 +523,9 @@ public class CMS_Card_Test extends BaseTest {
 					 else{
 							t10.log(Status.FAIL, "Client name is  not correct in CMS CARD PDF");
 					 }
+					
+					
+					checkFileIsDeleted("E:\\CMSCardPDF\\CMSCARD.pdf", t10);
 					 
 				}
 				
@@ -635,6 +639,12 @@ public class CMS_Card_Test extends BaseTest {
 		{
 			rep.flush();
 		}
+		
+		//checkFileIsDeleted("", testObject)
+		
+		
+		
+		
 	}
 
 	@DataProvider
