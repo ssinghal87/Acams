@@ -24,6 +24,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.Locale;
 
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.io.RandomAccessRead;
@@ -60,24 +61,36 @@ import javax.mail.internet.MimeMultipart;
 
 
 
+
+
+
 import jdk.internal.org.objectweb.asm.util.CheckFieldAdapter;
 
 import com.acams.ddf.base.BaseTest;
 import com.acams.ddf.util.Xls_Reader;
 import com.sun.xml.internal.fastinfoset.sax.Properties;
 
-public class test extends  BaseTest{
+public class test {
 	
 	  Properties prop;
 	static Xls_Reader xls = new Xls_Reader("C:\\Users\\ssinghal\\git\\selenium projects\\Acams\\Acro_Data_Driven_Framework\\Acams_Suite_One.xlsx");
 
 	public static void main(String[] args) throws ParseException, IOException, SQLException, ClassNotFoundException {
 		
+	 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		String date = "07/01/2018";
+		//convert String to LocalDate
+		LocalDate localDate = LocalDate.parse(date,formatter);
+		System.out.println(localDate);
 		
-
 		
+		
+		
+		
+		
+			
 
-	 
+	
 	}
 	
 

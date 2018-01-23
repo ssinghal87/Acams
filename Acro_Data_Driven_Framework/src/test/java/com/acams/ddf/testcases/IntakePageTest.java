@@ -90,11 +90,11 @@ public class IntakePageTest extends BaseTest {
 
 		try {
 			
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
-			removeDohPopUp(t1);
+			removeDohPopUp(t1);*/
 
 		    
 		    
@@ -170,9 +170,9 @@ public class IntakePageTest extends BaseTest {
 			waitUntilElementIsClickable("clickintake_xpath", t2);
 			clickIntake(t2);
 
-			waitUntilElementPresent("intakesubmit_id", t2);
+			/*waitUntilElementPresent("intakesubmit_id", t2);
 			click("intakesubmit_id", t2);
-			alertPresentAndGetText(t2);
+			alertPresentAndGetText(t2);*/
 		} catch (Exception e) {
 			t2.log(Status.FAIL,
 					"t2 catch block executed" + e.fillInStackTrace());

@@ -86,6 +86,13 @@ public class DemographicsPageTest extends BaseTest {
 
 		try {
 			
+			/*openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl_qa"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+			clickCmsProgram(t1);
+			removeDohPopUp(t1);*/
+			
+			
 			type("globalsearch_xpath", data.get("Mpi"), t1);
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
