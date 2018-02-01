@@ -81,13 +81,14 @@ public class Cms_Eligibility_Test extends BaseTest {
 			clickCmsProgram(t1);
 			removeDohPopUp(t1);*/
 			
-			waitUntilElementPresent("globalsearch_xpath", t1);
+			/*waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);
+			waitUntilElementPresent("clickeligibility_xpath", t1);*/
+			scrollTo("clickeligibility_xpath", t1);
 			clickEligibility(t1);
 			boolean eligibilityPageCheck = isElementPresent(
 					"Eligibilitypagecheck_xpath", t1);
@@ -332,6 +333,7 @@ try{
 				type("mdapprovalcomments_id", data.get("MdApprovalComment"), t6);
 				click("mdapprovalsubmitbuton_id", t6);
 				verifyAlertPresentAndAlertText("Request approved successfully.", t6);
+				wait(1);
 				logOutCactus(t6);
 				doLogin(prop.getProperty("ssusername"), prop.getProperty("sspassword"), t6);
 				clickCmsProgram(t6);

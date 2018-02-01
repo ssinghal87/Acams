@@ -119,13 +119,13 @@ public class BaseTest {
 	}
 	
 	@AfterSuite
-	public void closeBrowser(){
+	/*public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}
+	}*/
 
 	
 	
@@ -719,12 +719,14 @@ public class BaseTest {
 	}
 	
 	
-	public void ieFileDownloadAutoITFlow(ExtentTest testObject)
+	public void invokeAutoItScript(String autoItFilePath, ExtentTest testObject)
 	{
 		try{
 			wait(3);
 			testObject.log(Status.INFO, "Trying to download the file by clicking on the save button ");			
-			 String command = "C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload11.exe";
+			 //String command = "C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload11.exe";
+			 String command = autoItFilePath;
+
 			 ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", command);
 			 Process p = pb.start();
 			testObject.log(Status.INFO, "File downloaded successfully. ");
@@ -1589,7 +1591,9 @@ public class BaseTest {
 	
 	
 	
-//********************************CMS Card PAGE METHODS ENDS HERE ************************************//////////////////////////////////
+	
+	
+//********************************PA309 Card PAGE METHODS ENDS HERE ************************************//////////////////////////////////
 
 	public void clickPA309(ExtentTest testObject){
 		

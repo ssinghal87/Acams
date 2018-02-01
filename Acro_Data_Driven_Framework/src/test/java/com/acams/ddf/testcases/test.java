@@ -77,11 +77,9 @@ public class test {
 
 	public static void main(String[] args) throws ParseException, IOException, SQLException, ClassNotFoundException {
 		
-	 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-		String date = "07/01/2018";
-		//convert String to LocalDate
-		LocalDate localDate = LocalDate.parse(date,formatter);
-		System.out.println(localDate);
+
+		
+		
 		
 		
 		

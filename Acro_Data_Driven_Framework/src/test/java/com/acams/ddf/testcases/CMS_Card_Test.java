@@ -99,7 +99,7 @@ public class CMS_Card_Test extends BaseTest {
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
-			removeDohPopUp(t1);*/
+			removeDohPopUp(t1);
 			
 			waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
@@ -107,7 +107,7 @@ public class CMS_Card_Test extends BaseTest {
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);
+			waitUntilElementPresent("clickeligibility_xpath", t1);*/
 			clickEligibility(t1);
 			
 			selectHippaConsent("yes", t1);
@@ -444,7 +444,7 @@ public class CMS_Card_Test extends BaseTest {
 				ExtentTest t9 = test.createNode("Checking CMS card PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
 				try 
 				{	
-					openBrowser(data.get("Browser"), t9);
+					/*openBrowser(data.get("Browser"), t9);
 					navigate(prop.getProperty("appurl_qa"), t9);
 					doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t9);
 					clickCmsProgram(t9);
@@ -456,13 +456,13 @@ public class CMS_Card_Test extends BaseTest {
 					click("yespopupbutton_xpath", t9);
 					waitUntilElementPresent("clickclientname_xpath", t9);
 					click("clickclientname_xpath", t9);
-					wait(3);
+					wait(3);*/
 					
-					quickLinkIsPresent("cmscard", t9);
-					clickCmsCard(t9);
+					//quickLinkIsPresent("cmscard", t9);
+					//clickCmsCard(t9);
 					
 					scrollTo("cmscardactionbutton_xpath", t9);
-					ieFileDownloadAutoITFlow(t9);
+					invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/filedownload11.exe",t9);
 					wait(12);
 				   boolean cmsCardPdfFile= checkFileExists("E:\\CMSCardPDF\\CMSCARD.pdf",t9);
 				   if(cmsCardPdfFile=true)

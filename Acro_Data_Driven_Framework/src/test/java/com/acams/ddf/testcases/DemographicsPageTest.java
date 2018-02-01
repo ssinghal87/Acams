@@ -93,13 +93,13 @@ public class DemographicsPageTest extends BaseTest {
 			removeDohPopUp(t1);*/
 			
 			
-			type("globalsearch_xpath", data.get("Mpi"), t1);
+			/*type("globalsearch_xpath", data.get("Mpi"), t1);
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
 //			quickLinkIsPresent("caseclosure", t1);
-			waitUntilElementPresent("clickdemographics_xpath", t1);
+			waitUntilElementPresent("clickdemographics_xpath", t1);*/
 			clickDemographics(t1);
 			// click("clickdemographics_xpath", t1);
 
