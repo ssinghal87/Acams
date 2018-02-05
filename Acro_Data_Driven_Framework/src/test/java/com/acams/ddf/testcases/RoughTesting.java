@@ -121,32 +121,20 @@ public class RoughTesting extends BaseTest  {
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
 			waitUntilElementPresent("clickeligibility_xpath", t1);
-			wait(3);
-			//clickEligibility(t1);
 			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t1);
 			if(pa309QuickLinkEnable==true)
 			{
-				clickPA309(t1);
-				scrollTo("pa309actionbuttonlink_xpath", t1);
+				clickPA309(t9);
+				wait(3);
+				scrollTo("pa309actionbuttonlink_xpath", t9);
 			}
 			
-		   wait(2);
-		   invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/pa309_Auto_IT_Script_1.exe",t1);
-		   wait(10);
-		   String name=data.get("ClientName");
-		   String fileName1= name.replaceAll(",", "");
-		   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t1);
-		   String finalFileName=fileName1+" "+"-"+PAnumber+".pdf";
-		   
-		   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName,t1);
-		   if(pa309PdfFile=true)
-		   {
-			   t1.log(Status.PASS, "PA 309  PDF is successfully downloaded");
-		   }else{
-			   t1.log(Status.FAIL, "PA 309 PDF is not downloaded");
-
-		   }
 			
+		
+			
+			
+			
+
 		}
 		
 		catch (Exception e) 

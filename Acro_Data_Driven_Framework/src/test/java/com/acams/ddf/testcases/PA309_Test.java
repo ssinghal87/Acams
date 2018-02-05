@@ -90,9 +90,10 @@ public class PA309_Test extends BaseTest {
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
 			waitUntilElementPresent("clickeligibility_xpath", t1);
-			wait(1);/*
+			wait(1);*/
 			//clickEligibility(t1);*/
-			
+			wait(2);
+			scrollTo("quicklinkicon_xpath", t1);
 			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t1);
 			if(pa309QuickLinkEnable==true)
 			{
@@ -332,12 +333,12 @@ public class PA309_Test extends BaseTest {
 					
 					scrollTo("pa309actionbuttonlink_xpath", t7);
 					wait(2);
-					invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/pa309_Auto_IT_Script_1.exe",t7);
-					wait(10);
+					invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/PA309_Final.exe",t7);
+					wait(14);
 				   String name=data.get("ClientName");
 				   String fileName1= name.replaceAll(",", "");
 				   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
-				   String finalFileName=fileName1+" "+"-"+PAnumber+".pdf";
+				   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
 				   
 				   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName,t7);
 				   if(pa309PdfFile=true)

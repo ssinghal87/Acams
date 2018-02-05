@@ -46,7 +46,7 @@
 
 <test name = "PA 309_Test" allow-return-values="true"> 
 <classes>
-<class name="com.acams.ddf.testcases.CMS_Card_Test"></class>
+<class name="com.acams.ddf.testcases.PA309_Test"></class>
 </classes>
 </test>>
 
