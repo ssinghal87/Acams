@@ -2,31 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59042" started-at="2018-02-01T12:58:43Z" finished-at="2018-02-01T12:59:42Z">
+  <suite name="Default suite" duration-ms="324930" started-at="2018-02-06T10:47:57Z" finished-at="2018-02-06T10:53:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59042" started-at="2018-02-01T12:58:43Z" finished-at="2018-02-01T12:59:42Z">
-      <class name="com.acams.ddf.testcases.RoughTesting">
-        <test-method status="PASS" signature="Rough(java.util.Hashtable)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@17f62e33]" name="Rough" duration-ms="58402" started-at="2018-02-01T07:58:43Z" data-provider="getData" finished-at="2018-02-01T07:59:42Z">
+    <test name="Default test" duration-ms="324930" started-at="2018-02-06T10:47:57Z" finished-at="2018-02-06T10:53:22Z">
+      <class name="com.acams.ddf.testcases.PA309_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="beforeTest" is-config="true" duration-ms="371" started-at="2018-02-06T05:47:57Z" finished-at="2018-02-06T05:47:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="init" is-config="true" duration-ms="0" started-at="2018-02-06T05:47:58Z" finished-at="2018-02-06T05:47:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="PA309_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="PA309_Test" duration-ms="323704" started-at="2018-02-06T05:47:58Z" data-provider="getData" finished-at="2018-02-06T05:53:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Gonzalwis, Janis, Case=20180104000480, FirstName=John, LastName=Tailor, Runmode=Y, Mpi=201802002664, Browser=ie}]]>
+                <![CDATA[{ClientName=Gonzalvis, Janis, Case=20180204000014, Insurance Name=, Runmode=Y, ProviderName=180 MEDICAL INC, Mpi=201801002639, FinalComments=PA309 created, Browser=ie}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rough -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@17f62e33]" name="init" is-config="true" duration-ms="0" started-at="2018-02-01T07:58:43Z" finished-at="2018-02-01T07:58:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.RoughTesting@17f62e33]" name="quit" is-config="true" duration-ms="406" started-at="2018-02-01T07:59:42Z" finished-at="2018-02-01T07:59:42Z">
+        </test-method> <!-- PA309_Test -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="quit" is-config="true" duration-ms="544" started-at="2018-02-06T05:53:22Z" finished-at="2018-02-06T05:53:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="FAIL" signature="runApplication(java.lang.String)[pri:0, instance:com.acams.ddf.testcases.RoughTesting@17f62e33]" name="runApplication" is-config="true" duration-ms="0" started-at="2018-02-01T07:59:42Z" finished-at="2018-02-01T07:59:42Z">
+        <test-method status="FAIL" signature="runApplication(java.lang.String)[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="runApplication" is-config="true" duration-ms="0" started-at="2018-02-06T05:53:22Z" finished-at="2018-02-06T05:53:22Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
@@ -60,7 +64,7 @@ For more information on native dependency injection please refer to http://testn
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runApplication -->
-      </class> <!-- com.acams.ddf.testcases.RoughTesting -->
+      </class> <!-- com.acams.ddf.testcases.PA309_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

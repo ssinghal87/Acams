@@ -1,10 +1,14 @@
 package com.acams.ddf.testcases;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Hashtable;
 
+import org.apache.pdfbox.pdfparser.PDFParser;
+import org.apache.pdfbox.util.PDFTextStripper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
@@ -24,6 +28,7 @@ import com.aventstack.extentreports.Status;
 
 public class PA309_Test extends BaseTest {
 
+	
 	SoftAssert softAssert;
 	Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"\\Acams_Suite_One.xlsx");
 	Exception e;
@@ -77,7 +82,7 @@ public class PA309_Test extends BaseTest {
 
 		try 
 		{
-			/*openBrowser(data.get("Browser"), t1);
+			openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -90,7 +95,7 @@ public class PA309_Test extends BaseTest {
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
 			waitUntilElementPresent("clickeligibility_xpath", t1);
-			wait(1);*/
+			wait(1);
 			//clickEligibility(t1);*/
 			wait(2);
 			scrollTo("quicklinkicon_xpath", t1);
@@ -340,7 +345,7 @@ public class PA309_Test extends BaseTest {
 				   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
 				   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
 				   
-				   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName,t7);
+				   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName+".pdf",t7);
 				   if(pa309PdfFile=true)
 				   {
 					   t7.log(Status.PASS, "PA 309  PDF is successfully downloaded");
@@ -358,6 +363,83 @@ public class PA309_Test extends BaseTest {
 				{
 					t7.log(Status.FAIL,"t7 test case catch block executed" + e.fillInStackTrace());
 				}
+				
+				
+				
+				
+				ExtentTest t8 = test.createNode("Checking the text of the PA 309 PDF. ","Checking the Client name, Insurannce, PA 309 dates"+data.get("Mpi"));
+				try 
+				{	
+					
+					wait(3);
+					 //create buffer reader object
+					   String name=data.get("ClientName");
+					   String fileName1= name.replaceAll(",", "");
+					   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
+					   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
+					   
+					   
+					   
+					 //E:\CMSCardPDF\Gonzalwis  Janis -4518020022.pdf
+					 URL url = new URL("file:///E:/CMSCardPDF/"+finalFileName);
+					 BufferedInputStream fileToParse = new BufferedInputStream(url.openStream());
+					 PDFParser pdfParser = new PDFParser(fileToParse);
+					 pdfParser.parse();
+
+					 //save pdf text into strong variable
+					 String pdftxt = new PDFTextStripper().getText(pdfParser.getPDDocument());
+					 String newPdfTxt=pdftxt.toLowerCase();
+					                 
+					 //close PDFParser object
+					pdfParser.getPDDocument().close();
+					// System.out.println(pdftxt);
+					
+					
+					//checking the client name 
+					String pdfclientname = data.get("ClientName").toLowerCase();
+					
+					if (newPdfTxt.contains(pdfclientname)){
+					
+						t8.log(Status.PASS, "Client name is correct in PA 309 PDF");
+						//checking the CMS card Dates
+						String paNumber=getLocatorText("pa309gridPAnumber_xpath", t8);
+						if(newPdfTxt.contains(paNumber))
+						{
+							t8.log(Status.PASS, "PA309 number is matching");
+							// checking the insurance name 
+							if(newPdfTxt.contains("INSURANCE : CMS Only"))
+							{
+								t8.log(Status.PASS, "Insurance on the PA309 is correct");
+
+							}else{
+								t8.log(Status.FAIL, "Insurance on the PA309 is  not correct");
+
+							}
+
+						}else{
+							t8.log(Status.FAIL, "PA309 number is not matching");
+
+						}
+					}
+					
+					 else{
+							t8.log(Status.FAIL, "Client name is  not correct in PA309 PDF");
+					 }
+					
+					
+					//checkFileIsDeleted("E:\\CMSCardPDF\\CMSCARD.pdf", t8);
+					 
+				}
+				
+				catch (Exception e) 
+				{
+					t8.log(Status.FAIL,"t10 test case catch block executed" + e.fillInStackTrace());
+				}
+
+
+
+				
+
 	}
 	@BeforeMethod
 	public void init() {

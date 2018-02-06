@@ -95,7 +95,7 @@ public class CMS_Card_Test extends BaseTest {
 		{
 			
 		
-			/*openBrowser(data.get("Browser"), t1);
+			openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -107,7 +107,7 @@ public class CMS_Card_Test extends BaseTest {
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);*/
+			waitUntilElementPresent("clickeligibility_xpath", t1);
 			clickEligibility(t1);
 			
 			selectHippaConsent("yes", t1);

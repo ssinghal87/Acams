@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [ACAMS SUITE ONE]">
+  <listeners>
+    <listener class-name="com.acams.ddf.util.RetryListenerClass"/>
+  </listeners>
+  <test name="DemographicsTest(failed)">
     <classes>
+      <class name="com.acams.ddf.testcases.DemographicsPageTest">
+        <methods>
+          <include name="init"/>
+          <include name="DemographicsPageTest" invocation-numbers="0 0 0"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
+      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
+      <class name="com.acams.ddf.testcases.SaveAsReferral">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
+      <class name="com.acams.ddf.testcases.IntakePageTest">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
+      <class name="com.acams.ddf.testcases.CMS_Card_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="init"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
+      <class name="com.acams.ddf.testcases.LoginTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.LoginTest -->
       <class name="com.acams.ddf.testcases.PA309_Test">
         <methods>
-          <include name="closeBrowser"/>
           <include name="quit"/>
-          <include name="PA309_Test" invocation-numbers="0"/>
           <include name="beforeTest"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.acams.ddf.testcases.PA309_Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- DemographicsTest(failed) -->
+</suite> <!-- Failed suite [ACAMS SUITE ONE] -->

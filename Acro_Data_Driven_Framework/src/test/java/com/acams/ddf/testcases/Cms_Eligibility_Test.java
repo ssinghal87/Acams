@@ -332,6 +332,7 @@ try{
 				click("mdapprovalviewactioblink_id", t6);
 				type("mdapprovalcomments_id", data.get("MdApprovalComment"), t6);
 				click("mdapprovalsubmitbuton_id", t6);
+				wait(1);
 				verifyAlertPresentAndAlertText("Request approved successfully.", t6);
 				wait(1);
 				logOutCactus(t6);
