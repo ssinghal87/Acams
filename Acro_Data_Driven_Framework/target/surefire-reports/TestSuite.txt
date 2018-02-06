@@ -1,12 +1,58 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 631.526 sec <<< FAILURE! - in TestSuite
-CMS_Card_Test(com.acams.ddf.testcases.CMS_Card_Test)  Time elapsed: 83.229 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/apache/pdfbox/pdfparser/PDFParser
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at com.acams.ddf.testcases.CMS_Card_Test.CMS_Card_Test(CMS_Card_Test.java:487)
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 774.829 sec <<< FAILURE! - in TestSuite
+Cms_Eligibility_Test(com.acams.ddf.testcases.Cms_Eligibility_Test)  Time elapsed: 116.446 sec  <<< FAILURE!
+java.lang.AssertionError: Alert is not present
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:815)
+	at com.acams.ddf.base.BaseTest.verifyAlertPresentAndAlertText(BaseTest.java:1067)
+	at com.acams.ddf.testcases.Cms_Eligibility_Test.Cms_Eligibility_Test(Cms_Eligibility_Test.java:335)
+
+CMS_Card_Test(com.acams.ddf.testcases.CMS_Card_Test)  Time elapsed: 162.916 sec  <<< FAILURE!
+java.lang.AssertionError: Unable to find element with xpath == .//*[@id='lnkEligibility']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'ACROLAP15', ip: '10.0.4.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{proxy=Proxy(), acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0, ie.ensureCleanSession=false, elementScrollBehavior=0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:21944/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000, ignoreProtectedModeSettings=false}, timeouts={implicit=0, pageLoad=300000, script=30000}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=XP, setWindowRect=true, platform=XP}]
+Session ID: 8ba5584b-563a-48f1-814b-8ad3ae781215
+*** Element info: {Using=xpath, value=.//*[@id='lnkEligibility']}
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:815)
+	at com.acams.ddf.base.BaseTest.getElement(BaseTest.java:287)
+	at com.acams.ddf.base.BaseTest.clickEligibility(BaseTest.java:1528)
+	at com.acams.ddf.testcases.CMS_Card_Test.CMS_Card_Test(CMS_Card_Test.java:111)
+
+PA309_Test(com.acams.ddf.testcases.PA309_Test)  Time elapsed: 45.788 sec  <<< FAILURE!
+java.lang.AssertionError: PA309 quick link is not enable
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.acams.ddf.base.BaseTest.reportFailure(BaseTest.java:815)
+	at com.acams.ddf.testcases.PA309_Test.PA309_Test(PA309_Test.java:111)
+
+runApplication(com.acams.ddf.testcases.PA309_Test)  Time elapsed: 45.851 sec  <<< FAILURE!
+org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a AfterSuite annotated runApplication.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:244)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:458)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:203)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 
