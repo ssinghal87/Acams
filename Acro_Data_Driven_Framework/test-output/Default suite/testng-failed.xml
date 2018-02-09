@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.acams.ddf.testcases.PA309_Test">
+      <class name="com.acams.ddf.testcases.ATCTest">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="quit"/>
-          <include name="PA309_Test" invocation-numbers="0"/>
           <include name="beforeTest"/>
+          <include name="quit"/>
           <include name="init"/>
+          <include name="CMS_Card_Test" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.acams.ddf.testcases.PA309_Test -->
+      </class> <!-- com.acams.ddf.testcases.ATCTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

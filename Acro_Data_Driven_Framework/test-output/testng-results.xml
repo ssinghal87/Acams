@@ -1,36 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="324930" started-at="2018-02-06T10:47:57Z" finished-at="2018-02-06T10:53:22Z">
+  <suite name="ACAMS SUITE ONE" duration-ms="853269" started-at="2018-02-09T10:54:54Z" finished-at="2018-02-09T11:09:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="324930" started-at="2018-02-06T10:47:57Z" finished-at="2018-02-06T10:53:22Z">
-      <class name="com.acams.ddf.testcases.PA309_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="beforeTest" is-config="true" duration-ms="371" started-at="2018-02-06T05:47:57Z" finished-at="2018-02-06T05:47:58Z">
+    <test name="LoginTest" duration-ms="25182" started-at="2018-02-09T10:54:54Z" finished-at="2018-02-09T10:55:19Z">
+      <class name="com.acams.ddf.testcases.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.LoginTest@647fd8ce]" name="beforeTest" is-config="true" duration-ms="390" started-at="2018-02-09T05:54:54Z" finished-at="2018-02-09T05:54:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="init" is-config="true" duration-ms="0" started-at="2018-02-06T05:47:58Z" finished-at="2018-02-06T05:47:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="PA309_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="PA309_Test" duration-ms="323704" started-at="2018-02-06T05:47:58Z" data-provider="getData" finished-at="2018-02-06T05:53:22Z">
+        <test-method status="PASS" signature="LoginTest(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.LoginTest@647fd8ce]" name="LoginTest" duration-ms="23870" started-at="2018-02-09T05:54:55Z" data-provider="getData" finished-at="2018-02-09T05:55:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Gonzalvis, Janis, Case=20180204000014, Insurance Name=, Runmode=Y, ProviderName=180 MEDICAL INC, Mpi=201801002639, FinalComments=PA309 created, Browser=ie}]]>
+                <![CDATA[{Username=greg.bergman, ExpectedResult=Y, Password=1234, Runmode=Y, Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.LoginTest@647fd8ce]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T05:54:55Z" finished-at="2018-02-09T05:54:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.LoginTest@647fd8ce]" name="quit" is-config="true" duration-ms="672" started-at="2018-02-09T05:55:19Z" finished-at="2018-02-09T05:55:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.LoginTest -->
+    </test> <!-- LoginTest -->
+    <test name="SaveAsReferralTest" duration-ms="161819" started-at="2018-02-09T10:55:19Z" finished-at="2018-02-09T10:58:01Z">
+      <class name="com.acams.ddf.testcases.SaveAsReferral">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@794cb805]" name="beforeTest" is-config="true" duration-ms="312" started-at="2018-02-09T05:55:19Z" finished-at="2018-02-09T05:55:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="IntakePageTest(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.SaveAsReferral@794cb805]" name="IntakePageTest" duration-ms="161223" started-at="2018-02-09T05:55:20Z" data-provider="getData" finished-at="2018-02-09T05:58:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, AddressType2=Billing, Zip=12345.0, SourceAddress= 751 Golden Eagle Trail Chaparral NM 88081  , TypeOfContact=Secondary Contact, MiddleName=, AtcComments=Test Referral ATC, Runmode=Y, SourceName=Liliana Lopez , LastName=Jane, ReferralDate=10/30/2017, ReferralFinalComments=Add Referral Final Comments Test, Cc/clerk=CC - Bergman, Greg, CCOutreachtime=100, FirstName=Jackie, MCO=Molina, SourceType=Other, AddressType=Mailing, Address2=B address1, SourcePhone=(575)-639-3074, Address1=M address1, SourceContactPerson=Source Contact Person Test}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@794cb805]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T05:55:20Z" finished-at="2018-02-09T05:55:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.SaveAsReferral@794cb805]" name="quit" is-config="true" duration-ms="188" started-at="2018-02-09T05:58:01Z" finished-at="2018-02-09T05:58:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
+    </test> <!-- SaveAsReferralTest -->
+    <test name="IntakePageTest" duration-ms="158711" started-at="2018-02-09T10:58:01Z" finished-at="2018-02-09T11:00:40Z">
+      <class name="com.acams.ddf.testcases.IntakePageTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@202b0582]" name="beforeTest" is-config="true" duration-ms="312" started-at="2018-02-09T05:58:01Z" finished-at="2018-02-09T05:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="IntakePageTest(java.util.Hashtable)[pri:3, instance:com.acams.ddf.testcases.IntakePageTest@202b0582]" name="IntakePageTest" duration-ms="158100" started-at="2018-02-09T05:58:02Z" data-provider="getData" finished-at="2018-02-09T06:00:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{CommPhone=(222)-222-2222, Browser=ie, Gender=Male, ClientName=Clarkss, Andy, FinalComment=IntakeFinalComments, AddressType2=Billing, Zip=12345.0, County=Catron, Country=USA, RelationshipStatus=Mother, PhoneExt=22222.0, Dob=07/23/2000, MPhoneExt=22222.0, Race=Asian, Ethnicity=Hispanic or Latino, Mpi=201802002676, Mdob=03/25/1982, State=New Mexico, Runmode=Y, CommunicationType=Mobile, Mphone='(222)-222-2222, Case=20180204000014, MLastName=Clarkss, ReferralClientName=, MFirstName=Jessica, MCO=Molina, AddressType=Mailing, Address2=B address1, Address1=M address1, Email=Mother@Email.com, Memail=Mother@Email.com, MSSN=678-90-8765, City=Alabama, FacilityRegion=NE}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IntakePageTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@202b0582]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T05:58:02Z" finished-at="2018-02-09T05:58:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.IntakePageTest@202b0582]" name="quit" is-config="true" duration-ms="109" started-at="2018-02-09T06:00:40Z" finished-at="2018-02-09T06:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
+    </test> <!-- IntakePageTest -->
+    <test name="DemographicsTest" duration-ms="101829" started-at="2018-02-09T11:00:40Z" finished-at="2018-02-09T11:02:22Z">
+      <class name="com.acams.ddf.testcases.DemographicsPageTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@74e28667]" name="beforeTest" is-config="true" duration-ms="297" started-at="2018-02-09T06:00:40Z" finished-at="2018-02-09T06:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="DemographicsPageTest(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.DemographicsPageTest@74e28667]" name="DemographicsPageTest" duration-ms="101381" started-at="2018-02-09T06:00:40Z" data-provider="getData" finished-at="2018-02-09T06:02:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Browser=ie, PharmacyName=Test Pharmacy, ClientName=Jane, Jackie, Employer=ACRO, Occupation=Servicemen, ELastName=, PCPClinicName=PCPClinicName, EducationCompleted=Associates Degree, EmployementStatus=Full Time, Runmode=Y, Mpi=201802002684, PCPFirstName=PCPFirstName, DemoFinalComments=Demogrpahics Final Comments Test, Case=20180204000025, PCPLastName=PCPLastName, EmploymentRelationshipstatus=Mother, EFirstName=, FamilyEducationRelationshipStatus=Mother}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemographicsPageTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@74e28667]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T06:00:40Z" finished-at="2018-02-09T06:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.DemographicsPageTest@74e28667]" name="quit" is-config="true" duration-ms="109" started-at="2018-02-09T06:02:22Z" finished-at="2018-02-09T06:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
+    </test> <!-- DemographicsTest -->
+    <test name="Cms_Eligibility_Test" duration-ms="172529" started-at="2018-02-09T11:02:22Z" finished-at="2018-02-09T11:05:14Z">
+      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@3a7442c7]" name="beforeTest" is-config="true" duration-ms="328" started-at="2018-02-09T06:02:22Z" finished-at="2018-02-09T06:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@3a7442c7]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T06:02:22Z" finished-at="2018-02-09T06:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Cms_Eligibility_Test(java.util.Hashtable)[pri:4, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@3a7442c7]" name="Cms_Eligibility_Test" duration-ms="172044" started-at="2018-02-09T06:02:22Z" data-provider="getData" finished-at="2018-02-09T06:05:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Mpi=201802002684, Case=20180204000025, ICDComments=ICD code added successfully., ClientName=Jane, Jackie, Runmode=Y, ICDCode=A0, MdApprovalComment=I am approving the ICD code , Insurance=CMS Only, Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cms_Eligibility_Test -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Cms_Eligibility_Test@3a7442c7]" name="quit" is-config="true" duration-ms="110" started-at="2018-02-09T06:05:14Z" finished-at="2018-02-09T06:05:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
+    </test> <!-- Cms_Eligibility_Test -->
+    <test name="CMS_Card_Test" duration-ms="129159" started-at="2018-02-09T11:05:14Z" finished-at="2018-02-09T11:07:24Z">
+      <class name="com.acams.ddf.testcases.CMS_Card_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@2b40ff9c]" name="beforeTest" is-config="true" duration-ms="359" started-at="2018-02-09T06:05:14Z" finished-at="2018-02-09T06:05:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.CMS_Card_Test@2b40ff9c]" name="CMS_Card_Test" duration-ms="128622" started-at="2018-02-09T06:05:15Z" data-provider="getData" finished-at="2018-02-09T06:07:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ClientName=Jane, Jackie, Case=20180204000025, Runmode=Y, Mpi=201802002684, Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CMS_Card_Test -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@2b40ff9c]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T06:05:15Z" finished-at="2018-02-09T06:05:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.CMS_Card_Test@2b40ff9c]" name="quit" is-config="true" duration-ms="109" started-at="2018-02-09T06:07:23Z" finished-at="2018-02-09T06:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
+    </test> <!-- CMS_Card_Test -->
+    <test name="PA 309_Test" duration-ms="103883" started-at="2018-02-09T11:07:24Z" finished-at="2018-02-09T11:09:07Z">
+      <class name="com.acams.ddf.testcases.PA309_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@65987993]" name="beforeTest" is-config="true" duration-ms="328" started-at="2018-02-09T06:07:24Z" finished-at="2018-02-09T06:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="PA309_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.PA309_Test@65987993]" name="PA309_Test" duration-ms="103424" started-at="2018-02-09T06:07:24Z" data-provider="getData" finished-at="2018-02-09T06:09:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ClientName=Jane, Jackie, Case=20180204000025, Insurance Name=, Runmode=Y, ProviderName=180 MEDICAL INC, Mpi=201802002684, FinalComments=PA309 created, Browser=ie}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PA309_Test -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="quit" is-config="true" duration-ms="544" started-at="2018-02-06T05:53:22Z" finished-at="2018-02-06T05:53:22Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@65987993]" name="init" is-config="true" duration-ms="0" started-at="2018-02-09T06:07:24Z" finished-at="2018-02-09T06:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@65987993]" name="quit" is-config="true" duration-ms="93" started-at="2018-02-09T06:09:07Z" finished-at="2018-02-09T06:09:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="FAIL" signature="runApplication(java.lang.String)[pri:0, instance:com.acams.ddf.testcases.PA309_Test@1a1da881]" name="runApplication" is-config="true" duration-ms="0" started-at="2018-02-06T05:53:22Z" finished-at="2018-02-06T05:53:22Z">
+        <test-method status="FAIL" signature="runApplication(java.lang.String)[pri:0, instance:com.acams.ddf.testcases.PA309_Test@65987993]" name="runApplication" is-config="true" duration-ms="0" started-at="2018-02-09T06:09:07Z" finished-at="2018-02-09T06:09:07Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
@@ -65,6 +227,6 @@ For more information on native dependency injection please refer to http://testn
           </reporter-output>
         </test-method> <!-- runApplication -->
       </class> <!-- com.acams.ddf.testcases.PA309_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- PA 309_Test -->
+  </suite> <!-- ACAMS SUITE ONE -->
 </testng-results>

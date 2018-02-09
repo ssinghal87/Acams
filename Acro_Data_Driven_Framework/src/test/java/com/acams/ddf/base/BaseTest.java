@@ -988,6 +988,14 @@ public class BaseTest {
 		e.click();
 		testObject.log(Status.INFO, "successfully clicked on the Document tab");
 	}
+	
+	public void clickTimeCapture(ExtentTest testObject) {
+		waitUntilElementPresent("timecapturetablink_xpath", testObject);
+		testObject.log(Status.INFO, "Clicking on the Time Capture Tab");
+		WebElement e=getElement("timecapturetablink_xpath", testObject);
+		e.click();
+		testObject.log(Status.INFO, "successfully clicked on the Time Capture Tab");
+	}
 
 
 
@@ -1598,6 +1606,12 @@ public class BaseTest {
 	public void clickPA309(ExtentTest testObject){
 		
 		WebElement e =getElement("pa309quicklink_xpath", testObject);
+		e.click();
+	}
+	
+public void clickCaseClosure(ExtentTest testObject){
+		
+		WebElement e =getElement("caseclosequicklink_xpath", testObject);
 		e.click();
 	}
 	
