@@ -683,6 +683,30 @@ public class BaseTest {
 
 	}
 	
+	public boolean isElementDisplayed(String locatorKey,
+			ExtentTest testObject) {
+
+		//WebDriverWait wait = new WebDriverWait(driver, 100);
+		WebElement e = getElement(locatorKey, testObject);
+		boolean elementVisibility=e.isDisplayed();
+		if(elementVisibility==true)
+		{
+			testObject.log(Status.INFO, "Element is not displayed--"
+					+ locatorKey);
+			return true;
+			
+		}else{
+			testObject.log(Status.INFO, "Element is not displayed--"
+					+ locatorKey);
+			return false;
+			
+			
+		}
+			
+
+	}
+	
+	
 	
 	public void pressEnterKey(ExtentTest testObject) throws AWTException
 	{
@@ -1615,6 +1639,17 @@ public void clickCaseClosure(ExtentTest testObject){
 		e.click();
 	}
 	
+public void clickFollowUp(ExtentTest testObject){
+	
+	WebElement e =getElement("fuplink_xpath", testObject);
+	e.click();
+}
+
+public void clickAppointment(ExtentTest testObject){
+	
+	WebElement e =getElement("aptmntlink_xpath", testObject);
+	e.click();
+}
 	
 	
 //Mail function 

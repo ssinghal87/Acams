@@ -62,7 +62,12 @@ public class ATCTest extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("ATCTest").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("ATC ","Checking the mandatory alert for ATC :-"+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+    	
+    	
+ //*************************************First  Test case*********************************************************
+    	
+    	
+		ExtentTest t1 = test.createNode("ATC ","Checking the mandatory alert for ATC :-"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("ATCTest", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -102,10 +107,10 @@ public class ATCTest extends BaseTest {
 				{
 					t1.log(Status.FAIL,"t1 test case catch block executed" + e.fillInStackTrace());
 				}
-
+	
+//*************************************Second Test case*******************************************************
 		
-		
-		ExtentTest t2 = test.createNode("ATC","Submitting the ATC form"+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t2 = test.createNode("ATC","Submitting the ATC form"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("cc/clerk_id", t2);
 			waitUntilElementIsClickable("cc/clerk_id", t2);
@@ -135,13 +140,12 @@ public class ATCTest extends BaseTest {
 		{
 			t2.log(Status.FAIL,"t2 test case catch block executed" + e.fillInStackTrace());
 		}
-		
+			
+//*************************************Third Test case*******************************************************		
 		
 		ExtentTest t3 = test
 				.createNode(
-						"Checking that ATC record saved successfully and details comes in the grid")
-				.assignCategory("Funtional Category")
-				.assignAuthor("Sarthak Singhal");
+						"Checking that ATC record saved successfully and details comes in the grid:-"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		try {
 			waitUntilElementIsClickable("atcgridtext_xpath", t3);
 			scrollTo("atcgridtext_xpath", t3);
@@ -166,23 +170,6 @@ public class ATCTest extends BaseTest {
 					"t3 catch block executed" + e.fillInStackTrace());
 			reportFailure("Test Case t3 failed", t3);
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-
 // **************************************************END***********************************************************************************************
 
 	}
