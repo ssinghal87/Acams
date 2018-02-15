@@ -74,13 +74,13 @@ public class Acro_Xrm extends BaseTest {
 			
 		 openBrowser(data.get("Browser"), t1);
 		 navigate(data.get("Url"), t1);
-		 wait(1);
+		
 		 type("username_id", data.get("Username"), t1);
-		 wait(1);
+		
 		 type("password_id", data.get("Password"), t1);
-		 wait(1);
+	
 		 click("login_name", t1);
-		 wait(15);
+		 wait(10);
 		 if(driver.getCurrentUrl().equals("http://203.122.16.47/xrm_qa/NewMenu.aspx"))
 		 {
 			 t1.log(Status.PASS, "Logged in successfully");
@@ -122,30 +122,34 @@ public class Acro_Xrm extends BaseTest {
 	            //selectByVisibleText("clpnamedropdown_id", data.get("ClpName"), t2);
 				selectByValue("clpnamedropdown_id", data.get("ClpName"), t2);
 	            //selectByValue(locatorKey, value, testObject);
-	            wait(1);
+	            wait(2);
 	            click("proceedbutton_id", t2);
 	            wait(2);
 	            //Assert.assertEquals("http://203.122.16.47/xrm_qa/AcroTrac/MainEntry.aspx", driver.getCurrentUrl());
 	            driver.findElement(By.className("BillableTime")).click();
 	            //Assert.assertEquals("http://203.122.16.47/XRM_QA/AcroTrac/StandardTimeBill.aspx", driver.getCurrentUrl());
 	           
+	           // waitUntilElementPresent(locatorKey, testObject)
 	            List<WebElement> totalTextboxes = driver.findElements(By.xpath(".//input[@class='textBox details_box1']"));
 	            		// Number of text boxes present.
 
 	            		int nsize = totalTextboxes.size();
 	            		//TextBox txt = new 
 	            		System.out.println("number of textboxes enabled are : - "+nsize);
+	            		//waitUntilElementPresent("textboxwage_xpath");
+	            		waitUntilElementPresent("textboxwage_xpath", t2);
 	            		
 	            		for(int i=1; i<=nsize; i++)
 	            		{
-	            			if(i!=4||i!=7)
-	            			{
+	            			
 	            			
 	            			//totalTextboxes.forEach(action);
+	            			//wait(1);
 	            			totalTextboxes.get(i).clear();
 	            			totalTextboxes.get(i).sendKeys("1");
 	            			totalTextboxes.get(i).sendKeys(Keys.TAB);
-	            			}
+	            			
+	            			
 	            			
 	            			
 	            		}
