@@ -60,7 +60,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t1 = test
 				.createNode(
-						"Adding the Referral Tab Information",
+						"Saving the Referral Tab information",
 						"Opening the URL, Entering the username and Password and clicking the Sign In button, going to the add new client page, entering the referral tab information, clicking on the Add new referral button")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -75,7 +75,9 @@ public class SaveAsReferral extends BaseTest {
 		}
 		try {
 			
-			
+			/*openBrowser(data.get("Browser"), t1);
+			navigate(prop.getProperty("appurl_qa"), t1);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);*/
 			
 			clickCmsProgram(t1);
 			wait(2);
@@ -95,6 +97,7 @@ public class SaveAsReferral extends BaseTest {
 			typeMaskingValue("sourcephone_id", data.get("SourcePhone"), t1);
 			type("finalcomments_id", data.get("ReferralFinalComments"), t1);
 			wait(1); // waiting for 1 sec
+			scrollTo("addreferral_id", t1);
 			click("addreferral_id", t1); // typing the add referral button
 			waitUntilElementIsClickable("referralgrid_id", t1);
 			// waiting until the record appears in the referral grid
@@ -112,7 +115,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t2 = test
 				.createNode(
-						"Referral Information Showing in Referral Tab grid.",
+						"Checking the Referral information is showing in the grid.",
 						"When user successfully enters all the data in the referral tab and click on the Add Referral button, checking that data comes in the referral grid or not")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -258,7 +261,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t6 = test
 				.createNode(
-						"Clicking on the New Referral record and checking the Referral Details on the Referral Grid is present.")
+						"Going to the Client Referrals page and clicking on the new created referral name  ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 

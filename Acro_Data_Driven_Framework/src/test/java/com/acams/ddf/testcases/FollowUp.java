@@ -62,7 +62,8 @@ public class FollowUp extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Follow Up").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Follow Up","Checking that FollowUp quick link is enable for the MPI: - "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t1 = test.createNode("Follow Up","Checking that FollowUp quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("FollowUpTest", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -73,7 +74,7 @@ public class FollowUp extends BaseTest {
 
 		try 
 		{
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -84,10 +85,11 @@ public class FollowUp extends BaseTest {
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
+			click("clickclientname_xpath", t1);*/
 			waitUntilElementPresent("clickeligibility_xpath", t1);
 			
 			//cheking quick link is present
+			wait(2);
 			
 			boolean followUpQuickLink = quickLinkIsPresent("followup", t1);
 			if(followUpQuickLink==true)
@@ -117,7 +119,8 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t2 = test.createNode("Follow Up","Clicking on the FollowUp link and checking that the pop is coming "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t2 = test.createNode("Follow Up","Clicking on the FollowUp link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			clickFollowUp(t2);
 			click("fupaddnewbutton_id", t2);
@@ -154,7 +157,8 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t3 = test.createNode("Follow Up","Checking that Follow Up Pop is submitted successfully"+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t3 = test.createNode("Follow Up","Checking that Follow Up Pop is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			
 			click("fpopupreasondropdown_xpath", t3);
@@ -201,7 +205,8 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t4 = test.createNode("Follow Up","Opening the follow up and changing the status of follow up to Completed."+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t4 = test.createNode("Follow Up","Opening the follow up and changing the status of follow up to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("fupsummarygridactionbutton_xpath", t4);
 			click("fupsummarygridactionbutton_xpath", t4);

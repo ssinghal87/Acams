@@ -187,7 +187,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t3 = test
 				.createNode(
-						"Adding and checking the mandatory alert for Address Information section ")
+						"Checking the mandatory alert for Address Information section and Adding the Address information. ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -248,7 +248,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t4 = test
 				.createNode(
-						"Adding  and checking the mandatory alert for Communication Information section ")
+						"Checking the mandatory alert for Communication Information section and Adding the Communication information. ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -303,7 +303,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t5 = test
 				.createNode(
-						"Adding & checking the mandatory alert for ContactPersonInformation section ")
+						"Checking the mandatory alert for ContactPerson Information section and Adding the ContactPerson information. ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -365,7 +365,7 @@ public class IntakePageTest extends BaseTest {
 		// **************************************END**************************************************************
 
 		ExtentTest t6 = test
-				.createNode("Checking that MPI and Case generated successfully")
+				.createNode("Checking that MPI# and Case# generated successfully")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -465,7 +465,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t7 = test
 				.createNode(
-						"Checking All the mandatory values are showing up in the common header properly")
+						"Checking that the ClientName, Phone# are appearing in the common header properly")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 

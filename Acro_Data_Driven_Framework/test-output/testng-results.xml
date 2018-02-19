@@ -1,85 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="106698" started-at="2018-02-14T13:56:15Z" finished-at="2018-02-14T13:58:02Z">
+  <suite name="Default suite" duration-ms="245678" started-at="2018-02-19T13:48:35Z" finished-at="2018-02-19T13:52:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="106698" started-at="2018-02-14T13:56:15Z" finished-at="2018-02-14T13:58:02Z">
-      <class name="com.acams.ddf.testcases.Acro_Xrm">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="init" is-config="true" duration-ms="16" started-at="2018-02-14T08:56:15Z" finished-at="2018-02-14T08:56:15Z">
+    <test name="Default test" duration-ms="245678" started-at="2018-02-19T13:48:35Z" finished-at="2018-02-19T13:52:41Z">
+      <class name="com.acams.ddf.testcases.PA309_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="beforeTest" is-config="true" duration-ms="313" started-at="2018-02-19T08:48:35Z" finished-at="2018-02-19T08:48:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="init" is-config="true" duration-ms="1" started-at="2018-02-19T08:48:36Z" finished-at="2018-02-19T08:48:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="doLogin(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="doLogin" duration-ms="42480" started-at="2018-02-14T08:56:15Z" data-provider="getData" finished-at="2018-02-14T08:56:58Z">
+        <test-method status="PASS" signature="PA309_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="PA309_Test" duration-ms="244324" started-at="2018-02-19T08:48:36Z" data-provider="getData" finished-at="2018-02-19T08:52:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Username=acroxrm, Password=444444, Runmode=Y, ClpName=JAMESCARLLLL, Url=http://203.122.16.47/xrm_qa/newuserlogin.aspx, Browser=ie}]]>
+                <![CDATA[{ClientName=Warms, Johny, Case=20180204000046, Insurance Name=, Runmode=Y, ProviderName=180 MEDICAL INC, Mpi=201802002704, FinalComments=PA309 created, Browser=ie}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="quit" is-config="true" duration-ms="437" started-at="2018-02-14T08:56:58Z" finished-at="2018-02-14T08:56:58Z">
+        </test-method> <!-- PA309_Test -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="quit" is-config="true" duration-ms="810" started-at="2018-02-19T08:52:40Z" finished-at="2018-02-19T08:52:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="goToAcroTrac(java.util.Hashtable)[pri:2, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="goToAcroTrac" duration-ms="63334" started-at="2018-02-14T08:56:58Z" data-provider="getAcroTracData" finished-at="2018-02-14T08:58:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Username=acroxrm, Password=444444, Runmode=Y, ClpName=JAMESCARLLLL, Url=http://203.122.16.47/xrm_qa/newuserlogin.aspx, Browser=ie}]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="closeBrowser" is-config="true" duration-ms="17" started-at="2018-02-19T08:52:41Z" finished-at="2018-02-19T08:52:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToAcroTrac -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="init" is-config="true" duration-ms="0" started-at="2018-02-14T08:56:58Z" finished-at="2018-02-14T08:56:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="quit" is-config="true" duration-ms="94" started-at="2018-02-14T08:58:02Z" finished-at="2018-02-14T08:58:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="FAIL" signature="runApplication(java.lang.String)[pri:0, instance:com.acams.ddf.testcases.Acro_Xrm@2a39fe6a]" name="runApplication" is-config="true" duration-ms="0" started-at="2018-02-14T08:58:02Z" finished-at="2018-02-14T08:58:02Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a AfterSuite annotated runApplication.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a AfterSuite annotated runApplication.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:244)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:172)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:458)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:203)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runApplication -->
-      </class> <!-- com.acams.ddf.testcases.Acro_Xrm -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.acams.ddf.testcases.PA309_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

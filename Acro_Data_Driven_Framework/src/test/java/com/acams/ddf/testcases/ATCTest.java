@@ -78,7 +78,7 @@ public class ATCTest extends BaseTest {
 
 		try 
 		{
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -89,13 +89,11 @@ public class ATCTest extends BaseTest {
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
+			click("clickclientname_xpath", t1);*/
+			
+			scrollTo("timecapturetablink_xpath", t1);
 			waitUntilElementPresent("timecapturetablink_xpath", t1);
-			
-			
-			
-			
-			waitUntilElementIsClickable("clickatc_xpath", t1);
+			//waitUntilElementIsClickable("clickatc_xpath", t1);
 			clickAtc(t1);
 			wait(1);
 			click("Atcsubmitbutton_id", t1);
@@ -110,7 +108,8 @@ public class ATCTest extends BaseTest {
 	
 //*************************************Second Test case*******************************************************
 		
-		ExtentTest t2 = test.createNode("ATC","Submitting the ATC form"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
+		ExtentTest t2 = test.createNode("ATC","Submitting the ATC form"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("cc/clerk_id", t2);
 			waitUntilElementIsClickable("cc/clerk_id", t2);
@@ -145,7 +144,8 @@ public class ATCTest extends BaseTest {
 		
 		ExtentTest t3 = test
 				.createNode(
-						"Checking that ATC record saved successfully and details comes in the grid:-"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
+						"Checking that ATC record saved successfully and details comes in the grid:-"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 		try {
 			waitUntilElementIsClickable("atcgridtext_xpath", t3);
 			scrollTo("atcgridtext_xpath", t3);

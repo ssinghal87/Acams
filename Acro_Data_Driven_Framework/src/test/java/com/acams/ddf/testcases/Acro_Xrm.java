@@ -2,6 +2,7 @@ package com.acams.ddf.testcases;
 
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.util.PDFTextStripper;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
@@ -75,11 +76,11 @@ public class Acro_Xrm extends BaseTest {
 		 openBrowser(data.get("Browser"), t1);
 		 navigate(data.get("Url"), t1);
 		
-		 type("username_id", data.get("Username"), t1);
+		 type("xrmusernamexrm_id", data.get("Username"), t1);
 		
-		 type("password_id", data.get("Password"), t1);
+		 type("xrmpasswordxrm_id", data.get("Password"), t1);
 	
-		 click("login_name", t1);
+		 click("xrmlogin_name", t1);
 		 wait(10);
 		 if(driver.getCurrentUrl().equals("http://203.122.16.47/xrm_qa/NewMenu.aspx"))
 		 {
@@ -105,7 +106,7 @@ public class Acro_Xrm extends BaseTest {
 		@Test(dataProvider = "getAcroTracData", priority = 2)
 		public void goToAcroTrac(Hashtable<String, String> data)
 		{
-			ExtentTest t2 = test.createNode("Go To BillTime Page","Select the James, Carls CLP name and then click on the Biiling Time button and check user is redirected to the Bill Time page").assignAuthor("Sarthak Singhal");
+			ExtentTest t2 = test.createNode("CLP Time Recors submitted for Approval","Select the James, Carls CLP name and then click on the Biiling Time button and check user is redirected to the Bill Time page").assignAuthor("Sarthak Singhal");
 
 		
 	    	
@@ -134,26 +135,52 @@ public class Acro_Xrm extends BaseTest {
 	            		// Number of text boxes present.
 
 	            		int nsize = totalTextboxes.size();
-	            		//TextBox txt = new 
+	            	
+	            		
+
 	            		System.out.println("number of textboxes enabled are : - "+nsize);
-	            		//waitUntilElementPresent("textboxwage_xpath");
+	         
 	            		waitUntilElementPresent("textboxwage_xpath", t2);
 	            		
-	            		for(int i=1; i<=nsize; i++)
+	            		for(int i=0; i<=nsize; i++)
 	            		{
-	            			
-	            			
-	            			//totalTextboxes.forEach(action);
-	            			//wait(1);
+	    
 	            			totalTextboxes.get(i).clear();
 	            			totalTextboxes.get(i).sendKeys("1");
 	            			totalTextboxes.get(i).sendKeys(Keys.TAB);
-	            			
-	            			
-	            			
-	            			
+
 	            		}
 	            
+	            		type("finalcomments_id", data.get(""), t2);
+	            		
+	            		click("submitforapprovalbutton_id", t2);
+	            		
+	            		wait(1);
+	            		
+	            	    // Switching to Alert        
+	                    Alert alert = driver.switchTo().alert();		
+	                    		
+	                    // Capturing alert message.    
+	                  
+	                   driver.switchTo().alert().accept();	
+	                   
+	                   //Selected CLP's time record has been submitted for approval.
+	                   
+	                   
+	                   // getting the text of the success message 
+	                   
+	                   if(getLocatorText("successmessaage_xpath", t2).trim().equals("Selected CLP's time record has been submitted for approval."))
+	                   {
+	                	   t2.log(Status.PASS, "CLP Time reord has been submitted successfully.");
+	                	   reportPass("CLP Submitted for approval test case passed", t2);
+	                	   
+	                   }else{
+	                	   t2.log(Status.FAIL, "CLP Submitted for approval test case FAILED.");
+	                	   reportFailure("CLP Submitted for approval test case FAILED", t2);
+
+	                   }
+	            		
+	                   
 	  
 				
 			}

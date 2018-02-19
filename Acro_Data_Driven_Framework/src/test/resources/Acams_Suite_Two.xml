@@ -6,18 +6,38 @@
  
  </listeners>
 
-
-<test name = "Cms_Eligibility_Test" allow-return-values="true"> 
+<test name = "PA 309_Test" allow-return-values="true"> 
 <classes>
-<class name="com.acams.ddf.testcases.Cms_Eligibility_Test"></class>
+<class name="com.acams.ddf.testcases.PA309_Test"></class>
 </classes>
 </test>>
 
-<test name = "CMS_Card_Test" allow-return-values="true"> 
+<test name = "Time Capture" allow-return-values="true"> 
 <classes>
-<class name="com.acams.ddf.testcases.CMS_Card_Test"></class>
+<class name="com.acams.ddf.testcases.TimeCaptureTest"></class>
 </classes>
 </test>>
+
+<test name = "ATC" allow-return-values="true"> 
+<classes>
+<class name="com.acams.ddf.testcases.ATCTest"></class>
+</classes>
+</test>>
+
+<test name = "Follow Up" allow-return-values="true"> 
+<classes>
+<class name="com.acams.ddf.testcases.FollowUp"></class>
+</classes>
+</test>>
+
+
+<test name = "Appointment" allow-return-values="true"> 
+<classes>
+<class name="com.acams.ddf.testcases.Appointment"></class>
+</classes>
+</test>>
+
+
 
 
 

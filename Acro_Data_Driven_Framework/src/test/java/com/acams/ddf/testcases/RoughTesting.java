@@ -36,6 +36,7 @@ import java.util.List;
 
 
 
+
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.util.PDFTextStripper;
 import org.openqa.selenium.By;
@@ -104,54 +105,65 @@ public class RoughTesting extends BaseTest  {
 		}
 		
 		
-				
-		ExtentTest t9 = test.createNode("Checking CMS card PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+		ExtentTest t11 = test.createNode("Checking PA 309 PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try 
 		{	
-			openBrowser(data.get("Browser"), t1);
-			navigate(prop.getProperty("appurl_qa"), t1);
-			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
-			clickCmsProgram(t1);
-			removeDohPopUp(t1);
+		
+			openBrowser(data.get("Browser"), t11);
+			navigate(prop.getProperty("appurl_qa"), t11);
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t11);
+			clickCmsProgram(t11);
+			removeDohPopUp(t11);
 			
-			waitUntilElementPresent("globalsearch_xpath", t1);
-			type("globalsearch_xpath", data.get("Mpi"), t1);
-			click("globalsearchbutton_xpath", t1);
-			click("yespopupbutton_xpath", t1);
-			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);
-			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t1);
+			waitUntilElementPresent("globalsearch_xpath", t11);
+			type("globalsearch_xpath", data.get("Mpi"), t11);
+			click("globalsearchbutton_xpath", t11);
+			click("yespopupbutton_xpath", t11);
+			waitUntilElementPresent("clickclientname_xpath", t11);
+			click("clickclientname_xpath", t11);
+			wait(3);
+			waitUntilElementPresent("quicklinkicon_xpath", t11);
+			scrollTo("quicklinkicon_xpath", t11);
+			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t11);
 			if(pa309QuickLinkEnable==true)
 			{
-				clickPA309(t9);
-				wait(3);
-				scrollTo("pa309actionbuttonlink_xpath", t9);
+			clickPA309(t11);
 			}
 			
-			
-		
-			
-			
-			
+			scrollTo("pa309actionbuttonlink_xpath", t11);
+			wait(2);
+			invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/PA309_Final.exe",t11);
+			wait(20);
+		   String name=data.get("ClientName");
+		   String fileName1= name.replaceAll(",", "");
+		   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t11);
+		   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
+		   
+		   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName+".pdf",t11);
+		   if(pa309PdfFile=true)
+		   {
+			   t11.log(Status.PASS, "PA 309  PDF is successfully downloaded");
+		   }else{
+			   t11.log(Status.FAIL, "PA 309 PDF is not downloaded");
 
+		   }
+		    
+		    
+		    
+			
 		}
 		
 		catch (Exception e) 
 		{
-			t9.log(Status.FAIL,"t9 test case catch block executed" + e.fillInStackTrace());
+			t11.log(Status.FAIL,"t7 test case catch block executed" + e.fillInStackTrace());
 		}
-
-
-
-//**************************************************END***********************************************************************************************
-
 		
 		
-//********************************************************Tenth TEST CASE************************************************************************************
 		
-	
-		}
+		
+
+	}
 	
 		
 

@@ -50,7 +50,7 @@ public class LoginTest extends BaseTest {
 				.assignAuthor("Sarthak Singhal");
 		ExtentTest t1 = test
 				.createNode(
-						"Login Feature Test",
+						"Entering the username and password and clicking on Sign in Button",
 						"Opening the URL, Entering the username and Password and clicking the Sign In button");
 		// ExtentTest c9=pNode.createNode("URL",
 		// "checking that if user has successfully logged in then the url is the landingPage");
@@ -77,6 +77,8 @@ public class LoginTest extends BaseTest {
 			type("psw_id", data.get("Password"), t1);
 
 			click("signbutton_id", t1);
+			
+			//takeScreenShot(t1);
 
 			waitUntilElementPresent("afterlogin_xpath", t1);
 		} catch (Exception e) {

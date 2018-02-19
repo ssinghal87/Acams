@@ -119,13 +119,13 @@ public class BaseTest {
 	}
 	
 	@AfterSuite
-	/*public void closeBrowser(){
+	public void closeBrowser(){
 		if(driver!=null)
 		{
 			driver.close();
 
 		}
-	}*/
+	}
 
 	
 	
@@ -1199,6 +1199,7 @@ public class BaseTest {
 
 	public boolean quickLinkIsPresent(String quickLinkName, ExtentTest testObject){
 		try{
+			scrollTo("quicklinkicon_xpath", testObject);
 			boolean quickLinkVisible=quickLinkIsEnable(testObject);
 			if(quickLinkVisible==true){
 			//quickLinkIsEnable(testObject);
@@ -1573,10 +1574,12 @@ public class BaseTest {
 		try{
 			waitUntilElementPresent("medicaldiagnosisaddicon_xpath", testObject);
 			click("medicaldiagnosisaddicon_xpath", testObject);
+			scrollTo("icdcode_id", testObject);
 			type("icdcode_id", data, testObject);		
 			selectTextInAutocompleteTextbox("A000", "icdcodelist_id", testObject);		
 			getCurrentDate("diagnosisdate_id", testObject);
 			click("cmsapproved_id", testObject);
+			scrollTo("ICDccomments_id", testObject);
 			type("ICDccomments_id", "ICD code added successfully", testObject);
 			scrollTo("icdaddbutton_id", testObject);
 			click("icdaddbutton_id", testObject);

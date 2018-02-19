@@ -71,7 +71,8 @@ public class PA309_Test extends BaseTest {
 	public void PA309_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("PA309_Testing").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("PA309_Testing","Checking that PA309  quick link is enable for the MPI: - "+data.get("Mpi"));
+		ExtentTest t1 = test.createNode("PA309_Testing","Checking that PA309  quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("PA309_Test", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -94,6 +95,8 @@ public class PA309_Test extends BaseTest {
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
+			
+			
 			waitUntilElementPresent("clickeligibility_xpath", t1);
 			wait(1);
 			//clickEligibility(t1);*/
@@ -330,7 +333,8 @@ public class PA309_Test extends BaseTest {
 		
 				
 //*************************************** test case 7 **********************************************				
-				ExtentTest t7 = test.createNode("Checking PA 309 PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+				ExtentTest t7 = test.createNode("Checking PA 309 PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	
 				
@@ -339,7 +343,7 @@ public class PA309_Test extends BaseTest {
 					scrollTo("pa309actionbuttonlink_xpath", t7);
 					wait(2);
 					invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/PA309_Final.exe",t7);
-					wait(14);
+					wait(20);
 				   String name=data.get("ClientName");
 				   String fileName1= name.replaceAll(",", "");
 				   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
@@ -367,7 +371,8 @@ public class PA309_Test extends BaseTest {
 				
 				
 				
-				ExtentTest t8 = test.createNode("Checking the text of the PA 309 PDF. ","Checking the Client name, Insurannce, PA 309 dates"+data.get("Mpi"));
+				ExtentTest t8 = test.createNode("Checking the text of the PA 309 PDF. ","Checking the Client name, Insurannce, PA 309 dates"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	
 					
@@ -375,13 +380,19 @@ public class PA309_Test extends BaseTest {
 					 //create buffer reader object
 					   String name=data.get("ClientName");
 					   String fileName1= name.replaceAll(",", "");
+					  // String Fname = 
 					   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
-					   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
-					   
+					   String finalFileName=fileName1+" "+" "+"-"+PAnumber+".pdf";
+					   String names[]=name.split(",");
+						  
+						  for(int i =0; i<=names.length; i++)
+						  {
+							  
+						  }
 					   
 					   
 					 //E:\CMSCardPDF\Gonzalwis  Janis -4518020022.pdf
-					 URL url = new URL("file:///E:/CMSCardPDF/"+finalFileName);
+					 URL url = new URL("file:///E:/CMSCardPDF/"+names[0].trim()+"%20%20"+names[1].trim()+"%20-"+PAnumber.trim());
 					 BufferedInputStream fileToParse = new BufferedInputStream(url.openStream());
 					 PDFParser pdfParser = new PDFParser(fileToParse);
 					 pdfParser.parse();
@@ -426,6 +437,8 @@ public class PA309_Test extends BaseTest {
 							t8.log(Status.FAIL, "Client name is  not correct in PA309 PDF");
 					 }
 					
+					scrollTo("headerclientname_xpath", t8);
+					
 					
 					//checkFileIsDeleted("E:\\CMSCardPDF\\CMSCARD.pdf", t8);
 					 
@@ -433,7 +446,7 @@ public class PA309_Test extends BaseTest {
 				
 				catch (Exception e) 
 				{
-					t8.log(Status.FAIL,"t10 test case catch block executed" + e.fillInStackTrace());
+					t8.log(Status.FAIL,"t8 test case catch block executed" + e.fillInStackTrace());
 				}
 
 

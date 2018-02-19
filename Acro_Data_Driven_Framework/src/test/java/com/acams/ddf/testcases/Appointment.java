@@ -62,7 +62,8 @@ public class Appointment extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Appointment").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Appointment","Checking that Appointment quick link is enable for the MPI: - "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t1 = test.createNode("Appointment","Checking that Appointment quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("AppointmentTest", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -73,7 +74,7 @@ public class Appointment extends BaseTest {
 
 		try 
 		{
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -84,11 +85,12 @@ public class Appointment extends BaseTest {
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("clickeligibility_xpath", t1);
+			click("clickclientname_xpath", t1);*/
 			
-			//cheking quick link is present
 			
+			
+			
+			wait(2);
 			boolean appointmentUpQuickLink = quickLinkIsPresent("appointment", t1);
 			if(appointmentUpQuickLink==true)
 			{
@@ -117,7 +119,8 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t2 = test.createNode("Appointment","Clicking on the Appointment link and checking that the pop is coming "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t2 = test.createNode("Appointment","Clicking on the Appointment link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			clickAppointment(t2);
 			click("fupaddnewbutton_id", t2);
@@ -154,7 +157,8 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t3 = test.createNode("Appointment","Checking that Appointment Pop up is submitted successfully"+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t3 = test.createNode("Appointment","Checking that Appointment Pop up is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			
 			click("aptmntpopuptypeofvisit_xpath", t3);
@@ -209,7 +213,8 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t4 = test.createNode("Appointment","Opening the Appointment and changing the status of Appointment to Completed."+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t4 = test.createNode("Appointment","Opening the Appointment and changing the status of Appointment to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("aptmntsummarygridactionbutton_xpath", t4);
 			click("aptmntsummarygridactionbutton_xpath", t4);
@@ -234,7 +239,7 @@ public class Appointment extends BaseTest {
 				// chekcing the record in the grid
 				
                 String appointmentUpStatus=getLocatorText("aptmntsummarygridstatus_xpath", t4).trim();
-				if(appointmentUpStatus.equals("Completed"))
+				if(appointmentUpStatus.equals("Complete"))
 				{
 					t4.log(Status.PASS, "Record is present in the grid and the status of the Appointment is Completed");
 					reportPass("Test Case Passed", t4);

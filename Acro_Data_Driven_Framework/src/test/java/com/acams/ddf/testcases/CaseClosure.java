@@ -62,7 +62,8 @@ public class CaseClosure extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Case Closure").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Case Closure","Checking that Case_Closure quick link is enable for the MPI: - "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t1 = test.createNode("Case Closure","Checking that Case_Closure quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("CMS_Card_Test", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -73,11 +74,11 @@ public class CaseClosure extends BaseTest {
 
 		try 
 		{
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
-			removeDohPopUp(t1);
+			removeDohPopUp(t1);*/
 			
 			waitUntilElementPresent("globalsearch_xpath", t1);
 			type("globalsearch_xpath", data.get("Mpi"), t1);
@@ -117,7 +118,8 @@ public class CaseClosure extends BaseTest {
 		
 		
 		
-		ExtentTest t2 = test.createNode("Case Closure","Clicking on the case cloure link.  "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t2 = test.createNode("Case Closure","Clicking on the case cloure link.  "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			clickCaseClosure(t1);
 			wait(3);
@@ -151,7 +153,8 @@ public class CaseClosure extends BaseTest {
 		
 		
 		
-		ExtentTest t3 = test.createNode("Case Closure","Closing the success message:- Case Closed Successfully. "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t3 = test.createNode("Case Closure","Closing the success message:- Case Closed Successfully. "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			
 			selectByIndex("caseclosecode_id", 1, t3);
@@ -181,7 +184,8 @@ public class CaseClosure extends BaseTest {
 		
 		
 		
-		ExtentTest t4 = test.createNode("Case Closure","Checking the case status and the case# should be dissappeared"+data.get("Mpi")).assignAuthor("Sarthak Singhal");
+		ExtentTest t4 = test.createNode("Case Closure","Checking the case status and the case# should be dissappeared"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try{
 			
 			waitUntilElementPresent("headermpi_id", t4);

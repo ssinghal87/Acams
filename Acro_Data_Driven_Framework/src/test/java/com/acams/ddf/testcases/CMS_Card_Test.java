@@ -82,7 +82,8 @@ public class CMS_Card_Test extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("CMS Card Testing").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("CMS Card Testing","Checking that CMS Card quick link is enable for the MPI: - "+data.get("Mpi"));
+		ExtentTest t1 = test.createNode("CMS Card Testing","Checking that CMS Card quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("CMS_Card_Test", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -95,7 +96,7 @@ public class CMS_Card_Test extends BaseTest {
 		{
 			
 		
-			openBrowser(data.get("Browser"), t1);
+			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -106,7 +107,9 @@ public class CMS_Card_Test extends BaseTest {
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);
+			click("clickclientname_xpath", t1);*/
+			
+			
 			waitUntilElementPresent("clickeligibility_xpath", t1);
 			clickEligibility(t1);
 			
@@ -145,7 +148,8 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 //********************************************************SECOND TEST CASE*****************************************************************
-		ExtentTest t2 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi"));
+		ExtentTest t2 = test.createNode("Clicking on the CMS card quick link.","Checking that user is redirected to the CMS card page for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try 
 		{
 			clickCmsCard(t2);
@@ -177,7 +181,8 @@ public class CMS_Card_Test extends BaseTest {
 		
 //********************************************************Third Test Case************************************************
 		
-		ExtentTest t3 = test.createNode("Clicking on the CMS card quick link.","Checking that the fiscal year drop down value is showing correct or not"+data.get("Mpi"));
+		ExtentTest t3 = test.createNode("Clicking on the CMS card quick link.","Checking that the fiscal year drop down value is showing correct or not"+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try 
 		{
 			
@@ -251,7 +256,8 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 		
-		ExtentTest t4 = test.createNode("Checking the CMS card Start Date and EndDates are correctly populated","MPI: - "+data.get("Mpi"));
+		ExtentTest t4 = test.createNode("Checking the CMS card Start Date and EndDates are correctly populated","MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try 
 		{
 			
@@ -299,7 +305,8 @@ public class CMS_Card_Test extends BaseTest {
 
 		
 //********************************************************FIFTH TEST CASE*****************************************************************
-				ExtentTest t5 = test.createNode("Checking the PCP name","Checking the PCP name is coming populating correct for the MPI: - "+data.get("Mpi"));
+				ExtentTest t5 = test.createNode("Checking the PCP name","Checking the PCP name is coming populating correct for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{
 					
@@ -339,7 +346,8 @@ public class CMS_Card_Test extends BaseTest {
 				
 //********************************************************SIXTH TEST CASE************************************************************************************
 		
-		ExtentTest t6 = test.createNode("Checking the Pharmcy name","Checking the Pharmcy name is coming populating correct for the MPI: - "+data.get("Mpi"));
+		ExtentTest t6 = test.createNode("Checking the Pharmcy name","Checking the Pharmcy name is coming populating correct for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+				.assignAuthor("Sarthak Singhal");
 		try 
 		{	scrollTo("cmscardpharmacyname_id", t6);
 			String actualPharmacyName = getLocatorText("cmscardpharmacyname_id", t6);
@@ -371,7 +379,8 @@ public class CMS_Card_Test extends BaseTest {
 		
 //********************************************************SEVETH TEST CASE************************************************************************************
 		
-				ExtentTest t7 = test.createNode("Checking the Insurance name in the Insurance Drop down ","Checking that the Insurance name is  populating correct in the insurance drop down for the MPI: - "+data.get("Mpi"));
+				ExtentTest t7 = test.createNode("Checking the Insurance name in the Insurance Drop down ","Checking that the Insurance name is  populating correct in the insurance drop down for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	scrollTo("cmscardinsurance_id", t7);
 				    Select archiveList = new Select(driver.findElement(By.id(prop.getProperty("cmscardinsurance_id"))));
@@ -407,7 +416,8 @@ public class CMS_Card_Test extends BaseTest {
 				
 //********************************************************EIGHT TEST CASE************************************************************************************
 		
-				ExtentTest t8 = test.createNode("Checking that CMS card for the current fiscal year is generated successfully","Checking the record in the grid is present for the  MPI: - "+data.get("Mpi"));
+				ExtentTest t8 = test.createNode("Checking that CMS card for the current fiscal year is generated successfully","Checking the record in the grid is present for the  MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	scrollTo("cmscardgeneratebutton_id", t8);
 				click("cmscardgeneratebutton_id", t8);
@@ -441,7 +451,8 @@ public class CMS_Card_Test extends BaseTest {
 				
 				
 //********************************************************Ninth TEST CASE************************************************************************************
-				ExtentTest t9 = test.createNode("Checking CMS card PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+				ExtentTest t9 = test.createNode("Checking CMS card PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	
 					/*openBrowser(data.get("Browser"), t9);
@@ -491,7 +502,8 @@ public class CMS_Card_Test extends BaseTest {
 				
 		//********************************************************Tenth TEST CASE************************************************************************************
 				
-				ExtentTest t10 = test.createNode("Checking the text of the CMS CARD PDF. ","Checking the Client name, Insurannce, CMS card dates"+data.get("Mpi"));
+				ExtentTest t10 = test.createNode("Checking the text of the CMS CARD PDF. ","Checking the Client name, Insurannce, CMS card dates"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	
 					
@@ -561,7 +573,8 @@ public class CMS_Card_Test extends BaseTest {
 				
 		//********************************************************Eleventh TEST CASE************************************************************************************
 				
-				ExtentTest t11 = test.createNode("Checking the Autogenerated PA 309 is created ","Checking that the PDF is downloaded successfully"+data.get("Mpi"));
+				ExtentTest t11 = test.createNode("Checking the Autogenerated PA 309 is created ","Checking that the PDF is downloaded successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+						.assignAuthor("Sarthak Singhal");
 				try 
 				{	
 					quickLinkIsPresent("pa309", t11);
