@@ -73,7 +73,7 @@ public class TimeCaptureTest extends BaseTest {
 
 		try 
 		{
-			/*openBrowser(data.get("Browser"), t1);
+			openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
 			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
 			clickCmsProgram(t1);
@@ -84,9 +84,21 @@ public class TimeCaptureTest extends BaseTest {
 			click("globalsearchbutton_xpath", t1);
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
-			click("clickclientname_xpath", t1);*/
+			click("clickclientname_xpath", t1);
+			waitUntilElementPresent("headerclientname_xpath", t1);
 			
-			wait(2);
+			
+			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t1);
+			if(pa309QuickLinkEnable==true)
+			{
+				clickPA309(t1);
+			}
+			
+			//(2);
+			
+			wait(3);
+			waitUntilElementPresent("headerclientname_xpath", t1);
+			scrollTo("pa309sfy_id", t1);
 			scrollTo("headerclientname_xpath", t1);
 			click("headerclientname_xpath", t1);
 			waitUntilElementPresent("timecapturetablink_xpath", t1);	

@@ -381,7 +381,7 @@ public class PA309_Test extends BaseTest {
 					   String name=data.get("ClientName");
 					   String fileName1= name.replaceAll(",", "");
 					  // String Fname = 
-					   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7);
+					   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t7).trim();
 					   String finalFileName=fileName1+" "+" "+"-"+PAnumber+".pdf";
 					   String names[]=name.split(",");
 						  
@@ -392,7 +392,7 @@ public class PA309_Test extends BaseTest {
 					   
 					   
 					 //E:\CMSCardPDF\Gonzalwis  Janis -4518020022.pdf
-					 URL url = new URL("file:///E:/CMSCardPDF/"+names[0].trim()+"%20%20"+names[1].trim()+"%20-"+PAnumber.trim());
+					 URL url = new URL("file:///E:/CMSCardPDF/"+names[0].trim()+"%20%20"+names[1].trim()+"%20-"+PAnumber+".pdf");
 					 BufferedInputStream fileToParse = new BufferedInputStream(url.openStream());
 					 PDFParser pdfParser = new PDFParser(fileToParse);
 					 pdfParser.parse();
@@ -418,7 +418,7 @@ public class PA309_Test extends BaseTest {
 						{
 							t8.log(Status.PASS, "PA309 number is matching");
 							// checking the insurance name 
-							if(newPdfTxt.contains("INSURANCE : CMS Only"))
+							if(newPdfTxt.contains("insurance : cms only"))
 							{
 								t8.log(Status.PASS, "Insurance on the PA309 is correct");
 
@@ -437,10 +437,10 @@ public class PA309_Test extends BaseTest {
 							t8.log(Status.FAIL, "Client name is  not correct in PA309 PDF");
 					 }
 					
-					scrollTo("headerclientname_xpath", t8);
+				
 					
 					
-					//checkFileIsDeleted("E:\\CMSCardPDF\\CMSCARD.pdf", t8);
+					//scrollTo("", testObject);
 					 
 				}
 				
