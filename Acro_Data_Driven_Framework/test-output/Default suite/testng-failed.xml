@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.acams.ddf.testcases.RoughTesting">
+      <class name="com.acams.ddf.testcases.Acro_Xrm">
         <methods>
-          <include name="init"/>
-          <include name="Rough" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
           <include name="quit"/>
+          <include name="browserClose"/>
+          <include name="doLogin" invocation-numbers="0"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.acams.ddf.testcases.RoughTesting -->
+      </class> <!-- com.acams.ddf.testcases.Acro_Xrm -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

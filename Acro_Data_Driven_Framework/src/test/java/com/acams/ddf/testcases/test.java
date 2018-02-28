@@ -10,6 +10,11 @@ import org.testng.Assert;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -38,38 +43,66 @@ public class test extends BaseTest {
 	Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"\\Acams_Suite_One.xlsx");
 	Exception e;
 	 
-
 	
-    
 
-
-	
-	
-	@Test(dataProvider = "getData", priority = 1)
-	public void CMS_Card_Test(Hashtable<String, String> data)
-	{
-    	test = rep.createTest("Appointment").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-    	
-		ExtentTest t1 = test.createNode("Appointment","Checking that Appointment quick link is enable for the MPI: - "+data.get("Mpi")).assignAuthor("Sarthak Singhal");
-		
-		t1.log(Status.INFO, "Starting the test LoginTest");
-		if (!DataUtil.isRunnable("AppointmentTest", xls)
-				|| data.get("Runmode").equals("N")) 
-		{
-			t1.log(Status.SKIP, "Skipping the test as runmode is N");
-			throw new SkipException("Skipping the test as runmode is N");
-		}
-
-		try 
-		{
+		public static void main(String[] args) throws Exception {
 			
+			 connectSqlServer("jdbc:sqlserver://10.0.0.28", "ACAMSDev", "ACAMSDev", "select * from cm.clientmaster where cmpiid='201605000001'");
+
+			/*// Object of Connection from the Database
+			Connection conn = null;
 			
-		}
-				catch (Exception e) 
-				{
-					t1.log(Status.FAIL,"t1 test case catch block executed" + e.fillInStackTrace());
+			// Object of Statement. It is used to create a Statement to execute the query
+			Statement stmt = null;
+			
+			//Object of ResultSet => 'It maintains a cursor that points to the current row in the result set'
+			ResultSet resultSet = null;
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			
+			// Open a connection
+			conn = DriverManager.getConnection("jdbc:sqlserver://10.0.0.28", "ACAMSDev", "ACAMSDev");
+			
+			// Execute a query
+			stmt = conn.createStatement();
+			
+			resultSet = stmt.executeQuery("select * from cm.clientmaster where cmpiid='201605000001'");
+			while (resultSet .next()) {
+				System.out.println(resultSet .getString(1) + "  " + resultSet.getString(2) + "  " + resultSet.getString(3) + "  "
+				+ resultSet.getString(4) + "  " + resultSet.getString(5)+ resultSet.getString(6) + "  "+ resultSet.getString(7) + "  ");
+			}
+			
+			if (resultSet != null) {
+				try {
+					resultSet.close();
+				} catch (Exception e) {
 				}
+			}
+			
+			if (stmt != null) {
+				try {
+					stmt.close();
+				} catch (Exception e) {
+				}
+			}
+			
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+	
 
+	
+    */
+
+
+		}
+  
+  public void sqlTest() throws ClassNotFoundException, SQLException
+  {
+  }
 
 				
 				
@@ -87,43 +120,6 @@ public class test extends BaseTest {
 
 // **************************************************END***********************************************************************************************
 
-	}
-	@BeforeMethod
-	public void init() {
-		softAssert = new SoftAssert();
-	}
 	
-	
-
-	@AfterMethod
-	public void quit() 
-	{
-		try 
-		{
-		  softAssert.assertAll();
-		} catch (Error e) 
-		{
-		  test.log(Status.FAIL, e.getMessage());
-		}
-		if (rep != null) 
-		{
-			rep.flush();
-		}
-		
-		//checkFileIsDeleted("", testObject)
-		
-		
-		
-		
-	}
-
-	@DataProvider
-	public Object[][] getData() {
-		super.init();
-		xls = new Xls_Reader(prop.getProperty("xlspath_suite_one"));
-		return DataUtil.getTestData(xls, "AppointmentTest");
-		// return DataUtil.getTestData(xls, testCaseName);
-
-	}
 
 }

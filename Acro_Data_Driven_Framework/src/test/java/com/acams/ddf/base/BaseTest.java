@@ -1,6 +1,7 @@
 package com.acams.ddf.base;
 
 import org.testng.Assert;
+
 import java.awt.AWTException;
 import java.awt.Desktop;
 import java.awt.Robot;
@@ -10,6 +11,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -54,6 +60,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.asserts.SoftAssert;
 
@@ -435,6 +442,21 @@ public class BaseTest {
 		wait(1);
 
 	}
+	
+
+	public void mouseHoverAndClick(String mouseHoverlocatorKey,String clicklocatorKey,  ExtentTest testObject) {
+		testObject.log(Status.INFO, "mouseover on  - " + mouseHoverlocatorKey);
+		// mouse over on the left menu Client
+		Actions action = new Actions(driver);
+		WebElement mainMenu = getElement(mouseHoverlocatorKey, testObject);
+		action.moveToElement(mainMenu).build().perform();
+	
+		WebElement subMenu = getElement(clicklocatorKey, testObject);
+		action.moveToElement(subMenu);
+		action.click().build().perform();
+
+	}
+
 
 	public void selectByValue(String locatorKey, String value,
 			ExtentTest testObject) {
@@ -813,6 +835,60 @@ public class BaseTest {
 		
 	}
 	
+	
+	
+	
+	
+	public  void connectSqlServer(String databaseUrl, String databaseUserName, String password, String queryStatement ) throws ClassNotFoundException, SQLException
+	{
+		
+		// sample url = jdbc:mysql://localhost:3306/testdb
+		// Object of Connection from the Database
+					Connection conn = null;
+					
+					// Object of Statement. It is used to create a Statement to execute the query
+					Statement stmt = null;
+					
+					//Object of ResultSet => 'It maintains a cursor that points to the current row in the result set'
+					ResultSet resultSet = null;
+					Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+					
+					// Open a connection
+					conn = DriverManager.getConnection(databaseUrl, databaseUserName, password);
+					
+					// Execute a query
+					stmt = conn.createStatement();
+					
+					
+					//sample query=select * from sampletable
+					resultSet = stmt.executeQuery(queryStatement);
+					while (resultSet .next()) {
+						System.out.println(resultSet .getString(1) + "  " + resultSet.getString(2) + "  " + resultSet.getString(3) + "  "
+						+ resultSet.getString(4) + "  " + resultSet.getString(5));
+					}
+					
+					if (resultSet != null) {
+						try {
+							resultSet.close();
+						} catch (Exception e) {
+						}
+					}
+					
+					if (stmt != null) {
+						try {
+							stmt.close();
+						} catch (Exception e) {
+						}
+					}
+					
+					if (conn != null) {
+						try {
+							conn.close();
+						} catch (Exception e) {
+						}
+					}
+				}
+
 	
 	
 /////////////////////////////*****************************************************GENERIC FUNTIONS ENDS***************************************************************************////////////////////////////////////////////////

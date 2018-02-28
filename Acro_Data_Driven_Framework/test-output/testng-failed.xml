@@ -1,54 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ACAMS SUITE ONE]">
-  <listeners>
-    <listener class-name="com.acams.ddf.util.RetryListenerClass"/>
-  </listeners>
-  <test name="ATC(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.acams.ddf.testcases.PA309_Test">
+      <class name="com.acams.ddf.testcases.Acro_Xrm">
         <methods>
+          <include name="closeBrowser"/>
           <include name="quit"/>
-          <include name="beforeTest"/>
+          <include name="browserClose"/>
+          <include name="doLogin" invocation-numbers="0"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.acams.ddf.testcases.PA309_Test -->
-      <class name="com.acams.ddf.testcases.TimeCaptureTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.TimeCaptureTest -->
-      <class name="com.acams.ddf.testcases.Appointment">
-        <methods>
-          <include name="init"/>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Appointment -->
-      <class name="com.acams.ddf.testcases.FollowUp">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.FollowUp -->
-      <class name="com.acams.ddf.testcases.ATCTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-          <include name="CMS_Card_Test" invocation-numbers="0 0 0"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.ATCTest -->
-      <class name="com.acams.ddf.testcases.CMS_Card_Test">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
+      </class> <!-- com.acams.ddf.testcases.Acro_Xrm -->
     </classes>
-  </test> <!-- ATC(failed) -->
-</suite> <!-- Failed suite [ACAMS SUITE ONE] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

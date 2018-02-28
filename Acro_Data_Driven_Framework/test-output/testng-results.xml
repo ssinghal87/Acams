@@ -1,40 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="245678" started-at="2018-02-19T13:48:35Z" finished-at="2018-02-19T13:52:41Z">
+  <suite name="ACAMS SUITE ONE" duration-ms="215409" started-at="2018-02-28T13:42:53Z" finished-at="2018-02-28T13:46:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="245678" started-at="2018-02-19T13:48:35Z" finished-at="2018-02-19T13:52:41Z">
-      <class name="com.acams.ddf.testcases.PA309_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="beforeTest" is-config="true" duration-ms="313" started-at="2018-02-19T08:48:35Z" finished-at="2018-02-19T08:48:36Z">
+    <test name="Time Capture" duration-ms="74358" started-at="2018-02-28T13:42:53Z" finished-at="2018-02-28T13:44:07Z">
+      <class name="com.acams.ddf.testcases.TimeCaptureTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.TimeCaptureTest@5b1669c0]" name="beforeTest" is-config="true" duration-ms="294" started-at="2018-02-28T08:42:53Z" finished-at="2018-02-28T08:42:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="init" is-config="true" duration-ms="1" started-at="2018-02-19T08:48:36Z" finished-at="2018-02-19T08:48:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="PA309_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="PA309_Test" duration-ms="244324" started-at="2018-02-19T08:48:36Z" data-provider="getData" finished-at="2018-02-19T08:52:40Z">
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.TimeCaptureTest@5b1669c0]" name="CMS_Card_Test" duration-ms="73540" started-at="2018-02-28T08:42:53Z" data-provider="getData" finished-at="2018-02-28T08:44:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ClientName=Warms, Johny, Case=20180204000046, Insurance Name=, Runmode=Y, ProviderName=180 MEDICAL INC, Mpi=201802002704, FinalComments=PA309 created, Browser=ie}]]>
+                <![CDATA[{ClientName=Willliams, Samuel, Case=20180204000069, CcTime=80, Runmode=Y, TimeCaptureFinalComments=TC Final Comments Test, Mpi=201802002726, Browser=ie}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PA309_Test -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="quit" is-config="true" duration-ms="810" started-at="2018-02-19T08:52:40Z" finished-at="2018-02-19T08:52:41Z">
+        </test-method> <!-- CMS_Card_Test -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.TimeCaptureTest@5b1669c0]" name="init" is-config="true" duration-ms="0" started-at="2018-02-28T08:42:53Z" finished-at="2018-02-28T08:42:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.TimeCaptureTest@5b1669c0]" name="quit" is-config="true" duration-ms="368" started-at="2018-02-28T08:44:07Z" finished-at="2018-02-28T08:44:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.PA309_Test@3f2ef586]" name="closeBrowser" is-config="true" duration-ms="17" started-at="2018-02-19T08:52:41Z" finished-at="2018-02-19T08:52:41Z">
+      </class> <!-- com.acams.ddf.testcases.TimeCaptureTest -->
+    </test> <!-- Time Capture -->
+    <test name="ATC" duration-ms="47786" started-at="2018-02-28T13:44:07Z" finished-at="2018-02-28T13:44:55Z">
+      <class name="com.acams.ddf.testcases.ATCTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.ATCTest@606e4010]" name="beforeTest" is-config="true" duration-ms="250" started-at="2018-02-28T08:44:07Z" finished-at="2018-02-28T08:44:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.ATCTest@606e4010]" name="CMS_Card_Test" duration-ms="47298" started-at="2018-02-28T08:44:07Z" data-provider="getData" finished-at="2018-02-28T08:44:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Mpi=201802002726, Case=20180204000069, CCOutreachtime=100, ClientName=Willliams, Samuel, Runmode=Y, TypeOfContact=Secondary Contact, Cc/clerk=CC - Bergman, Greg, AtcComments=ATC Saved After Client is created. Test , Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CMS_Card_Test -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.ATCTest@606e4010]" name="init" is-config="true" duration-ms="0" started-at="2018-02-28T08:44:07Z" finished-at="2018-02-28T08:44:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.ATCTest@606e4010]" name="quit" is-config="true" duration-ms="95" started-at="2018-02-28T08:44:55Z" finished-at="2018-02-28T08:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.acams.ddf.testcases.ATCTest -->
+    </test> <!-- ATC -->
+    <test name="Follow Up" duration-ms="93218" started-at="2018-02-28T13:44:55Z" finished-at="2018-02-28T13:46:28Z">
+      <class name="com.acams.ddf.testcases.FollowUp">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.acams.ddf.testcases.FollowUp@4a003cbe]" name="beforeTest" is-config="true" duration-ms="266" started-at="2018-02-28T08:44:55Z" finished-at="2018-02-28T08:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.acams.ddf.testcases.FollowUp@4a003cbe]" name="init" is-config="true" duration-ms="0" started-at="2018-02-28T08:44:55Z" finished-at="2018-02-28T08:44:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="CMS_Card_Test(java.util.Hashtable)[pri:1, instance:com.acams.ddf.testcases.FollowUp@4a003cbe]" name="CMS_Card_Test" duration-ms="92773" started-at="2018-02-28T08:44:55Z" data-provider="getData" finished-at="2018-02-28T08:46:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ClientName=Willliams, Samuel, Case=20180204000069, Runmode=Y, Cc/clerk=CC - Bergman, Greg, FollowUpPopUpComments=Pop up follow up comments test, Mpi=201802002726, FollowUpDetailPageFinalComment=FollowUpDetailPageFinalComment test, Browser=ie}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CMS_Card_Test -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.acams.ddf.testcases.FollowUp@4a003cbe]" name="quit" is-config="true" duration-ms="110" started-at="2018-02-28T08:46:28Z" finished-at="2018-02-28T08:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.acams.ddf.testcases.FollowUp@4a003cbe]" name="closeBrowser" is-config="true" duration-ms="31" started-at="2018-02-28T08:46:28Z" finished-at="2018-02-28T08:46:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.acams.ddf.testcases.PA309_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.acams.ddf.testcases.FollowUp -->
+    </test> <!-- Follow Up -->
+  </suite> <!-- ACAMS SUITE ONE -->
 </testng-results>

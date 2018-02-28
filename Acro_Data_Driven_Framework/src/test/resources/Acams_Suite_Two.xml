@@ -6,11 +6,7 @@
  
  </listeners>
 
-<test name = "PA 309_Test" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.PA309_Test"></class>
-</classes>
-</test>>
+
 
 <test name = "Time Capture" allow-return-values="true"> 
 <classes>
@@ -30,12 +26,6 @@
 </classes>
 </test>>
 
-
-<test name = "Appointment" allow-return-values="true"> 
-<classes>
-<class name="com.acams.ddf.testcases.Appointment"></class>
-</classes>
-</test>>
 
 
 

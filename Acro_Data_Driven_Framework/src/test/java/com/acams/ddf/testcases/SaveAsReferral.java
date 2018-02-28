@@ -77,7 +77,9 @@ public class SaveAsReferral extends BaseTest {
 			
 			/*openBrowser(data.get("Browser"), t1);
 			navigate(prop.getProperty("appurl_qa"), t1);
-			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);*/
+			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t1);
+			wait(1);*/
+			
 			
 			clickCmsProgram(t1);
 			wait(2);

@@ -4,51 +4,59 @@
   <listeners>
     <listener class-name="com.acams.ddf.util.RetryListenerClass"/>
   </listeners>
-  <test name="ATC(failed)">
+  <test name="CMS_Card_Test(failed)">
     <classes>
+      <class name="com.acams.ddf.testcases.DemographicsPageTest">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.DemographicsPageTest -->
+      <class name="com.acams.ddf.testcases.Cms_Eligibility_Test">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.Cms_Eligibility_Test -->
+      <class name="com.acams.ddf.testcases.SaveAsReferral">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.SaveAsReferral -->
+      <class name="com.acams.ddf.testcases.IntakePageTest">
+        <methods>
+          <include name="init"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.IntakePageTest -->
+      <class name="com.acams.ddf.testcases.CMS_Card_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="init"/>
+          <include name="CMS_Card_Test" invocation-numbers="0"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
+      <class name="com.acams.ddf.testcases.LoginTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.acams.ddf.testcases.LoginTest -->
       <class name="com.acams.ddf.testcases.PA309_Test">
         <methods>
+          <include name="closeBrowser"/>
           <include name="quit"/>
           <include name="beforeTest"/>
           <include name="init"/>
         </methods>
       </class> <!-- com.acams.ddf.testcases.PA309_Test -->
-      <class name="com.acams.ddf.testcases.TimeCaptureTest">
-        <methods>
-          <include name="init"/>
-          <include name="quit"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.TimeCaptureTest -->
-      <class name="com.acams.ddf.testcases.Appointment">
-        <methods>
-          <include name="init"/>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.Appointment -->
-      <class name="com.acams.ddf.testcases.FollowUp">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.FollowUp -->
-      <class name="com.acams.ddf.testcases.ATCTest">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="quit"/>
-          <include name="init"/>
-          <include name="CMS_Card_Test" invocation-numbers="0 0 0"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.ATCTest -->
-      <class name="com.acams.ddf.testcases.CMS_Card_Test">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="init"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.acams.ddf.testcases.CMS_Card_Test -->
     </classes>
-  </test> <!-- ATC(failed) -->
+  </test> <!-- CMS_Card_Test(failed) -->
 </suite> <!-- Failed suite [ACAMS SUITE ONE] -->

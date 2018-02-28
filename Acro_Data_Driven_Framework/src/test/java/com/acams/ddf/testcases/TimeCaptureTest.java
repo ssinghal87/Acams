@@ -85,7 +85,7 @@ public class TimeCaptureTest extends BaseTest {
 			click("yespopupbutton_xpath", t1);
 			waitUntilElementPresent("clickclientname_xpath", t1);
 			click("clickclientname_xpath", t1);
-			waitUntilElementPresent("headerclientname_xpath", t1);
+			/*waitUntilElementPresent("headerclientname_xpath", t1);
 			
 			
 			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t1);
@@ -100,7 +100,7 @@ public class TimeCaptureTest extends BaseTest {
 			waitUntilElementPresent("headerclientname_xpath", t1);
 			scrollTo("pa309sfy_id", t1);
 			scrollTo("headerclientname_xpath", t1);
-			click("headerclientname_xpath", t1);
+			click("headerclientname_xpath", t1);*/
 			waitUntilElementPresent("timecapturetablink_xpath", t1);	
 			clickTimeCapture(t1);
 			waitUntilElementPresent("timecapturesubmitbutton_id", t1);
