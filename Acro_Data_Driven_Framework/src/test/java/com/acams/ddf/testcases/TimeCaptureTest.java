@@ -62,7 +62,7 @@ public class TimeCaptureTest extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Time Capture").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Time Capture","Checking the mandatory alert for Time Capture Form"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
+		ExtentTest t1 = test.createNode("Checking the mandatory alert for Time Capture Form on the click of submit button.","Checking the mandatory alert for Time Capture Form"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test Time Capture Test ");
 		if (!DataUtil.isRunnable("TimeCaptureTest", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -116,7 +116,7 @@ public class TimeCaptureTest extends BaseTest {
 
 		
 		
-		ExtentTest t2 = test.createNode("Time Capture","Submitting the Time Capture form"+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t2 = test.createNode("Submitting the Time Capture form(ONLY MANDATORY FIELDS) and checking that record saved successfully.","Submitting the Time Capture form"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			wait(1);

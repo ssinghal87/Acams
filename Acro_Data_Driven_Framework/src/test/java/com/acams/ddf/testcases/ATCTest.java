@@ -67,7 +67,7 @@ public class ATCTest extends BaseTest {
  //*************************************First  Test case*********************************************************
     	
     	
-		ExtentTest t1 = test.createNode("ATC ","Checking the mandatory alert for ATC :-"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
+		ExtentTest t1 = test.createNode("Checking the mandatory alert for ATC Form on the click of submit button. ","Checking the mandatory alert for ATC :-"+data.get("Mpi")).assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("ATCTest", xls)
 				|| data.get("Runmode").equals("N")) 
@@ -108,7 +108,7 @@ public class ATCTest extends BaseTest {
 	
 //*************************************Second Test case*******************************************************
 		
-		ExtentTest t2 = test.createNode("ATC","Submitting the ATC form"+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t2 = test.createNode("Submitting the ATC form(MANDATORY FIELDS ONLY.)","Submitting the ATC form"+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("cc/clerk_id", t2);
@@ -143,7 +143,7 @@ public class ATCTest extends BaseTest {
 //*************************************Third Test case*******************************************************		
 		
 		ExtentTest t3 = test
-				.createNode(
+				.createNode("Checking that ATC record saved successfully and details comes in the grid.",
 						"Checking that ATC record saved successfully and details comes in the grid:-"+data.get("Mpi")).assignCategory("Funtional Category")
 						.assignAuthor("Sarthak Singhal");
 		try {

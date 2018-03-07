@@ -60,7 +60,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t1 = test
 				.createNode(
-						"Saving the Referral Tab information",
+						"Adding and Saving the Referral Tab information",
 						"Opening the URL, Entering the username and Password and clicking the Sign In button, going to the add new client page, entering the referral tab information, clicking on the Add new referral button")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -117,7 +117,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t2 = test
 				.createNode(
-						"Checking the Referral information is showing in the grid.",
+						"Checking the added Referral tab information is showing in the grid.",
 						"When user successfully enters all the data in the referral tab and click on the Add Referral button, checking that data comes in the referral grid or not")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -147,7 +147,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t3 = test
 				.createNode(
-						"Save As Draft Mandatory Alert Message is Present on the Intake Page",
+						"Checking that the clicking on Save As Draft button Mandatory Alert Message is Present on the Intake Page",
 						"When user does not enter anything on the intake page and click on the SaveAsDraft button ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -189,7 +189,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t4 = test
 				.createNode(
-						"Checking Record saved successfully and Client is Referral Only alert is present.",
+						"Checking Record saved successfully on the intake page and Client is Referral Only alert is present.",
 						"When user enters the first name and the last name on the intake page and click on the SaveAsDraft button")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -218,7 +218,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t5 = test
 				.createNode(
-						" Referral Client is showing on the Dashboard under New Activities : New Referrals",
+						"Checking that the Newly created Referral Client name is showing on the Dashboard under New Activities : New Referrals",
 						"Newly created Client is coming on the dashboard under the New Referrals section")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
@@ -263,7 +263,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t6 = test
 				.createNode(
-						"Going to the Client Referrals page and clicking on the new created referral name  ")
+						"Going to the Client Referrals page and clicking on the newly created referral name.")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -332,7 +332,7 @@ public class SaveAsReferral extends BaseTest {
 		// client***************************************************
 
 		ExtentTest t7 = test
-				.createNode("ATC record saved successfully alert present.")
+				.createNode("Going to the ATC tab of the referral client and entering the mandatory fields and saving it.","ATC record saved successfully alert present.")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try {
@@ -373,7 +373,7 @@ public class SaveAsReferral extends BaseTest {
 
 		ExtentTest t8 = test
 				.createNode(
-						"Checking that ATC record saved successfully and details comes in the grid")
+						"Checking that ATC record saved successfully for the referral client and details are coming in the grid")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try {

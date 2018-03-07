@@ -76,7 +76,7 @@ public class IntakePageTest extends BaseTest {
 		// Information*******************************************************
 
 		ExtentTest t1 = test
-				.createNode("Checking that user can click on Referral Record.")
+				.createNode("Going to the New created referral on the referral page and clicking on the name.")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test IntakePageTest");
@@ -162,7 +162,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t2 = test
 				.createNode(
-						"Intake Mandatory Alert Check on click of Submit button.")
+						"Checking the mandatory alert for the Intake tab when clicked on the Submit button.")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -187,7 +187,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t3 = test
 				.createNode(
-						"Checking the mandatory alert for Address Information section and Adding the Address information. ")
+						"Checking the mandatory alert for Address Information section and Adding the Address information and then verifying that the added address successfully comes in the grid. ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -248,7 +248,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t4 = test
 				.createNode(
-						"Checking the mandatory alert for Communication Information section and Adding the Communication information. ")
+						"Checking the mandatory alert for Communication Information section and Adding the Communication information and then verifying that the added information successfully comes in the grid. ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -303,7 +303,7 @@ public class IntakePageTest extends BaseTest {
 
 		ExtentTest t5 = test
 				.createNode(
-						"Checking the mandatory alert for ContactPerson Information section and Adding the ContactPerson information. ")
+						"Checking the mandatory alert for ContactPerson Information section and Adding the ContactPerson information and then verifying that the added information successfully comes in the grid.  ")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -365,7 +365,7 @@ public class IntakePageTest extends BaseTest {
 		// **************************************END**************************************************************
 
 		ExtentTest t6 = test
-				.createNode("Checking that MPI# and Case# generated successfully")
+				.createNode("Checking that alert is present on the successfull creation of the mpi# and Case# and checking that in  the common header mpi and case# are appearing. ","Checking that MPI# and Case# generated successfully")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 
@@ -520,7 +520,7 @@ public class IntakePageTest extends BaseTest {
 		// are enable***************
 
 		ExtentTest t8 = test
-				.createNode("Checking that quick links are available")
+				.createNode("Checking that quick links are available after the successfull MPI# and Case# generation.")
 				.assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try {

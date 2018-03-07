@@ -46,8 +46,10 @@ public class test extends BaseTest {
 	
 
 		public static void main(String[] args) throws Exception {
+			String s = String.format("I%nam%na%nboy");
+			System.out.println(s);
 			
-			 connectSqlServer("jdbc:sqlserver://10.0.0.28", "ACAMSDev", "ACAMSDev", "select * from cm.clientmaster where cmpiid='201605000001'");
+			 //connectSqlServer("jdbc:sqlserver://10.0.0.28", "ACAMSDev", "ACAMSDev", "select * from cm.clientmaster where cmpiid='201605000001'");
 
 			/*// Object of Connection from the Database
 			Connection conn = null;

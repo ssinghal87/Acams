@@ -62,7 +62,7 @@ public class Appointment extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Appointment").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Appointment","Checking that Appointment quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t1 = test.createNode("Checking that Appointment quick link is enable.","Checking that Appointment quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("AppointmentTest", xls)
@@ -119,7 +119,7 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t2 = test.createNode("Appointment","Clicking on the Appointment link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t2 = test.createNode("Clicking on the Appointment link and checking that the pop is coming.","Clicking on the Appointment link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			clickAppointment(t2);
@@ -157,7 +157,7 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t3 = test.createNode("Appointment","Checking that Appointment Pop up is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t3 = test.createNode("Checking that Appointment Pop up is submitted successfully.","Checking that Appointment Pop up is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			
@@ -213,7 +213,7 @@ public class Appointment extends BaseTest {
 		
 		
 		
-		ExtentTest t4 = test.createNode("Appointment","Opening the Appointment and changing the status of Appointment to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t4 = test.createNode("Going to  the Appointment Details Page  and changing the status of Appointment to Completed and clicking on the Submit button and chcking that the updated record comes in the grid.","Opening the Appointment and changing the status of Appointment to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("aptmntsummarygridactionbutton_xpath", t4);

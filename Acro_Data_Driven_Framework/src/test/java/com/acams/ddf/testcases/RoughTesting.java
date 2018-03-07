@@ -92,84 +92,13 @@ public class RoughTesting extends BaseTest  {
 		
  
 	{
-		
-		test = rep.createTest("Login").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1=test.createNode("rough testing");
-		//ExtentTest c9=pNode.createNode("URL", "checking that if user has successfully logged in then the url is the landingPage");
-
-        t1.log(Status.INFO, "Starting the test Lough");
-		//test.log(Status.INFO,data.toString());
-		if(!DataUtil.isRunnable("Rough", xls) ||  data.get("Runmode").equals("N")){
-			t1.log(Status.SKIP, "Skipping the test as runmode is N");
-			throw new SkipException("Skipping the test as runmode is N");
-		}
-		
-		
-		ExtentTest t11 = test.createNode("Checking PA 309 PDF is Downloaded. ","Checking that the PDF is downloaded successfully"+data.get("Mpi")).assignCategory("Funtional Category")
-				.assignAuthor("Sarthak Singhal");
-		try 
-		{	
-		
-			openBrowser(data.get("Browser"), t11);
-			navigate(prop.getProperty("appurl_qa"), t11);
-			doLogin(prop.getProperty("mduserid"), prop.getProperty("mdpasw"), t11);
-			clickCmsProgram(t11);
-			removeDohPopUp(t11);
-			
-			waitUntilElementPresent("globalsearch_xpath", t11);
-			type("globalsearch_xpath", data.get("Mpi"), t11);
-			click("globalsearchbutton_xpath", t11);
-			click("yespopupbutton_xpath", t11);
-			waitUntilElementPresent("clickclientname_xpath", t11);
-			click("clickclientname_xpath", t11);
-			wait(3);
-			waitUntilElementPresent("quicklinkicon_xpath", t11);
-			scrollTo("quicklinkicon_xpath", t11);
-			boolean pa309QuickLinkEnable=quickLinkIsPresent("pa309", t11);
-			if(pa309QuickLinkEnable==true)
-			{
-			clickPA309(t11);
-			}
-			
-			scrollTo("pa309actionbuttonlink_xpath", t11);
-			wait(2);
-			invokeAutoItScript("C:/Users/ssinghal/git/selenium projects/Acams/Acro_Data_Driven_Framework/AutoIT/PA309_Final.exe",t11);
-			wait(20);
-		   String name=data.get("ClientName");
-		   String fileName1= name.replaceAll(",", "");
-		   String PAnumber=getLocatorText("pa309gridPAnumber_xpath", t11);
-		   String finalFileName=fileName1+"  "+"-"+PAnumber+".pdf";
-		   
-		   boolean pa309PdfFile= checkFileExists("E:\\CMSCardPDF\\"+finalFileName+".pdf",t11);
-		   if(pa309PdfFile=true)
-		   {
-			   t11.log(Status.PASS, "PA 309  PDF is successfully downloaded");
-		   }else{
-			   t11.log(Status.FAIL, "PA 309 PDF is not downloaded");
-
-		   }
-		    
-		    
-		    
-			
-		}
-		
-		catch (Exception e) 
-		{
-			t11.log(Status.FAIL,"t7 test case catch block executed" + e.fillInStackTrace());
-		}
-		
-		
-		
+//connectSqlServer("jdbc:sqlserver://10.0.0.18", "Dev", "acro","");
+connectSqlServer("jdbc:sqlserver://10.0.0.18", "Dev", "acro", "declare @Weekendingdate datetime='3/01/2018'select top 20 a.emp_name,a.assignment_id,em.userid,em.password  from assignment a join employee em on a.assignment_id=em.assignment_id where not exists(select * from timebillentry_header th where th.Assignmentid=a.assignment_id and CONVERT(date,th.Weekendingdate)=convert(date,@Weekendingdate))");
 		
 
+
+	
 	}
-	
-		
-
-
-	
-			
 		
 	@BeforeMethod
 	public void init() {

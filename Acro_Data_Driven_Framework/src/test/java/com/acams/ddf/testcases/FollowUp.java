@@ -62,7 +62,7 @@ public class FollowUp extends BaseTest {
 	public void CMS_Card_Test(Hashtable<String, String> data)
 	{
     	test = rep.createTest("Follow Up").assignCategory("Funtional Category").assignAuthor("Sarthak Singhal");
-		ExtentTest t1 = test.createNode("Follow Up","Checking that FollowUp quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t1 = test.createNode("Checking that FollowUp quick link is enable for the MPI.","Checking that FollowUp quick link is enable for the MPI: - "+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		t1.log(Status.INFO, "Starting the test LoginTest");
 		if (!DataUtil.isRunnable("FollowUpTest", xls)
@@ -119,7 +119,7 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t2 = test.createNode("Follow Up","Clicking on the FollowUp link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t2 = test.createNode("Clicking on the FollowUp link and checking that the Follow - Up popup is coming ","Clicking on the FollowUp link and checking that the pop is coming "+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			clickFollowUp(t2);
@@ -157,7 +157,7 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t3 = test.createNode("Follow Up","Checking that Follow Up Pop is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t3 = test.createNode("Checking that Follow Up Pop is submitted successfully.","Checking that Follow Up Pop is submitted successfully"+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			
@@ -205,7 +205,7 @@ public class FollowUp extends BaseTest {
 		
 		
 		
-		ExtentTest t4 = test.createNode("Follow Up","Opening the follow up and changing the status of follow up to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
+		ExtentTest t4 = test.createNode("Going to the Follow-Up Details page, filling in the mandatory fields and changing the status of the Follow Up to Complete and checking that the record in the grid is updated.","Opening the follow up and changing the status of follow up to Completed."+data.get("Mpi")).assignCategory("Funtional Category")
 				.assignAuthor("Sarthak Singhal");
 		try{
 			scrollTo("fupsummarygridactionbutton_xpath", t4);
